@@ -1,0 +1,79 @@
+{
+  "name": "@weme-ui/schema",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@10.14.0",
+  "author": "Allen Luo <luoyi@mouji.net>",
+  "license": "MIT",
+  "homepage": "https://weme-ui.github.io/schema",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weme-ui/schema.git"
+  },
+  "bugs": {
+    "url": "https://github.com/weme-ui/schema/issues"
+  },
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./project.json": "./project.json",
+    "./registry.json": "./registry.json"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist",
+    "project.json",
+    "registry.json"
+  ],
+  "engines": {
+    "node": ">=22.14.0",
+    "pnpm": ">=10.13.0"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "lint": "eslint .",
+    "typecheck": "tsgo --noEmit",
+    "release": "bumpp",
+    "taze": "taze major -I -r"
+  },
+  "dependencies": {
+    "zod": "^4.0.17"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^5.2.1",
+    "@typescript/native-preview": "7.0.0-dev.20250816.1",
+    "bumpp": "^10.2.3",
+    "eslint": "^9.33.0",
+    "lint-staged": "^16.1.5",
+    "simple-git-hooks": "^2.13.1",
+    "taze": "^19.1.0",
+    "tsdown": "^0.14.1",
+    "typescript": "^5.9.2"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "simple-git-hooks"
+    ]
+  },
+  "simple-git-hooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{ts}": "eslint --fix"
+  }
+}
