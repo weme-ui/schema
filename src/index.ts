@@ -1,2 +1,3 @@
-export * from './schema/project'
-export * from './schema/registry'
+export * from './project'
+export * from './registry'
+export * from './utilities'

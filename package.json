@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "pnpm@10.14.0",
+  "packageManager": "pnpm@10.15.0",
   "author": "Allen Luo <luoyi@mouji.net>",
   "license": "MIT",
   "homepage": "https://weme-ui.github.io/schema",
@@ -48,25 +48,28 @@
     "dev": "tsdown --watch",
     "lint": "eslint .",
     "typecheck": "tsgo --noEmit",
+    "test": "vitest",
     "release": "bumpp",
     "taze": "taze major -I -r"
   },
   "dependencies": {
-    "zod": "^4.0.17"
+    "zod": "^4.1.5"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^5.2.1",
     "@typescript/native-preview": "7.0.0-dev.20250816.1",
     "bumpp": "^10.2.3",
-    "eslint": "^9.33.0",
+    "eslint": "^9.34.0",
     "lint-staged": "^16.1.5",
     "simple-git-hooks": "^2.13.1",
-    "taze": "^19.1.0",
-    "tsdown": "^0.14.1",
-    "typescript": "^5.9.2"
+    "taze": "^19.3.0",
+    "tsdown": "^0.14.2",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
+      "esbuild",
       "simple-git-hooks"
     ]
   },

@@ -1,0 +1,16 @@
+{
+  "$schema": "../../project.json",
+  "provider": "bitbucket",
+  "paths": {
+    "components": "components"
+  },
+  "repos": [
+    {
+      "repo": "repo",
+      "registry": "registry"
+    }
+  ],
+  "unocss": {
+    "prefix": "prefix"
+  }
+}

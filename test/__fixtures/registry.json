@@ -1,0 +1,48 @@
+{
+  "$schema": "../../registry.json",
+  "name": "name",
+  "description": "description",
+  "version": "version",
+  "prefix": "prefix",
+  "directory": "directory",
+  "access": "public",
+  "meta": {
+    "authors": ["authors"],
+    "homepage": "https://github.com/weme-ui/weme-ui",
+    "repository": "https://github.com/weme-ui/weme-ui",
+    "bugs": "https://github.com/weme-ui/weme-ui/issues",
+    "tags": ["tags"]
+  },
+  "dependencies": ["dependencies"],
+  "devDependencies": ["devDependencies"],
+  "items": [
+    {
+      "name": "icon",
+      "description": "description",
+      "title": "Icon",
+      "author": "author",
+      "dependencies": ["dependencies"],
+      "devDependencies": ["devDependencies"],
+      "registryDependencies": ["registryDependencies"],
+      "type": "component",
+      "files": [
+        {
+          "type": "component",
+          "path": "path"
+        },
+        {
+          "type": "composable",
+          "path": "path"
+        },
+        {
+          "type": "file",
+          "path": "path",
+          "target": "target"
+        }
+      ]
+    }
+  ],
+  "cssVars": {
+    "color": "color"
+  }
+}

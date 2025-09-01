@@ -2,23 +2,23 @@
   "$schema": "https://json-schema.org/draft-07/schema#",
   "$id": "https://weme-ui.github.io/schema/registry.json",
   "title": "Weme UI Registry JSON Schema Definitions",
-  "description": "A weme-ui registry of components, composables, themes, blocks, etc.",
+  "description": "Weme UI registry of components, composables, themes, blocks, etc.",
   "type": "object",
   "properties": {
     "name": {
       "type": "string",
       "description": "The name of the registry.",
-      "examples": ["@weme-ui/std", "@weme-ui/plus"]
+      "examples": ["weme-ui/std", "weme-ui/plus"]
+    },
+    "description": {
+      "type": "string",
+      "description": "The description of the registry."
     },
     "version": {
       "type": "string",
       "description": "The version of the registry. Empty to use the version from `package.json`.",
       "format": "semver",
       "examples": ["1.0.0"]
-    },
-    "description": {
-      "type": "string",
-      "description": "The description of the registry."
     },
     "prefix": {
       "type": "string",
@@ -33,7 +33,7 @@
     "access": {
       "type": "string",
       "description": "The access level of the registry.",
-      "enum": ["public"],
+      "enum": ["public", "private"],
       "default": "public"
     },
     "meta": {
@@ -99,7 +99,7 @@
           "type": {
             "type": "string",
             "description": "The type of the item.",
-            "enum": ["component", "composable", "layout", "theme", "block", "page"],
+            "enum": ["component", "layout", "theme", "block", "page"],
             "examples": ["component"]
           },
           "title": {
@@ -180,9 +180,23 @@
           "cssVars": {
             "type": "object",
             "description": "The CSS variables required by the item.",
-            "additionalProperties": {
-              "type": "string"
-            }
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "string"
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              }
+            ]
           },
           "meta": {
             "type": "object",

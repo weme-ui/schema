@@ -2,33 +2,45 @@
   "$schema": "https://json-schema.org/draft-07/schema#",
   "$id": "https://weme-ui.github.io/schema/project.json",
   "title": "Weme UI Project JSON Schema Definitions",
-  "description": "A weme-ui project configuration.",
+  "description": "The Weme UI CLI will load `weme.config.json` before running any command.",
   "type": "object",
   "properties": {
     "provider": {
       "type": "string",
       "description": "The provider for the registry repository. This is used to load the registry item's files.",
       "default": "github",
-      "examples": ["github", "esm", "unpkg", "jsdelivr", "https://git.self-hosted.com", "path/to/local/registry"]
+      "examples": ["github", "gitlab", "bitbucket", "esm", "unpkg", "jsdelivr", "https://git.self-hosted.com", "path/to/local/registry"]
     },
 
     "repos": {
       "type": "array",
       "description": "The repos to fetch the components from.",
       "items": {
-        "type": "string"
-      },
-      "examples": ["@weme-ui/weme-ui"]
-    },
-
-    "prefix": {
-      "type": "object",
-      "description": "The prefix for the registry repository.",
-      "additionalProperties": {
-        "type": "string"
-      },
-      "propertyNames": {
-        "type": "string"
+        "type": "object",
+        "properties": {
+          "repo": {
+            "type": "string",
+            "description": "The repository name."
+          },
+          "registry": {
+            "type": "string",
+            "description": "The registry name."
+          },
+          "directory": {
+            "type": "string",
+            "description": "The directory of the registry."
+          },
+          "prefix": {
+            "type": "string",
+            "description": "The prefix for the registry item's files.",
+            "default": "ui"
+          },
+          "license": {
+            "type": "string",
+            "description": "The license for the private registry."
+          }
+        },
+        "required": ["repo", "registry"]
       }
     },
 
@@ -40,15 +52,43 @@
           "type": "string",
           "description": "The path for the components.",
           "default": "~/components"
+        },
+        "composables": {
+          "type": "string",
+          "description": "The path for the composables.",
+          "default": "~/composables"
+        },
+        "layouts": {
+          "type": "string",
+          "description": "The path for the layouts.",
+          "default": "~/layouts"
+        },
+        "pages": {
+          "type": "string",
+          "description": "The path for the pages.",
+          "default": "~/pages"
+        },
+        "plugins": {
+          "type": "string",
+          "description": "The path for the plugins.",
+          "default": "~/plugins"
+        },
+        "themes": {
+          "type": "string",
+          "description": "The path for the themes.",
+          "default": "~/themes"
+        },
+        "types": {
+          "type": "string",
+          "description": "The path for the types.",
+          "default": "~/types"
+        },
+        "utils": {
+          "type": "string",
+          "description": "The path for the utils.",
+          "default": "~/utils"
         }
-      },
-      "additionalProperties": {
-        "type": "string"
-      },
-      "propertyNames": {
-        "type": "string"
-      },
-      "required": ["components"]
+      }
     },
 
     "unocss": {
@@ -63,21 +103,7 @@
         "reset": {
           "type": "boolean",
           "description": "Whether to inject reset styles.",
-          "examples": [true]
-        },
-        "accentColors": {
-          "type": "object",
-          "description": "The custom accent colors for the project.",
-          "additionalProperties": {
-            "type": "string"
-          }
-        },
-        "neutralColors": {
-          "type": "object",
-          "description": "The custom neutral colors for the project.",
-          "additionalProperties": {
-            "type": "string"
-          }
+          "default": true
         },
         "background": {
           "type": "object",
@@ -94,9 +120,31 @@
               "default": "#111"
             }
           }
+        },
+        "accentColors": {
+          "type": "object",
+          "description": "The custom accent colors for the project.",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "neutralColors": {
+          "type": "object",
+          "description": "The custom neutral colors for the project.",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "cssVars": {
+          "type": "object",
+          "description": "The custom CSS variables for the project.",
+          "additionalProperties": {
+            "type": "string"
+          }
         }
       }
     }
   },
-  "required": ["paths"]
+
+  "required": ["provider"]
 }
