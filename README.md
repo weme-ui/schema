@@ -14,8 +14,8 @@
 
 [MIT][license-href] License © 2025 [weme-ui][github-href]
 
-[npm-version-src]: https://img.shields.io/npm/v/@weme-ui/schema?style=flat&colorA=1d2129&colorB=1d2129
+[npm-version-src]: https://img.shields.io/npm/v/@weme-ui/schema?style=flat&colorA=1d2129&colorB=4CBBA5
 [npm-version-href]: https://npmjs.com/package/@weme-ui/schema
-[license-src]: https://img.shields.io/github/license/weme-ui/schema.svg?style=flat&colorA=1d2129&colorB=1d2129
+[license-src]: https://img.shields.io/github/license/weme-ui/schema.svg?style=flat&colorA=1d2129&colorB=4CBBA5
 [license-href]: https://github.com/weme-ui/schema/blob/main/LICENSE
 [github-href]: https://github.com/weme-ui/weme-ui
