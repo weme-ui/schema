@@ -158,7 +158,7 @@ export const registrySchema = z.object({
   items: z.array(registryItem),
 })
 
-export type RegistrySchema = z.infer<typeof registrySchema>
+export type Registry = z.infer<typeof registrySchema>
 export type RegistryItem = z.infer<typeof registryItem>
 export type RegistryItemFile = z.infer<typeof registryItemFile>
 export type RegistryAccess = z.infer<typeof registryAccess>

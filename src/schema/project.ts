@@ -197,4 +197,4 @@ export const projectSchema = z.strictObject({
     .optional(),
 })
 
-export type ProjectSchema = z.infer<typeof projectSchema>
+export type Project = z.infer<typeof projectSchema>
