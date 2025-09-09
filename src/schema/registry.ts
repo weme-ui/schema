@@ -80,7 +80,7 @@ export const registryItem = z.object({
   /**
    * Metadata of the item.
    */
-  meta: z.record(z.string(), z.string()).optional(),
+  meta: z.record(z.string().trim(), z.string().trim()).optional(),
   /**
    * Docs of the item.
    */
@@ -106,17 +106,17 @@ export const registrySchema = z.object({
   /**
    * Version of the registry.
    */
-  version: z.string().optional(),
+  version: z.string().trim().optional(),
 
   /**
    * Default prefix for added items of the registry.
    */
-  prefix: z.string().optional(),
+  prefix: z.string().trim().optional(),
 
   /**
    * Directory of the registry.
    */
-  directory: z.string().optional(),
+  directory: z.string().trim().optional(),
 
   /**
    * Access level of the registry.
@@ -135,22 +135,22 @@ export const registrySchema = z.object({
    * - tags: Array of tags
    */
   meta: z.object({
-    authors: z.array(z.string()),
+    authors: z.array(z.string().trim()),
     homepage: z.url(),
     repository: z.url(),
     bugs: z.url(),
-    tags: z.array(z.string()),
+    tags: z.array(z.string().trim()),
   }).partial().optional(),
 
   /**
    * Global dependencies of the registry items.
    */
-  dependencies: z.array(z.string()).optional(),
+  dependencies: z.array(z.string().trim()).optional(),
 
   /**
    * Global dev dependencies of the registry items.
    */
-  devDependencies: z.array(z.string()).optional(),
+  devDependencies: z.array(z.string().trim()).optional(),
 
   /**
    * Items in the registry.

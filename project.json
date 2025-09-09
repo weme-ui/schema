@@ -30,6 +30,11 @@
             "type": "string",
             "description": "The directory of the registry."
           },
+          "default": {
+            "type": "boolean",
+            "description": "Whether to use this registry as the default one.",
+            "default": false
+          },
           "prefix": {
             "type": "string",
             "description": "The prefix for the registry item's files.",
@@ -95,31 +100,10 @@
       "type": "object",
       "description": "The UnoCSS Preset options.",
       "properties": {
-        "prefix": {
+        "variablePrefix": {
           "type": "string",
           "description": "The prefix for the CSS variables.",
           "default": "ui"
-        },
-        "reset": {
-          "type": "boolean",
-          "description": "Whether to inject reset styles.",
-          "default": true
-        },
-        "background": {
-          "type": "object",
-          "description": "The background colors for generating the custom color scales.",
-          "properties": {
-            "light": {
-              "type": "string",
-              "description": "The light background color.",
-              "default": "#fff"
-            },
-            "dark": {
-              "type": "string",
-              "description": "The dark background color.",
-              "default": "#111"
-            }
-          }
         },
         "accentColors": {
           "type": "object",

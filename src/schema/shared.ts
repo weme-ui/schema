@@ -1,7 +1,7 @@
 import { z } from 'zod'
 
-export const inlineCssVars = z.record(z.string(), z.string())
-export const nestedCssVars = z.record(z.string(), z.record(z.string(), z.string()))
+export const inlineCssVars = z.record(z.string().trim(), z.string().trim())
+export const nestedCssVars = z.record(z.string().trim(), z.record(z.string().trim(), z.string().trim()))
 
 /**
  * CSS Variables Schema

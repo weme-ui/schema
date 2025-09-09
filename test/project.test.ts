@@ -15,7 +15,7 @@ describe('project schema', () => {
       repos: [{ repo: 'repo ', registry: 'registry ' }],
     })).toEqual({
       provider: 'github',
-      repos: [{ prefix: 'ui', repo: 'repo', registry: 'registry' }],
+      repos: [{ prefix: 'ui', repo: 'repo', registry: 'registry', default: false }],
     })
   })
 
@@ -30,10 +30,10 @@ describe('project schema', () => {
 
   it('should pass with unocss', () => {
     expect(projectSchema.parse({
-      unocss: { prefix: 'prefix' },
+      unocss: { variablePrefix: 'prefix' },
     })).toEqual({
       provider: 'github',
-      unocss: { prefix: 'prefix', reset: true },
+      unocss: { variablePrefix: 'prefix' },
     })
   })
 
@@ -54,7 +54,7 @@ describe('project schema', () => {
           },
         ],
         "unocss": {
-          "prefix": "prefix",
+          "variablePrefix": "ui",
         },
       }
     `)
@@ -76,14 +76,14 @@ describe('project schema', () => {
         "provider": "bitbucket",
         "repos": [
           {
+            "default": false,
             "prefix": "ui",
             "registry": "registry",
             "repo": "repo",
           },
         ],
         "unocss": {
-          "prefix": "prefix",
-          "reset": true,
+          "variablePrefix": "ui",
         },
       }
     `)

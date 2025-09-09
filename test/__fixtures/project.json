@@ -11,6 +11,6 @@
     }
   ],
   "unocss": {
-    "prefix": "prefix"
+    "variablePrefix": "ui"
   }
 }
