@@ -42,10 +42,6 @@ export const registryItem = z.object({
    */
   type: registryItemType,
   /**
-   * Files of the item.
-   */
-  files: z.array(registryItemFile),
-  /**
    * Title of the item.
    */
   title: z.string().trim().optional(),
@@ -73,6 +69,10 @@ export const registryItem = z.object({
    * Registry dependencies of the item.
    */
   registryDependencies: z.array(z.string().trim()).optional(),
+  /**
+   * Files of the item.
+   */
+  files: z.array(registryItemFile),
   /**
    * CSS variables of the item.
    */
