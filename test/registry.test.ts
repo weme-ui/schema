@@ -1,6 +1,5 @@
 import { describe, expect, it } from 'vitest'
-
-import { registrySchema } from '../src/registry'
+import { registrySchema } from '../src/schema/registry'
 
 describe('registry schema', () => {
   it('should pass with empty object', () => {

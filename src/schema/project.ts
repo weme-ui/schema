@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { inlineCssVars } from './utilities'
+import { inlineCssVars } from './shared'
 
 /**
  * Project Config Schema

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { cssVars } from './utilities'
+import { cssVars } from './shared'
 
 export const registryAccess = z.enum(['public', 'private'])
 export const registryItemType = z.enum(['component', 'layout', 'theme', 'block', 'page'])
@@ -99,11 +99,6 @@ export const registrySchema = z.object({
   name: z.string().trim(),
 
   /**
-   * Items in the registry.
-   */
-  items: z.array(registryItem),
-
-  /**
    * Description of the registry.
    */
   description: z.string().trim().optional(),
@@ -156,6 +151,11 @@ export const registrySchema = z.object({
    * Global dev dependencies of the registry items.
    */
   devDependencies: z.array(z.string()).optional(),
+
+  /**
+   * Items in the registry.
+   */
+  items: z.array(registryItem),
 })
 
 export type RegistrySchema = z.infer<typeof registrySchema>

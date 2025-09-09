@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { projectSchema } from '../src/project'
+import { projectSchema } from '../src/schema/project'
 
 describe('project schema', () => {
   it('should pass with empty object', () => {
