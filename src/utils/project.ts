@@ -1,11 +1,12 @@
 import type { PackageJson } from 'pkg-types'
 import type { ProjectSchema } from '../schema'
-import { existsSync, readFileSync } from 'node:fs'
+import { existsSync } from 'node:fs'
 import fg from 'fast-glob'
 import { join, resolve } from 'pathe'
 import { resolveAlias } from 'pathe/utils'
 import { DEFAULT_REGISTRY_PREFIX, PROJECT_CONFIG_NAME, PROJECT_SCHEMA_URL } from '../constants'
 import { projectSchema } from '../schema'
+import { readFile } from './shared'
 
 export interface ProjectInfo {
   name?: string
@@ -32,14 +33,14 @@ export class ProjectConfig {
   constructor(cwd: string) {
     this.cwd = cwd
 
-    const schema = this.readJson<ProjectSchema>(PROJECT_CONFIG_NAME)
+    const schema = readFile<ProjectSchema>(PROJECT_CONFIG_NAME, this.cwd)
 
     if (schema) {
       if (Object.keys(schema).includes('$schema')) {
         delete (schema as any).$schema
       }
 
-      const tsConfig = this.readJson('.nuxt/tsconfig.json')
+      const tsConfig = readFile('.nuxt/tsconfig.json', this.cwd)
 
       if (tsConfig?.compilerOptions?.paths) {
         const tsPaths = Object.entries(tsConfig.compilerOptions.paths)
@@ -71,7 +72,7 @@ export class ProjectConfig {
   }
 
   get info(): ProjectInfo {
-    const packageJson = this.readJson<PackageJson>('package.json')
+    const packageJson = readFile<PackageJson>('package.json', this.cwd)
 
     return {
       name: packageJson?.name,
@@ -105,30 +106,6 @@ export class ProjectConfig {
       $schema: PROJECT_SCHEMA_URL,
       ...this.schema,
     } as ProjectSchema
-  }
-
-  readJson<T = any>(path: string) {
-    const filePath = resolve(this.cwd, path)
-
-    if (!existsSync(filePath)) {
-      throw new Error(`File ${filePath} not found`)
-    }
-
-    const content = readFileSync(filePath, 'utf-8')
-
-    if (content) {
-      try {
-        const json = JSON.parse(content)
-
-        if (!json)
-          throw new Error(`File ${filePath} is empty`)
-
-        return json as T
-      }
-      catch (e) {
-        throw new Error(`File ${filePath} is not a valid JSON : ${e}`)
-      }
-    }
   }
 
   exists() {

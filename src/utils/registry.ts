@@ -1,6 +1,7 @@
 import type { RegistryItem, RegistryItemFile, RegistryItemType, RegistrySchema } from '../schema'
-import { REGISTRY_SCHEMA_URL } from '../constants'
+import { REGISTRY_CONFIG_NAME, REGISTRY_SCHEMA_URL } from '../constants'
 import { registrySchema } from '../schema'
+import { readFile } from './shared'
 
 export interface RegistryInfo {
   name: RegistrySchema['name']
@@ -32,9 +33,14 @@ export interface RegistryInstallItem extends RegistryInit {
 }
 
 export class RegistryConfig {
+  private cwd: string
   private schema: RegistrySchema
 
-  constructor(schema: unknown) {
+  constructor(cwd: string) {
+    this.cwd = cwd
+
+    const schema = readFile<RegistrySchema>(REGISTRY_CONFIG_NAME, this.cwd)
+
     if (schema) {
       if (Object.keys(schema).includes('$schema')) {
         delete (schema as any).$schema

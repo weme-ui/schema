@@ -49,7 +49,7 @@ describe('registry schema', () => {
   })
 
   it('should validate basic', async () => {
-    const json = await import('./fixtures/registry/basic.json').then(r => r.default)
+    const json = await import('./fixtures/registry/basic/registry.json').then(r => r.default)
 
     const result = registrySchema.safeParse(json)
 
@@ -102,7 +102,7 @@ describe('registry schema', () => {
   })
 
   it('should validate full', async () => {
-    const json = await import('./fixtures/registry/full.json').then(r => r.default)
+    const json = await import('./fixtures/registry/full/registry.json').then(r => r.default)
 
     const result = registrySchema.safeParse(json)
 

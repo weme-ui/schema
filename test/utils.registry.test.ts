@@ -2,8 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { RegistryConfig } from '../src/utils'
 
 describe('registry config', async () => {
-  const json = await import('./fixtures/registry/full.json').then(r => r.default)
-  const registry = new RegistryConfig(json)
+  const registry = new RegistryConfig('./test/fixtures/registry/full')
 
   it('should get registry info', async () => {
     expect(registry.info).toMatchInlineSnapshot(`
