@@ -37,6 +37,18 @@ describe('registry config', async () => {
   })
 
   it('should get registry schema', async () => {
+    registry.addItem('component', 'test', [
+      'components/test/test.vue',
+      'components/test/test.props.ts',
+      'components/test/test.style.ts',
+    ])
+
+    registry.addItemFiles('test', [
+      'components/test/test-1.vue',
+      'components/test/test-2.props.ts',
+      'components/test/test-2.style.ts',
+    ])
+
     expect(registry.output).toMatchInlineSnapshot(`
       {
         "$schema": "https://weme-ui.github.io/schema/registry.json",
@@ -158,6 +170,38 @@ describe('registry config', async () => {
               "icon",
             ],
             "title": "Card",
+            "type": "component",
+          },
+          {
+            "description": "The test component.",
+            "files": [
+              {
+                "path": "components/test/test.vue",
+                "type": "component",
+              },
+              {
+                "path": "components/test/test.props.ts",
+                "type": "type",
+              },
+              {
+                "path": "components/test/test.style.ts",
+                "type": "style",
+              },
+              {
+                "path": "components/test/test-1.vue",
+                "type": "component",
+              },
+              {
+                "path": "components/test/test-2.props.ts",
+                "type": "type",
+              },
+              {
+                "path": "components/test/test-2.style.ts",
+                "type": "style",
+              },
+            ],
+            "name": "test",
+            "title": "Test",
             "type": "component",
           },
         ],

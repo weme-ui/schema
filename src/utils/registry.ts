@@ -1,4 +1,5 @@
 import type { RegistryItem, RegistryItemFile, RegistryItemType, RegistrySchema } from '../schema'
+import { titleCase } from 'scule'
 import { REGISTRY_CONFIG_NAME, REGISTRY_SCHEMA_URL } from '../constants'
 import { registrySchema } from '../schema'
 import { readFile } from './shared'
@@ -114,7 +115,7 @@ export class RegistryConfig {
     this.schema?.items.push({
       name: itemName,
       type,
-      title: itemName,
+      title: titleCase(itemName),
       description: `The ${itemName} component.`,
       files: [],
     })
