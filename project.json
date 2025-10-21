@@ -5,13 +5,6 @@
   "description": "The Weme UI CLI will load `weme.config.json` before running any command.",
   "type": "object",
   "properties": {
-    "provider": {
-      "type": "string",
-      "description": "The provider for the registry repository. This is used to load the registry item's files.",
-      "default": "github",
-      "examples": ["github", "gitlab", "bitbucket", "esm", "unpkg", "jsdelivr", "https://git.self-hosted.com", "path/to/local/registry"]
-    },
-
     "repos": {
       "type": "array",
       "description": "The repos to fetch the components from.",
@@ -129,6 +122,5 @@
       }
     }
   },
-
-  "required": ["provider"]
+  "required": ["repos", "paths"]
 }

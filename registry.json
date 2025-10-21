@@ -8,7 +8,7 @@
     "name": {
       "type": "string",
       "description": "The name of the registry.",
-      "examples": ["weme-ui", "weme-ui/plus"]
+      "examples": ["weme-ui/std", "weme-ui/plus"]
     },
     "description": {
       "type": "string",
@@ -28,7 +28,7 @@
     "directory": {
       "type": "string",
       "description": "The directory of the registry. This is relative to the registry's root directory.",
-      "examples": ["registry/acme"]
+      "examples": ["path/to/registry"]
     },
     "access": {
       "type": "string",
@@ -71,20 +71,6 @@
         }
       }
     },
-    "dependencies": {
-      "type": "array",
-      "description": "The dependencies of the registry.",
-      "items": {
-        "type": "string"
-      }
-    },
-    "devDependencies": {
-      "type": "array",
-      "description": "The dev dependencies of the registry.",
-      "items": {
-        "type": "string"
-      }
-    },
     "items": {
       "type": "array",
       "description": "The items of the registry.",
@@ -99,7 +85,7 @@
           "type": {
             "type": "string",
             "description": "The type of the item.",
-            "enum": ["component", "layout", "theme", "block", "page"],
+            "enum": ["component", "layout", "theme", "block", "page", "init"],
             "examples": ["component"]
           },
           "title": {
@@ -111,11 +97,6 @@
             "type": "string",
             "description": "A short description of the item.",
             "examples": ["A button component.", "An icon component."]
-          },
-          "author": {
-            "type": "string",
-            "description": "The author of the item. Recommended format: username <email>",
-            "examples": ["Your Name <your-name@email.com>"]
           },
           "dependencies": {
             "type": "array",
@@ -180,38 +161,11 @@
           "cssVars": {
             "type": "object",
             "description": "The CSS variables required by the item.",
-            "oneOf": [
-              {
-                "type": "object",
-                "additionalProperties": {
-                  "type": "string"
-                }
-              },
-              {
-                "type": "object",
-                "additionalProperties": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": "string"
-                  }
-                }
+            "additionalProperties": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
               }
-            ]
-          },
-          "meta": {
-            "type": "object",
-            "description": "Additional metadata for the item. This is an object with any key value pairs.",
-            "additionalProperties": true
-          },
-          "docs": {
-            "type": "string",
-            "description": "The documentation for the item. This is a markdown string."
-          },
-          "categories": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "description": "The categories of the item. This is an array of strings."
             }
           }
         },

@@ -1,34 +1,63 @@
 import { z } from 'zod'
 import { inlineCssVars } from './shared'
 
-function projectPath(defaultPath: string) {
-  return z.string().trim().default(defaultPath)
-}
-
-/**
- * Project Config Schema
- *
- * @see {@link https://weme-ui.github.io/schema/project.json}
- */
-export const projectSchema = z.strictObject({
+export const projectRepo = z.strictObject({
   /**
-   * Provider for the registry repository.
+   * Repository name.
    *
-   * This is used to load the registry item's files.
-   *
-   * - 'github'
-   * - 'gitlab'
-   * - 'bitbucket'
-   * - 'esm'
-   * - 'unpkg'
-   * - 'jsdelivr'
-   * - 'https://git.self-hosted.com'
-   * - 'path/to/local/registry'
-   *
-   * @default 'github'
+   * @example '@weme-ui/weme-ui'
    */
-  provider: z.string().default('github').optional(),
+  repo: z.string().trim(),
 
+  /**
+   * Registry name.
+   *
+   * @example 'weme-ui/std'
+   */
+  registry: z.string().toLowerCase().trim(),
+
+  /**
+   * Directory of the registry.
+   *
+   * @example 'registry/std'
+   */
+  directory: z.string().optional(),
+
+  /**
+   * Whether to use this registry as the default one.
+   *
+   * @default false
+   */
+  default: z.boolean().default(false).optional(),
+
+  /**
+   * Prefix for the registry item's files.
+   *
+   * @example Add components to `${paths.components}/ui` -> `UiComponentName`
+   * @default 'ui'
+   */
+  prefix: z.string().toLowerCase().trim().default('ui').optional(),
+
+  /**
+   * License for the private registry.
+   */
+  license: z.string().trim().optional(),
+})
+
+export const projectPaths = z.strictObject({
+  components: z.string().trim().default('~/components'),
+  composables: z.string().trim().default('~/composables').optional(),
+  layouts: z.string().trim().default('~/layouts').optional(),
+  pages: z.string().trim().default('~/pages').optional(),
+  plugins: z.string().trim().default('~/plugins').optional(),
+  themes: z.string().trim().default('~/themes').optional(),
+  types: z.string().trim().default('~/types').optional(),
+  utils: z.string().trim().default('~/utils').optional(),
+})
+
+export const projectUnoCssColors = z.record(z.string().trim(), z.string().trim())
+
+export const projectSchema = z.strictObject({
   /**
    * Repos to fetch the components from.
    *
@@ -46,50 +75,7 @@ export const projectSchema = z.strictObject({
    * }
    * ```
    */
-  repos: z.array(
-    z.strictObject({
-      /**
-       * Repository name.
-       *
-       * @example '@weme-ui/weme-ui'
-       */
-      repo: z.string().trim(),
-
-      /**
-       * Registry name.
-       *
-       * @example 'weme-ui/std'
-       */
-      registry: z.string().toLowerCase().trim(),
-
-      /**
-       * Directory of the registry.
-       *
-       * @example 'registry/std'
-       */
-      directory: z.string().optional(),
-
-      /**
-       * Whether to use this registry as the default one.
-       *
-       * @default false
-       */
-      default: z.boolean().default(false).optional(),
-
-      /**
-       * Prefix for the registry item's files.
-       *
-       * @example Add components to `${paths.components}/ui` -> `UiComponentName`
-       * @default 'ui'
-       */
-      prefix: z.string().toLowerCase().trim().default('ui').optional(),
-
-      /**
-       * License for the private registry.
-       */
-      license: z.string().optional(),
-    }),
-  ).optional(),
+  repos: z.array(projectRepo),
 
   /**
    * Paths for the project.
@@ -112,16 +98,7 @@ export const projectSchema = z.strictObject({
    * }
    * ```
    */
-  paths: z.strictObject({
-    components: projectPath('~/components'),
-    composables: projectPath('~/composables').optional(),
-    layouts: projectPath('~/layouts').optional(),
-    pages: projectPath('~/pages').optional(),
-    plugins: projectPath('~/plugins').optional(),
-    themes: projectPath('~/themes').optional(),
-    types: projectPath('~/types').optional(),
-    utils: projectPath('~/utils').optional(),
-  }).optional(),
+  paths: projectPaths,
 
   /**
    * UnoCSS Preset options.
@@ -146,7 +123,7 @@ export const projectSchema = z.strictObject({
      * }
      * ```
      */
-    accentColors: z.record(z.string().trim(), z.string().trim()).optional(),
+    accentColors: projectUnoCssColors.optional(),
 
     /**
      * Custom neutral colors for the project.
@@ -160,7 +137,7 @@ export const projectSchema = z.strictObject({
      * }
      * ```
      */
-    neutralColors: z.record(z.string().trim(), z.string().trim()).optional(),
+    neutralColors: projectUnoCssColors.optional(),
 
     /**
      * Custom CSS variables for the project.
@@ -183,4 +160,7 @@ export const projectSchema = z.strictObject({
   }).optional(),
 })
 
-export type Project = z.infer<typeof projectSchema>
+export type ProjectSchema = z.infer<typeof projectSchema>
+export type ProjectRepo = z.infer<typeof projectRepo>
+export type ProjectPaths = z.infer<typeof projectPaths>
+export type ProjectUnoCssColors = z.infer<typeof projectUnoCssColors>

@@ -1,0 +1,13 @@
+{
+  "repos": [
+    {
+      "repo": "@weme-ui/weme-ui",
+      "registry": "weme-ui/basic",
+      "directory": "test/fixtures/registry/basic",
+      "default": true
+    }
+  ],
+  "paths": {
+    "components": "~/components"
+  }
+}
