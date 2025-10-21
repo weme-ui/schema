@@ -27,10 +27,51 @@ export interface ProjectInfo {
 }
 
 export class ProjectConfig {
-  private cwd: string
-  private schema: ProjectSchema
+  private cwd: string = ''
+  private schema?: ProjectSchema
 
   constructor(cwd: string) {
+    this.load(cwd)
+  }
+
+  get info(): ProjectInfo {
+    const packageJson = readFile<PackageJson>('package.json', this.cwd)
+
+    return {
+      name: packageJson?.name,
+      description: packageJson?.description,
+      version: packageJson?.version,
+      repos: this.schema?.repos.map((repo) => {
+        const files = fg.sync(['**/*.vue'], {
+          cwd: join(this.schema?.paths.components || '', repo.prefix || DEFAULT_REGISTRY_PREFIX),
+          onlyFiles: true,
+          absolute: false,
+        })
+
+        return {
+          name: repo.registry,
+          prefix: repo.prefix || DEFAULT_REGISTRY_PREFIX,
+          default: !!repo.default,
+          installed: files.length,
+        }
+      }) || [],
+      unocss: {
+        variablePrefix: this.schema?.unocss?.variablePrefix || DEFAULT_REGISTRY_PREFIX,
+        accentColors: Object.keys(this.schema?.unocss?.accentColors || {}).length,
+        neutralColors: Object.keys(this.schema?.unocss?.neutralColors || {}).length,
+        cssVars: Object.keys(this.schema?.unocss?.cssVars || {}).length,
+      },
+    }
+  }
+
+  get output(): ProjectSchema {
+    return {
+      $schema: PROJECT_SCHEMA_URL,
+      ...this.schema,
+    } as ProjectSchema
+  }
+
+  load(cwd: string) {
     this.cwd = cwd
 
     const schema = readFile<ProjectSchema>(PROJECT_CONFIG_NAME, this.cwd)
@@ -69,43 +110,6 @@ export class ProjectConfig {
     }
 
     this.schema = result.data
-  }
-
-  get info(): ProjectInfo {
-    const packageJson = readFile<PackageJson>('package.json', this.cwd)
-
-    return {
-      name: packageJson?.name,
-      description: packageJson?.description,
-      version: packageJson?.version,
-      repos: this.schema.repos.map((repo) => {
-        const files = fg.sync(['**/*.vue'], {
-          cwd: join(this.schema.paths.components, repo.prefix || DEFAULT_REGISTRY_PREFIX),
-          onlyFiles: true,
-          absolute: false,
-        })
-
-        return {
-          name: repo.registry,
-          prefix: repo.prefix || DEFAULT_REGISTRY_PREFIX,
-          default: !!repo.default,
-          installed: files.length,
-        }
-      }),
-      unocss: {
-        variablePrefix: this.schema.unocss?.variablePrefix || DEFAULT_REGISTRY_PREFIX,
-        accentColors: Object.keys(this.schema.unocss?.accentColors || {}).length,
-        neutralColors: Object.keys(this.schema.unocss?.neutralColors || {}).length,
-        cssVars: Object.keys(this.schema.unocss?.cssVars || {}).length,
-      },
-    }
-  }
-
-  get output(): ProjectSchema {
-    return {
-      $schema: PROJECT_SCHEMA_URL,
-      ...this.schema,
-    } as ProjectSchema
   }
 
   exists() {
