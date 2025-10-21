@@ -36,8 +36,9 @@ export class RegistryConfig {
   private cwd: string = ''
   private schema?: RegistrySchema
 
-  constructor(cwd: string) {
-    this.load(cwd)
+  constructor(cwd: string = '') {
+    if (cwd !== '')
+      this.load(cwd)
   }
 
   get init(): RegistryInit {

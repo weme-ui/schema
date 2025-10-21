@@ -30,8 +30,9 @@ export class ProjectConfig {
   private cwd: string = ''
   private schema?: ProjectSchema
 
-  constructor(cwd: string) {
-    this.load(cwd)
+  constructor(cwd: string = '') {
+    if (cwd !== '')
+      this.load(cwd)
   }
 
   get info(): ProjectInfo {
