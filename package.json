@@ -2,7 +2,7 @@
   "name": "@weme-ui/schema",
   "type": "module",
   "version": "0.2.4",
-  "packageManager": "pnpm@10.18.3",
+  "packageManager": "pnpm@10.19.0",
   "author": "Allen Luo <luoyi@mouji.net>",
   "license": "MIT",
   "homepage": "https://weme-ui.github.io/schema",
@@ -51,11 +51,11 @@
     "release": "pnpm build && bumpp",
     "taze": "taze major -I -r"
   },
-  "peerDependencies": {
-    "fast-glob": "^3.3.3",
-    "pathe": "^2.0.3"
-  },
   "dependencies": {
+    "fast-glob": "^3.3.3",
+    "mkdirp": "^3.0.1",
+    "pathe": "^2.0.3",
+    "scule": "^1.3.0",
     "zod": "^4.1.12"
   },
   "devDependencies": {
@@ -64,11 +64,8 @@
     "@typescript/native-preview": "7.0.0-dev.20250816.1",
     "bumpp": "^10.3.1",
     "eslint": "^9.38.0",
-    "fast-glob": "^3.3.3",
     "lint-staged": "^16.2.5",
-    "pathe": "^2.0.3",
     "pkg-types": "^2.3.0",
-    "scule": "^1.3.0",
     "simple-git-hooks": "^2.13.1",
     "taze": "^19.8.1",
     "tsdown": "^0.15.9",

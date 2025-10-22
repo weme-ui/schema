@@ -1,5 +1,6 @@
-import { existsSync, readFileSync } from 'node:fs'
-import { resolve } from 'pathe'
+import { existsSync, readFileSync, writeFileSync } from 'node:fs'
+import { mkdirp } from 'mkdirp'
+import { dirname, isAbsolute, resolve } from 'pathe'
 
 export function readFile<T = any>(path: string, cwd: string = ''): T | undefined {
   const filePath = resolve(cwd, path)
@@ -24,4 +25,15 @@ export function readFile<T = any>(path: string, cwd: string = ''): T | undefined
   catch (e) {
     throw new Error(`File ${filePath} is not a valid JSON : ${e}`)
   }
+}
+
+export function writeFile(path: string, content: string, cwd: string = '') {
+  const fullPath = isAbsolute(path) ? path : resolve(cwd, path)
+
+  mkdirp.sync(dirname(fullPath))
+
+  writeFileSync(fullPath, `${content}\n`, {
+    encoding: 'utf-8',
+    flag: 'w',
+  })
 }
