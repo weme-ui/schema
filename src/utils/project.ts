@@ -15,8 +15,8 @@ export interface ProjectInfo {
   repos: {
     name: string
     prefix: string
-    default: boolean
     installed: number
+    default: boolean
   }[]
   unocss?: {
     variablePrefix: string
@@ -35,37 +35,32 @@ export class ProjectConfig {
 
     const schema = readFile<ProjectSchema>(PROJECT_CONFIG_NAME, this.cwd)
 
-    if (schema) {
-      if (Object.keys(schema).includes('$schema')) {
-        delete (schema as any).$schema
-      }
-
-      const tsConfig = readFile('.nuxt/tsconfig.json', this.cwd)
-
-      if (tsConfig.compilerOptions?.paths) {
-        const tsPaths = Object.entries(tsConfig.compilerOptions.paths)
-          .reduce((acc, [key, value]) => {
-            acc[key] = (value as string[])[0]
-            return acc
-          }, {} as Record<string, string>)
-
-        if (schema.paths) {
-          const paths = schema.paths as Record<string, string>
-
-          Object.keys(paths).forEach((name) => {
-            paths[name] = resolveAlias(
-              paths[name],
-              tsPaths,
-            ).replace('..', this.cwd)
-          })
-        }
-      }
-    }
+    if (schema && Object.keys(schema).includes('$schema'))
+      delete (schema as any).$schema
 
     const result = projectSchema.safeParse(schema)
 
     if (!result.success) {
       throw new Error(result.error.message)
+    }
+
+    const tsConfig = readFile('.nuxt/tsconfig.json', this.cwd)
+
+    if (tsConfig.compilerOptions?.paths) {
+      const tsPaths = Object.entries(tsConfig.compilerOptions.paths)
+        .reduce((acc, [key, value]) => {
+          acc[key] = (value as string[])[0]
+          return acc
+        }, {} as Record<string, string>)
+
+      const paths = result.data.paths as Record<string, string>
+
+      Object.keys(paths).forEach((name) => {
+        paths[name] = resolveAlias(
+          paths[name],
+          tsPaths,
+        ).replace('..', this.cwd)
+      })
     }
 
     this.schema = result.data
@@ -88,8 +83,8 @@ export class ProjectConfig {
         return {
           name: repo.registry,
           prefix: repo.prefix || DEFAULT_REGISTRY_PREFIX,
-          default: !!repo.default,
           installed: files.length,
+          default: !!repo.default,
         }
       }) || [],
       unocss: {
