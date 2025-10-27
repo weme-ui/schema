@@ -59,18 +59,18 @@
     "zod": "^4.1.12"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^6.0.0",
+    "@antfu/eslint-config": "^6.1.0",
     "@types/node": "^24.9.1",
     "@typescript/native-preview": "7.0.0-dev.20250816.1",
     "bumpp": "^10.3.1",
     "eslint": "^9.38.0",
-    "lint-staged": "^16.2.5",
+    "lint-staged": "^16.2.6",
     "pkg-types": "^2.3.0",
     "simple-git-hooks": "^2.13.1",
     "taze": "^19.8.1",
-    "tsdown": "^0.15.9",
+    "tsdown": "^0.15.10",
     "typescript": "^5.9.3",
-    "vitest": "^3.2.4"
+    "vitest": "^4.0.3"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
