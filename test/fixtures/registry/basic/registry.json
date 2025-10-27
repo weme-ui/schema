@@ -1,4 +1,5 @@
 {
+  "$schema": "https://weme-ui.github.io/schema/registry.json",
   "name": "weme-ui/basic",
   "items": [
     {

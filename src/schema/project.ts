@@ -59,6 +59,11 @@ export const projectUnoCssColors = z.record(z.string().trim(), z.string().trim()
 
 export const projectSchema = z.strictObject({
   /**
+   * Schema URL.
+   */
+  $schema: z.url().trim(),
+
+  /**
    * Repos to fetch the components from.
    *
    * @example

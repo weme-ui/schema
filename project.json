@@ -5,6 +5,12 @@
   "description": "The Weme UI CLI will load `weme.config.json` before running any command.",
   "type": "object",
   "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "The schema URL.",
+      "format": "uri",
+      "default": "https://weme-ui.github.io/schema/project.json"
+    },
     "repos": {
       "type": "array",
       "description": "The repos to fetch the components from.",

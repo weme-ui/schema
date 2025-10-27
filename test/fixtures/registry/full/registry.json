@@ -1,4 +1,5 @@
 {
+  "$schema": "https://weme-ui.github.io/schema/registry.json",
   "name": "weme-ui/full",
   "description": "The basic test registry for Weme UI.",
   "version": "1.0.0",

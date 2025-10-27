@@ -4,6 +4,7 @@ import { projectSchema } from '../src/schema'
 describe('project schema', () => {
   it('should validate', () => {
     const result = projectSchema.safeParse({
+      $schema: 'https://weme-ui.github.io/schema/project.json',
       repos: [
         { repo: '@weme-ui/weme-ui', registry: 'weme-ui/std', default: true },
       ],
@@ -15,6 +16,7 @@ describe('project schema', () => {
     expect(result.success).toBe(true)
     expect(result.data).toMatchInlineSnapshot(`
       {
+        "$schema": "https://weme-ui.github.io/schema/project.json",
         "paths": {
           "components": "~/components",
           "composables": "~/composables",
@@ -45,6 +47,7 @@ describe('project schema', () => {
     expect(result.success).toBe(true)
     expect(result.data).toMatchInlineSnapshot(`
       {
+        "$schema": "https://weme-ui.github.io/schema/project.json",
         "paths": {
           "components": "~/components",
           "composables": "~/composables",
@@ -76,6 +79,7 @@ describe('project schema', () => {
     expect(result.success).toBe(true)
     expect(result.data).toMatchInlineSnapshot(`
       {
+        "$schema": "https://weme-ui.github.io/schema/project.json",
         "paths": {
           "components": "~/components-1",
           "composables": "~/composables-1",

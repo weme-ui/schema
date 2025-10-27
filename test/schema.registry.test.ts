@@ -4,6 +4,7 @@ import { registrySchema } from '../src/schema'
 describe('registry schema', () => {
   it('should validate', () => {
     const result = registrySchema.safeParse({
+      $schema: 'https://weme-ui.github.io/schema/registry.json',
       name: 'weme-ui/std',
       items: [
         {
@@ -28,6 +29,7 @@ describe('registry schema', () => {
     expect(result.success).toBe(true)
     expect(result.data).toMatchInlineSnapshot(`
       {
+        "$schema": "https://weme-ui.github.io/schema/registry.json",
         "access": "public",
         "items": [
           {
@@ -56,6 +58,7 @@ describe('registry schema', () => {
     expect(result.success).toBe(true)
     expect(result.data).toMatchInlineSnapshot(`
       {
+        "$schema": "https://weme-ui.github.io/schema/registry.json",
         "access": "public",
         "items": [
           {
@@ -109,6 +112,7 @@ describe('registry schema', () => {
     expect(result.success).toBe(true)
     expect(result.data).toMatchInlineSnapshot(`
       {
+        "$schema": "https://weme-ui.github.io/schema/registry.json",
         "access": "public",
         "description": "The basic test registry for Weme UI.",
         "directory": "test/fixtures/registry/full",

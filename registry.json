@@ -5,6 +5,12 @@
   "description": "Weme UI registry of components, composables, themes, blocks, etc.",
   "type": "object",
   "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "The schema URL.",
+      "format": "uri",
+      "default": "https://weme-ui.github.io/schema/registry.json"
+    },
     "name": {
       "type": "string",
       "description": "The name of the registry.",

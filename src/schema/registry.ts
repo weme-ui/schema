@@ -74,6 +74,11 @@ export const registryItem = z.object({
 
 export const registrySchema = z.object({
   /**
+   * Schema URL.
+   */
+  $schema: z.url().trim(),
+
+  /**
    * Name of the registry.
    */
   name: z.string().trim(),

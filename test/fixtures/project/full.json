@@ -1,4 +1,5 @@
 {
+  "$schema": "https://weme-ui.github.io/schema/project.json",
   "repos": [
     {
       "repo": "@weme-ui/weme-ui",
