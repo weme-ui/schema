@@ -31,11 +31,6 @@
       "description": "Default prefix for added components of the registry.",
       "examples": ["ui"]
     },
-    "directory": {
-      "type": "string",
-      "description": "The directory of the registry. This is relative to the registry's root directory.",
-      "examples": ["path/to/registry"]
-    },
     "access": {
       "type": "string",
       "description": "The access level of the registry.",
