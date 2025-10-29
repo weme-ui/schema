@@ -12,27 +12,27 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
-      - name: Install Dependencies
-        run: pnpm install
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4.1.0
 
-      - name: Setup node
+      - name: Set node
         uses: actions/setup-node@v5
         with:
           node-version: lts/*
           cache: pnpm
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4.1.0
-
       - run: npx changelogithub
         continue-on-error: true
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+      - name: Install Dependencies
+        run: pnpm install
 
       - name: Publish to NPM
         run: npm install -g npm@latest && pnpm publish --no-git-checks
