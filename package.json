@@ -48,6 +48,7 @@
     "lint": "eslint .",
     "typecheck": "tsgo --noEmit",
     "test": "vitest",
+    "prepublishOnly": "pnpm build",
     "release": "pnpm build && bumpp",
     "taze": "taze major -I -r"
   },
