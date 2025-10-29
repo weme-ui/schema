@@ -115,7 +115,6 @@ describe('registry schema', () => {
         "$schema": "https://weme-ui.github.io/schema/registry.json",
         "access": "public",
         "description": "The basic test registry for Weme UI.",
-        "directory": "test/fixtures/registry/full",
         "items": [
           {
             "dependencies": [

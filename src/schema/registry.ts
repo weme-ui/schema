@@ -99,11 +99,6 @@ export const registrySchema = z.object({
   prefix: z.string().trim().default('ui').optional(),
 
   /**
-   * Directory of the registry.
-   */
-  directory: z.string().trim().optional(),
-
-  /**
    * Access level of the registry.
    *
    * @default 'public'
@@ -121,9 +116,9 @@ export const registrySchema = z.object({
    */
   meta: z.object({
     authors: z.array(z.string().trim()),
-    homepage: z.url(),
-    repository: z.url(),
-    bugs: z.url(),
+    homepage: z.url().trim(),
+    repository: z.url().trim(),
+    bugs: z.url().trim(),
     tags: z.array(z.string().trim()),
   }).partial().optional(),
 

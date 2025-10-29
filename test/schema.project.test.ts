@@ -6,7 +6,7 @@ describe('project schema', () => {
     const result = projectSchema.safeParse({
       $schema: 'https://weme-ui.github.io/schema/project.json',
       repos: [
-        { repo: '@weme-ui/weme-ui', registry: 'weme-ui/std', default: true },
+        { repo: 'weme-ui/weme-ui', registry: 'weme-ui/std', default: true },
       ],
       paths: {
         components: '~/components',
@@ -32,7 +32,7 @@ describe('project schema', () => {
             "default": true,
             "prefix": "ui",
             "registry": "weme-ui/std",
-            "repo": "@weme-ui/weme-ui",
+            "repo": "weme-ui/weme-ui",
           },
         ],
       }
@@ -61,7 +61,6 @@ describe('project schema', () => {
         "repos": [
           {
             "default": true,
-            "directory": "test/fixtures/registry/basic",
             "prefix": "ui",
             "registry": "weme-ui/basic",
             "repo": "@weme-ui/weme-ui",
@@ -93,7 +92,6 @@ describe('project schema', () => {
         "repos": [
           {
             "default": true,
-            "directory": "test/fixtures/registry/full",
             "prefix": "ui",
             "registry": "weme-ui/full",
             "repo": "@weme-ui/weme-ui",

@@ -4,7 +4,6 @@
     {
       "repo": "@weme-ui/weme-ui",
       "registry": "weme-ui/full",
-      "directory": "test/fixtures/registry/full",
       "default": true
     }
   ],

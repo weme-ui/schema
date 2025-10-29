@@ -2,7 +2,7 @@
   "name": "@weme-ui/schema",
   "type": "module",
   "version": "0.2.7",
-  "packageManager": "pnpm@10.19.0",
+  "packageManager": "pnpm@10.20.0",
   "author": "Allen Luo <luoyi@mouji.net>",
   "license": "MIT",
   "homepage": "https://weme-ui.github.io/schema",
@@ -60,7 +60,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^6.1.0",
-    "@types/node": "^24.9.1",
+    "@types/node": "^24.9.2",
     "@typescript/native-preview": "7.0.0-dev.20250816.1",
     "bumpp": "^10.3.1",
     "eslint": "^9.38.0",
@@ -68,9 +68,9 @@
     "pkg-types": "^2.3.0",
     "simple-git-hooks": "^2.13.1",
     "taze": "^19.8.1",
-    "tsdown": "^0.15.10",
+    "tsdown": "^0.15.11",
     "typescript": "^5.9.3",
-    "vitest": "^4.0.3"
+    "vitest": "^4.0.4"
   },
   "pnpm": {
     "onlyBuiltDependencies": [

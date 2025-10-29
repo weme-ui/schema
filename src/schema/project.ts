@@ -5,7 +5,7 @@ export const projectRepo = z.strictObject({
   /**
    * Repository name.
    *
-   * @example '@weme-ui/weme-ui'
+   * @example 'https://github.com/weme-ui/weme-ui'
    */
   repo: z.string().trim(),
 
@@ -15,13 +15,6 @@ export const projectRepo = z.strictObject({
    * @example 'weme-ui/std'
    */
   registry: z.string().toLowerCase().trim(),
-
-  /**
-   * Directory of the registry.
-   *
-   * @example 'registry/std'
-   */
-  directory: z.string().optional(),
 
   /**
    * Whether to use this registry as the default one.
@@ -73,7 +66,6 @@ export const projectSchema = z.strictObject({
    *     {
    *       "repo": "@weme-ui/weme-ui",
    *       "registry": "weme-ui/std",
-   *       "directory": "registry/std",
    *       "prefix": "ui"
    *     }
    *   ]
