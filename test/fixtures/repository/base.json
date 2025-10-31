@@ -1,0 +1,17 @@
+[
+  {
+    "name": "weme-ui/basic",
+    "description": "The basic test registry for Weme UI.",
+    "version": "1.0.0",
+    "directory": "test/fixtures/registry/basic",
+    "prefix": "ui",
+    "access": "public",
+    "items": {
+      "components": 1,
+      "layouts": 0,
+      "themes": 0,
+      "blocks": 0,
+      "pages": 0
+    }
+  }
+]
