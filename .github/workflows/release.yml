@@ -34,5 +34,28 @@ jobs:
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
+      - name: Debug Environment
+        run: |
+          echo "Repository: ${{ github.repository }}"
+          echo "Ref: ${{ github.ref }}"
+          echo "Actor: ${{ github.actor }}"
+          echo "Token available: ${{ secrets.GITHUB_TOKEN != '' }}"
+          npm config list
+
+      - name: Test NPM Authentication
+        run: |
+          npm whoami --registry https://registry.npmjs.org || echo "NPM authentication failed"
+          npm access list packages --registry https://registry.npmjs.org || echo "Cannot list packages"
+
+      - name: Check Package Info
+        run: |
+          npm view @weme-ui/schema --registry https://registry.npmjs.org || echo "Package not found"
+
       - name: Publish to NPM
-        run: npm install -g npm@latest && pnpm publish --no-git-checks --provenance --access public
+        run: |
+          echo "Publishing package..."
+          pnpm publish --no-git-checks --provenance --access public --dry-run
+          echo "Dry run successful, now publishing for real..."
+          pnpm publish --no-git-checks --provenance --access public
+        env:
+          NPM_CONFIG_PROVENANCE: true
