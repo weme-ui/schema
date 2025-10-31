@@ -1,13 +1,13 @@
 [
   {
-    "name": "weme-ui/basic",
-    "description": "The basic test registry for Weme UI.",
-    "version": "1.0.0",
-    "directory": "test/fixtures/registry/basic",
+    "name": "weme-ui/std",
+    "description": "The standard components for Weme UI.",
+    "version": "0.0.0",
+    "directory": "std",
     "prefix": "ui",
     "access": "public",
     "items": {
-      "components": 1,
+      "components": 46,
       "layouts": 0,
       "themes": 0,
       "blocks": 0,

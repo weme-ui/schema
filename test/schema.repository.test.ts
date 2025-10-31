@@ -43,18 +43,18 @@ describe('repository schema', () => {
       [
         {
           "access": "public",
-          "description": "The basic test registry for Weme UI.",
-          "directory": "test/fixtures/registry/basic",
+          "description": "The standard components for Weme UI.",
+          "directory": "std",
           "items": {
             "blocks": 0,
-            "components": 1,
+            "components": 46,
             "layouts": 0,
             "pages": 0,
             "themes": 0,
           },
-          "name": "weme-ui/basic",
+          "name": "weme-ui/std",
           "prefix": "ui",
-          "version": "1.0.0",
+          "version": "0.0.0",
         },
       ]
     `)
