@@ -1,7 +1,7 @@
 {
   "name": "@weme-ui/schema",
   "type": "module",
-  "version": "0.3.9",
+  "version": "0.4.0",
   "packageManager": "pnpm@10.20.0",
   "author": "Allen Luo <luoyi@mouji.net>",
   "license": "MIT",
