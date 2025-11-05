@@ -1,6 +1,6 @@
 import { z } from 'zod'
 
-export const repositorySchema = z.strictObject({
+export const manifestSchema = z.strictObject({
   name: z.string().trim(),
   description: z.string().trim().optional(),
   version: z.string().trim().optional(),
@@ -14,6 +14,7 @@ export const repositorySchema = z.strictObject({
     blocks: z.number(),
     pages: z.number(),
   }),
+  updated: z.string().trim(),
 })
 
-export type RepositorySchema = z.infer<typeof repositorySchema>
+export type ManifestSchema = z.infer<typeof manifestSchema>
