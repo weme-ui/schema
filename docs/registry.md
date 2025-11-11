@@ -23,6 +23,7 @@ Weme UI registry of components, composables, themes, blocks, etc.
 | Property                    | Type     | Required | Nullable       | Defined by                                                                                                                                                     |
 | :-------------------------- | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [$schema](#schema)          | `string` | Optional | cannot be null | [Weme UI Registry JSON Schema Definitions](registry-properties-schema.md "https://weme-ui.github.io/schema/registry.schema.json#/properties/$schema")          |
+| [id](#id)                   | `string` | Optional | cannot be null | [Weme UI Registry JSON Schema Definitions](registry-properties-id.md "https://weme-ui.github.io/schema/registry.schema.json#/properties/id")                   |
 | [name](#name)               | `string` | Required | cannot be null | [Weme UI Registry JSON Schema Definitions](registry-properties-name.md "https://weme-ui.github.io/schema/registry.schema.json#/properties/name")               |
 | [description](#description) | `string` | Optional | cannot be null | [Weme UI Registry JSON Schema Definitions](registry-properties-description.md "https://weme-ui.github.io/schema/registry.schema.json#/properties/description") |
 | [version](#version)         | `string` | Optional | cannot be null | [Weme UI Registry JSON Schema Definitions](registry-properties-version.md "https://weme-ui.github.io/schema/registry.schema.json#/properties/version")         |
@@ -60,6 +61,24 @@ The default value is:
 ```json
 "https://weme-ui.github.io/schema/registry.json"
 ```
+
+## id
+
+The ID of the registry.
+
+`id`
+
+* is optional
+
+* Type: `string`
+
+* cannot be null
+
+* defined in: [Weme UI Registry JSON Schema Definitions](registry-properties-id.md "https://weme-ui.github.io/schema/registry.schema.json#/properties/id")
+
+### id Type
+
+`string`
 
 ## name
 
