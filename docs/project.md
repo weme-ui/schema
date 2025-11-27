@@ -6,9 +6,9 @@ https://weme-ui.github.io/schema/project.schema.json
 
 The Weme UI CLI will load `weme.config.json` before running any command.
 
-| Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                           |
-| :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------------- |
-| Can be instantiated | No         | Unknown status | No           | Forbidden         | Allowed               | none                | [project.schema.json](../project.schema.json "open original schema") |
+| Abstract            | Extensible | Status      | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                           |
+| :------------------ | :--------- | :---------- | :----------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------------- |
+| Can be instantiated | No         | Stabilizing | No           | Forbidden         | Forbidden             | none                | [project.schema.json](../project.schema.json "open original schema") |
 
 ## Weme UI Project JSON Schema Definitions Type
 
@@ -16,12 +16,13 @@ The Weme UI CLI will load `weme.config.json` before running any command.
 
 # Weme UI Project JSON Schema Definitions Properties
 
-| Property           | Type     | Required | Nullable       | Defined by                                                                                                                                         |
-| :----------------- | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [$schema](#schema) | `string` | Optional | cannot be null | [Weme UI Project JSON Schema Definitions](project-properties-schema.md "https://weme-ui.github.io/schema/project.schema.json#/properties/$schema") |
-| [repos](#repos)    | `array`  | Required | cannot be null | [Weme UI Project JSON Schema Definitions](project-properties-repos.md "https://weme-ui.github.io/schema/project.schema.json#/properties/repos")    |
-| [paths](#paths)    | `object` | Required | cannot be null | [Weme UI Project JSON Schema Definitions](project-properties-paths.md "https://weme-ui.github.io/schema/project.schema.json#/properties/paths")    |
-| [unocss](#unocss)  | `object` | Optional | cannot be null | [Weme UI Project JSON Schema Definitions](project-properties-unocss.md "https://weme-ui.github.io/schema/project.schema.json#/properties/unocss")  |
+| Property           | Type     | Required | Nullable       | Defined by                                                                                                                                                       |
+| :----------------- | :------- | :------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [$schema](#schema) | `string` | Optional | cannot be null | [Weme UI Project JSON Schema Definitions](project-properties-schema-url.md "https://weme-ui.github.io/schema/project.schema.json#/properties/$schema")           |
+| [repos](#repos)    | `array`  | Required | cannot be null | [Weme UI Project JSON Schema Definitions](project-properties-repos.md "https://weme-ui.github.io/schema/project.schema.json#/properties/repos")                  |
+| [paths](#paths)    | `object` | Required | cannot be null | [Weme UI Project JSON Schema Definitions](project-properties-paths.md "https://weme-ui.github.io/schema/project.schema.json#/properties/paths")                  |
+| [unocss](#unocss)  | `object` | Optional | cannot be null | [Weme UI Project JSON Schema Definitions](project-properties-unocss-preset-options.md "https://weme-ui.github.io/schema/project.schema.json#/properties/unocss") |
+| [items](#items)    | `object` | Optional | cannot be null | [Weme UI Project JSON Schema Definitions](project-properties-installed-items.md "https://weme-ui.github.io/schema/project.schema.json#/properties/items")        |
 
 ## $schema
 
@@ -31,15 +32,15 @@ The schema URL.
 
 * is optional
 
-* Type: `string`
+* Type: `string` ([Schema URL](project-properties-schema-url.md))
 
 * cannot be null
 
-* defined in: [Weme UI Project JSON Schema Definitions](project-properties-schema.md "https://weme-ui.github.io/schema/project.schema.json#/properties/$schema")
+* defined in: [Weme UI Project JSON Schema Definitions](project-properties-schema-url.md "https://weme-ui.github.io/schema/project.schema.json#/properties/$schema")
 
 ### $schema Type
 
-`string`
+`string` ([Schema URL](project-properties-schema-url.md))
 
 ### $schema Constraints
 
@@ -50,7 +51,7 @@ The schema URL.
 The default value is:
 
 ```json
-"https://weme-ui.github.io/schema/project.json"
+"https://weme-ui.github.io/schema/project.schema.json"
 ```
 
 ## repos
@@ -61,7 +62,7 @@ The repos to fetch the components from.
 
 * is required
 
-* Type: `object[]` ([Details](project-properties-repos-items.md))
+* Type: `object[]` ([Repo](project-properties-repos-repo.md))
 
 * cannot be null
 
@@ -69,7 +70,7 @@ The repos to fetch the components from.
 
 ### repos Type
 
-`object[]` ([Details](project-properties-repos-items.md))
+`object[]` ([Repo](project-properties-repos-repo.md))
 
 ## paths
 
@@ -79,7 +80,7 @@ The paths for the project.
 
 * is required
 
-* Type: `object` ([Details](project-properties-paths.md))
+* Type: `object` ([Paths](project-properties-paths.md))
 
 * cannot be null
 
@@ -87,7 +88,7 @@ The paths for the project.
 
 ### paths Type
 
-`object` ([Details](project-properties-paths.md))
+`object` ([Paths](project-properties-paths.md))
 
 ## unocss
 
@@ -97,12 +98,30 @@ The UnoCSS Preset options.
 
 * is optional
 
-* Type: `object` ([Details](project-properties-unocss.md))
+* Type: `object` ([UnoCSS Preset Options](project-properties-unocss-preset-options.md))
 
 * cannot be null
 
-* defined in: [Weme UI Project JSON Schema Definitions](project-properties-unocss.md "https://weme-ui.github.io/schema/project.schema.json#/properties/unocss")
+* defined in: [Weme UI Project JSON Schema Definitions](project-properties-unocss-preset-options.md "https://weme-ui.github.io/schema/project.schema.json#/properties/unocss")
 
 ### unocss Type
 
-`object` ([Details](project-properties-unocss.md))
+`object` ([UnoCSS Preset Options](project-properties-unocss-preset-options.md))
+
+## items
+
+The installed items for the project.
+
+`items`
+
+* is optional
+
+* Type: `object` ([Installed items](project-properties-installed-items.md))
+
+* cannot be null
+
+* defined in: [Weme UI Project JSON Schema Definitions](project-properties-installed-items.md "https://weme-ui.github.io/schema/project.schema.json#/properties/items")
+
+### items Type
+
+`object` ([Installed items](project-properties-installed-items.md))

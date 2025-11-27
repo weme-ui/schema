@@ -6,49 +6,55 @@
 
 * [Weme UI Registry JSON Schema Definitions](./registry.md "Weme UI registry of components, composables, themes, blocks, etc") – `https://weme-ui.github.io/schema/registry.schema.json`
 
+* [Weme UI Repository JSON Schema Definitions](./repository.md "This is the repository configuration for the registry") – `https://weme-ui.github.io/schema/repository.schema.json`
+
 ## Other Schemas
 
 ### Objects
 
-* [Untitled object in Weme UI Project JSON Schema Definitions](./project-properties-repos-items.md) – `https://weme-ui.github.io/schema/project.schema.json#/properties/repos/items`
+* [Accent colors](./project-properties-unocss-preset-options-properties-accent-colors.md "The custom accent colors for the project") – `https://weme-ui.github.io/schema/project.schema.json#/properties/unocss/properties/accentColors`
 
-* [Untitled object in Weme UI Project JSON Schema Definitions](./project-properties-paths.md "The paths for the project") – `https://weme-ui.github.io/schema/project.schema.json#/properties/paths`
+* [CSS variable](./registry-properties-registry-items-items-properties-css-variables-css-variable.md) – `https://weme-ui.github.io/schema/registry.schema.json#/properties/items/items/properties/cssVars/additionalProperties`
 
-* [Untitled object in Weme UI Project JSON Schema Definitions](./project-properties-unocss.md "The UnoCSS Preset options") – `https://weme-ui.github.io/schema/project.schema.json#/properties/unocss`
+* [CSS variables](./registry-properties-registry-items-items-properties-css-variables.md "The CSS variables required by the item") – `https://weme-ui.github.io/schema/registry.schema.json#/properties/items/items/properties/cssVars`
 
-* [Untitled object in Weme UI Project JSON Schema Definitions](./project-properties-unocss-properties-accentcolors.md "The custom accent colors for the project") – `https://weme-ui.github.io/schema/project.schema.json#/properties/unocss/properties/accentColors`
+* [Custom CSS variables](./project-properties-unocss-preset-options-properties-custom-css-variables.md "The custom CSS variables for the project") – `https://weme-ui.github.io/schema/project.schema.json#/properties/unocss/properties/cssVars`
 
-* [Untitled object in Weme UI Project JSON Schema Definitions](./project-properties-unocss-properties-neutralcolors.md "The custom neutral colors for the project") – `https://weme-ui.github.io/schema/project.schema.json#/properties/unocss/properties/neutralColors`
+* [Installed items](./project-properties-installed-items.md "The installed items for the project") – `https://weme-ui.github.io/schema/project.schema.json#/properties/items`
 
-* [Untitled object in Weme UI Project JSON Schema Definitions](./project-properties-unocss-properties-cssvars.md "The custom CSS variables for the project") – `https://weme-ui.github.io/schema/project.schema.json#/properties/unocss/properties/cssVars`
+* [Item file](./registry-properties-registry-items-items-properties-item-files-item-file.md "A file required by the item") – `https://weme-ui.github.io/schema/registry.schema.json#/properties/items/items/properties/files/items`
 
-* [Untitled object in Weme UI Registry JSON Schema Definitions](./registry-properties-meta.md "Additional metadata for the registry") – `https://weme-ui.github.io/schema/registry.schema.json#/properties/meta`
+* [Neutral colors](./project-properties-unocss-preset-options-properties-neutral-colors.md "The custom neutral colors for the project") – `https://weme-ui.github.io/schema/project.schema.json#/properties/unocss/properties/neutralColors`
 
-* [Untitled object in Weme UI Registry JSON Schema Definitions](./registry-properties-items-items.md) – `https://weme-ui.github.io/schema/registry.schema.json#/properties/items/items`
+* [Paths](./project-properties-paths.md "The paths for the project") – `https://weme-ui.github.io/schema/project.schema.json#/properties/paths`
 
-* [Untitled object in Weme UI Registry JSON Schema Definitions](./registry-properties-items-items-properties-files-items.md) – `https://weme-ui.github.io/schema/registry.schema.json#/properties/items/items/properties/files/items`
+* [Registry](./repository-properties-registries-registry.md "The registry in the repository") – `https://weme-ui.github.io/schema/repository.schema.json#/properties/registries/items`
 
-* [Untitled object in Weme UI Registry JSON Schema Definitions](./registry-properties-items-items-properties-cssvars.md "The CSS variables required by the item") – `https://weme-ui.github.io/schema/registry.schema.json#/properties/items/items/properties/cssVars`
+* [Registry statistics](./repository-properties-registries-registry-properties-registry-statistics.md "The statistics of the registry") – `https://weme-ui.github.io/schema/repository.schema.json#/properties/registries/items/properties/statistics`
 
-* [Untitled object in Weme UI Registry JSON Schema Definitions](./registry-properties-items-items-properties-cssvars-additionalproperties.md) – `https://weme-ui.github.io/schema/registry.schema.json#/properties/items/items/properties/cssVars/additionalProperties`
+* [Repo](./project-properties-repos-repo.md "The repository configuration") – `https://weme-ui.github.io/schema/project.schema.json#/properties/repos/items`
+
+* [UnoCSS Preset Options](./project-properties-unocss-preset-options.md "The UnoCSS Preset options") – `https://weme-ui.github.io/schema/project.schema.json#/properties/unocss`
+
+* [Untitled object in Weme UI Registry JSON Schema Definitions](./registry-properties-registry-items-items.md) – `https://weme-ui.github.io/schema/registry.schema.json#/properties/items/items`
 
 ### Arrays
 
-* [Untitled array in Weme UI Project JSON Schema Definitions](./project-properties-repos.md "The repos to fetch the components from") – `https://weme-ui.github.io/schema/project.schema.json#/properties/repos`
+* [Item files](./registry-properties-registry-items-items-properties-item-files.md "The main payload of files required by the item") – `https://weme-ui.github.io/schema/registry.schema.json#/properties/items/items/properties/files`
 
-* [Untitled array in Weme UI Registry JSON Schema Definitions](./registry-properties-meta-properties-authors.md "The authors of the registry") – `https://weme-ui.github.io/schema/registry.schema.json#/properties/meta/properties/authors`
+* [NPM dependencies](./registry-properties-registry-items-items-properties-npm-dependencies.md "An array of NPM dependencies required by the item") – `https://weme-ui.github.io/schema/registry.schema.json#/properties/items/items/properties/dependencies`
 
-* [Untitled array in Weme UI Registry JSON Schema Definitions](./registry-properties-meta-properties-tags.md "The tags of the registry") – `https://weme-ui.github.io/schema/registry.schema.json#/properties/meta/properties/tags`
+* [NPM dev dependencies](./registry-properties-registry-items-items-properties-npm-dev-dependencies.md "An array of NPM dev dependencies required by the item") – `https://weme-ui.github.io/schema/registry.schema.json#/properties/items/items/properties/devDependencies`
 
-* [Untitled array in Weme UI Registry JSON Schema Definitions](./registry-properties-items.md "The items of the registry") – `https://weme-ui.github.io/schema/registry.schema.json#/properties/items`
+* [Registries](./repository-properties-registries.md "The registries in the repository") – `https://weme-ui.github.io/schema/repository.schema.json#/properties/registries`
 
-* [Untitled array in Weme UI Registry JSON Schema Definitions](./registry-properties-items-items-properties-dependencies.md "An array of NPM dependencies required by the item") – `https://weme-ui.github.io/schema/registry.schema.json#/properties/items/items/properties/dependencies`
+* [Registry dependencies](./registry-properties-registry-items-items-properties-registry-dependencies.md "An array of registry dependencies required by the item") – `https://weme-ui.github.io/schema/registry.schema.json#/properties/items/items/properties/registryDependencies`
 
-* [Untitled array in Weme UI Registry JSON Schema Definitions](./registry-properties-items-items-properties-devdependencies.md "An array of NPM dev dependencies required by the item") – `https://weme-ui.github.io/schema/registry.schema.json#/properties/items/items/properties/devDependencies`
+* [Registry items](./registry-properties-registry-items.md "The items of the registry") – `https://weme-ui.github.io/schema/registry.schema.json#/properties/items`
 
-* [Untitled array in Weme UI Registry JSON Schema Definitions](./registry-properties-items-items-properties-registrydependencies.md "An array of registry dependencies required by the item") – `https://weme-ui.github.io/schema/registry.schema.json#/properties/items/items/properties/registryDependencies`
+* [Repos](./project-properties-repos.md "The repos to fetch the components from") – `https://weme-ui.github.io/schema/project.schema.json#/properties/repos`
 
-* [Untitled array in Weme UI Registry JSON Schema Definitions](./registry-properties-items-items-properties-files.md "The main payload of files required by the item") – `https://weme-ui.github.io/schema/registry.schema.json#/properties/items/items/properties/files`
+* [Untitled array in Weme UI Project JSON Schema Definitions](./project-properties-installed-items-additionalproperties.md) – `https://weme-ui.github.io/schema/project.schema.json#/properties/items/additionalProperties`
 
 ## Version Note
 

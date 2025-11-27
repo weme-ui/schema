@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@adobe/jsonschema2md':
-        specifier: ^8.0.7
-        version: 8.0.7
+        specifier: ^8.0.8
+        version: 8.0.8
       bumpp:
         specifier: ^10.3.1
         version: 10.3.1
@@ -20,8 +20,8 @@ importers:
 
 packages:
 
-  '@adobe/jsonschema2md@8.0.7':
-    resolution: {integrity: sha512-vqN/VYttg07NMmkbcODGXGOwM0alyGv+kpCF5+z48V6pM7BOST9sdVZ0i/qV8UNP0g5l5zYMeRHZbaB0W3nffw==}
+  '@adobe/jsonschema2md@8.0.8':
+    resolution: {integrity: sha512-KqYjZxjvCj7/AlvVtXVKz1AJk+5f3LFnuWi8B2N1sRsJX3oCKNI/XXkns5uChaEL+qAazkvbh7AQd8kANtbjLA==}
     engines: {node: ^18.0.0 || >= 20.0.0}
     hasBin: true
 
@@ -218,8 +218,8 @@ packages:
     resolution: {integrity: sha512-ekilCSN1jwRvIbgeg/57YFh8qQDNbwDb9xT/qu2DAHbFFZUicIl4ygVaAvzveMhMVr3LnpSKTNnwt8PoOfmKhQ==}
     hasBin: true
 
-  js-yaml@4.1.0:
-    resolution: {integrity: sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==}
+  js-yaml@4.1.1:
+    resolution: {integrity: sha512-qQKT4zQxXl8lLwBtHMWwaTcGfFOZviOJet3Oy/xmGk2gZH677CJM9EvtfdSkgWcATZhj/55JZ0rmy3myCT5lsA==}
     hasBin: true
 
   json-schema@0.4.0:
@@ -524,7 +524,7 @@ packages:
 
 snapshots:
 
-  '@adobe/jsonschema2md@8.0.7':
+  '@adobe/jsonschema2md@8.0.8':
     dependencies:
       '@types/json-schema': 7.0.15
       '@types/mdast': 4.0.4
@@ -533,7 +533,7 @@ snapshots:
       ferrum: 1.9.4
       fs-extra: 11.3.2
       github-slugger: 2.0.0
-      js-yaml: 4.1.0
+      js-yaml: 4.1.1
       json-schema: 0.4.0
       mdast-builder: 1.1.1
       mdast-util-to-string: 4.0.0
@@ -719,7 +719,7 @@ snapshots:
 
   jiti@2.6.1: {}
 
-  js-yaml@4.1.0:
+  js-yaml@4.1.1:
     dependencies:
       argparse: 2.0.1
 

@@ -1,8 +1,8 @@
 {
   "name": "schema",
   "type": "module",
-  "version": "0.4.3",
-  "packageManager": "pnpm@10.20.0",
+  "version": "1.0.0~dev",
+  "packageManager": "pnpm@10.23.0",
   "author": "Allen Luo <luoyi@mouji.net>",
   "license": "MIT",
   "homepage": "https://weme-ui.github.io/schema",
@@ -25,7 +25,7 @@
     "taze": "taze major -I -r"
   },
   "devDependencies": {
-    "@adobe/jsonschema2md": "^8.0.7",
+    "@adobe/jsonschema2md": "^8.0.8",
     "bumpp": "^10.3.1",
     "taze": "^19.9.0"
   }

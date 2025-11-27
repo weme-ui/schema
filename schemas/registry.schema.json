@@ -3,149 +3,131 @@
   "$id": "https://weme-ui.github.io/schema/registry.schema.json",
   "title": "Weme UI Registry JSON Schema Definitions",
   "description": "Weme UI registry of components, composables, themes, blocks, etc.",
+  "meta:status": "stabilizing",
   "type": "object",
   "properties": {
     "$schema": {
-      "type": "string",
+      "title": "Schema URL",
       "description": "The schema URL.",
-      "format": "uri",
-      "default": "https://weme-ui.github.io/schema/registry.json"
-    },
-    "id": {
       "type": "string",
-      "description": "The ID of the registry."
+      "format": "uri",
+      "default": "https://weme-ui.github.io/schema/registry.schema.json"
     },
     "name": {
-      "type": "string",
+      "title": "Registry name",
       "description": "The name of the registry.",
+      "type": "string",
+      "pattern": "^[^A-Z]*\\/[^A-Z]*$",
       "examples": ["weme-ui/std", "weme-ui/plus"]
     },
     "description": {
-      "type": "string",
-      "description": "The description of the registry."
+      "title": "Registry description",
+      "description": "The description of the registry.",
+      "type": "string"
     },
     "version": {
-      "type": "string",
+      "title": "Registry version",
       "description": "The version of the registry. Empty to use the version from `package.json`.",
+      "type": "string",
       "format": "semver",
       "examples": ["1.0.0"]
     },
     "prefix": {
-      "type": "string",
+      "title": "Registry prefix",
       "description": "Default prefix for added components of the registry.",
+      "type": "string",
       "examples": ["ui"]
     },
-    "access": {
-      "type": "string",
-      "description": "The access level of the registry.",
-      "enum": ["public", "private"],
-      "default": "public"
-    },
-    "meta": {
-      "type": "object",
-      "description": "Additional metadata for the registry.",
-      "properties": {
-        "authors": {
-          "type": "array",
-          "description": "The authors of the registry.",
-          "items": {
-            "type": "string"
-          }
-        },
-        "homepage": {
-          "type": "string",
-          "description": "The homepage of the registry.",
-          "format": "uri"
-        },
-        "repository": {
-          "type": "string",
-          "description": "The repository of the registry.",
-          "format": "uri"
-        },
-        "bugs": {
-          "type": "string",
-          "description": "The bugs page of the registry.",
-          "format": "uri"
-        },
-        "tags": {
-          "type": "array",
-          "description": "The tags of the registry.",
-          "items": {
-            "type": "string"
-          }
-        }
-      }
-    },
     "items": {
-      "type": "array",
+      "title": "Registry items",
       "description": "The items of the registry.",
+      "type": "array",
       "items": {
         "type": "object",
         "properties": {
           "name": {
-            "type": "string",
+            "title": "Item name",
             "description": "The name of the item. This is used to identify the item in the registry. It should be unique for your registry.",
+            "type": "string",
             "examples": ["button", "icon"]
           },
           "type": {
-            "type": "string",
+            "title": "Item type",
             "description": "The type of the item.",
+            "type": "string",
             "enum": ["component", "layout", "theme", "block", "page", "init"],
             "examples": ["component"]
           },
           "title": {
-            "type": "string",
+            "title": "Item title",
             "description": "The human-readable title for your registry item. Keep it short and descriptive.",
+            "type": "string",
             "examples": ["Button", "Icon"]
           },
           "description": {
-            "type": "string",
+            "title": "Item description",
             "description": "A short description of the item.",
+            "type": "string",
             "examples": ["A button component.", "An icon component."]
           },
           "dependencies": {
-            "type": "array",
+            "title": "NPM dependencies",
             "description": "An array of NPM dependencies required by the item.",
+            "type": "array",
             "items": {
               "type": "string"
             }
           },
           "devDependencies": {
-            "type": "array",
+            "title": "NPM dev dependencies",
             "description": "An array of NPM dev dependencies required by the item.",
+            "type": "array",
             "items": {
               "type": "string"
             }
           },
           "registryDependencies": {
-            "type": "array",
+            "title": "Registry dependencies",
             "description": "An array of registry dependencies required by the item. This is an array of registry item names.",
+            "type": "array",
             "items": {
               "type": "string"
             }
           },
           "files": {
-            "type": "array",
+            "title": "Item files",
             "description": "The main payload of files required by the item.",
+            "type": "array",
             "items": {
+              "title": "Item file",
+              "description": "A file required by the item.",
               "type": "object",
               "properties": {
                 "path": {
-                  "type": "string",
-                  "description": "The path to the file. This is relative to the item's directory."
+                  "title": "File path",
+                  "description": "The path to the file. This is relative to the item's directory.",
+                  "type": "string"
                 },
                 "content": {
-                  "type": "string",
-                  "description": "The content of the file. This is a stringified version of the file's content."
+                  "title": "File content",
+                  "description": "The content of the file. This is a stringified version of the file's content.",
+                  "type": "string"
                 },
                 "type": {
-                  "type": "string",
+                  "title": "File type",
                   "description": "The type of the file. This is used to group files in the registry.",
+                  "type": "string",
                   "enum": ["component", "composable", "plugin", "util", "type", "style", "file"]
                 },
                 "target": {
-                  "type": "string",
-                  "description": "The target path to the file. This is relative to the user's project directory."
+                  "title": "File target",
+                  "description": "The target path to the file. This is relative to the user's project directory.",
+                  "type": "string"
+                },
+                "hash": {
+                  "title": "File hash",
+                  "description": "The hash of the file. This is used to check if the file has changed.",
+                  "type": "string"
                 }
               },
               "if": {
@@ -164,11 +146,14 @@
             }
           },
           "cssVars": {
-            "type": "object",
+            "title": "CSS variables",
             "description": "The CSS variables required by the item.",
+            "type": "object",
             "additionalProperties": {
+              "title": "CSS variable",
               "type": "object",
               "additionalProperties": {
+                "title": "CSS variable value",
                 "type": "string"
               }
             }
