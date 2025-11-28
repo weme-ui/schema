@@ -41,6 +41,18 @@ The prefix for the CSS variables.
 
 `string` ([Variable prefix](project-properties-unocss-preset-options-properties-variable-prefix.md))
 
+### variablePrefix Constraints
+
+**pattern**: the string must match the following regular expression:&#x20;
+
+```regexp
+^[^A-Z]*$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5B%5EA-Z%5D*%24 "try regular expression with regexr.com")
+
+**unknown format**: the value of this string must follow the format: `lowercase`
+
 ### variablePrefix Default Value
 
 The default value is:

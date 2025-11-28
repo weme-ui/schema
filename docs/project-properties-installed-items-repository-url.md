@@ -1,10 +1,10 @@
-# Registry name Schema
+# Repository URL Schema
 
 ```txt
 https://weme-ui.github.io/schema/project.schema.json#/properties/items/propertyNames
 ```
 
-The registry name.
+The repository URL.
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                             |
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :--------------------------------------------------------------------- |
@@ -12,14 +12,8 @@ The registry name.
 
 ## propertyNames Type
 
-`string` ([Registry name](project-properties-installed-items-registry-name.md))
+`string` ([Repository URL](project-properties-installed-items-repository-url.md))
 
 ## propertyNames Constraints
 
-**pattern**: the string must match the following regular expression:&#x20;
-
-```regexp
-^[^A-Z]*\/[^A-Z]*$
-```
-
-[try pattern](https://regexr.com/?expression=%5E%5B%5EA-Z%5D*%5C%2F%5B%5EA-Z%5D*%24 "try regular expression with regexr.com")
+**unknown format**: the value of this string must follow the format: `url`

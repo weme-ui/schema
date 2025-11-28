@@ -2,7 +2,7 @@
   "name": "schema",
   "type": "module",
   "version": "1.0.0~dev",
-  "packageManager": "pnpm@10.23.0",
+  "packageManager": "pnpm@10.24.0",
   "author": "Allen Luo <luoyi@mouji.net>",
   "license": "MIT",
   "homepage": "https://weme-ui.github.io/schema",
@@ -19,14 +19,12 @@
     "pnpm": ">=10.13.0"
   },
   "scripts": {
-    "build": "jsonschema2md -d ./schemas -x . -o ./docs",
-    "prepublishOnly": "pnpm build",
-    "release": "pnpm build && bumpp",
+    "build": "premove ./docs && jsonschema2md -d ./schemas -x . -o ./docs",
     "taze": "taze major -I -r"
   },
   "devDependencies": {
     "@adobe/jsonschema2md": "^8.0.8",
-    "bumpp": "^10.3.1",
-    "taze": "^19.9.0"
+    "premove": "^4.0.0",
+    "taze": "^19.9.2"
   }
 }

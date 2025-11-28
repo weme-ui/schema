@@ -37,3 +37,7 @@ The color value.
 ### additionalProperties Type
 
 `string` ([Color value](project-properties-unocss-preset-options-properties-accent-colors-color-value.md))
+
+### additionalProperties Constraints
+
+**unknown format**: the value of this string must follow the format: `lowercase`

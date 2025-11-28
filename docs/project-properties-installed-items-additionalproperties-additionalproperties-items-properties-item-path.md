@@ -1,7 +1,7 @@
 # Item path Schema
 
 ```txt
-https://weme-ui.github.io/schema/project.schema.json#/properties/items/additionalProperties/items/properties/path
+https://weme-ui.github.io/schema/project.schema.json#/properties/items/additionalProperties/additionalProperties/items/properties/path
 ```
 
 The path to the item.
@@ -12,4 +12,4 @@ The path to the item.
 
 ## path Type
 
-`string` ([Item path](project-properties-installed-items-additionalproperties-items-properties-item-path.md))
+`string` ([Item path](project-properties-installed-items-additionalproperties-additionalproperties-items-properties-item-path.md))

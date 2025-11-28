@@ -128,6 +128,8 @@
           "title": "Variable prefix",
           "description": "The prefix for the CSS variables.",
           "type": "string",
+          "format": "lowercase",
+          "pattern": "^[^A-Z]*$",
           "default": "ui"
         },
         "accentColors": {
@@ -137,6 +139,7 @@
           "additionalProperties": {
             "title": "Color value",
             "description": "The color value.",
+            "format": "lowercase",
             "type": "string"
           }
         },
@@ -147,6 +150,7 @@
           "additionalProperties": {
             "title": "Color value",
             "description": "The color value.",
+            "format": "lowercase",
             "type": "string"
           }
         },
@@ -169,36 +173,46 @@
       "description": "The installed items for the project.",
       "type": "object",
       "propertyNames": {
-        "title": "Registry name",
-        "description": "The registry name.",
+        "title": "Repository URL",
+        "description": "The repository URL.",
         "type": "string",
-        "pattern": "^[^A-Z]*\\/[^A-Z]*$"
+        "format": "url"
       },
       "additionalProperties": {
-        "type": "array",
-        "items": {
-          "type": "object",
-          "properties": {
-            "type": {
-              "title": "Item type",
-              "description": "The type of the item.",
-              "type": "string",
-              "enum": [
-                "component",
-                "layout",
-                "theme",
-                "block",
-                "page",
-                "init"
-              ]
+        "type": "object",
+        "propertyNames": {
+          "title": "Registry name",
+          "description": "The registry name.",
+          "type": "string",
+          "pattern": "^[^A-Z]*\\/[^A-Z]*$"
+        },
+        "additionalProperties": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "title": "Item type",
+                "description": "The type of the item.",
+                "type": "string",
+                "enum": [
+                  "component",
+                  "layout",
+                  "theme",
+                  "block",
+                  "page",
+                  "init"
+                ]
+              },
+              "path": {
+                "title": "Item path",
+                "description": "The path to the item.",
+                "type": "string"
+              }
             },
-            "path": {
-              "title": "Item path",
-              "description": "The path to the item.",
-              "type": "string"
-            }
-          },
-          "required": ["type", "path"]
+            "required": ["type", "path"],
+            "additionalProperties": false
+          }
         }
       }
     }

@@ -16,9 +16,9 @@ The installed items for the project.
 
 # items Properties
 
-| Property              | Type    | Required | Nullable       | Defined by                                                                                                                                                                                          |
-| :-------------------- | :------ | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Additional Properties | `array` | Optional | cannot be null | [Weme UI Project JSON Schema Definitions](project-properties-installed-items-additionalproperties.md "https://weme-ui.github.io/schema/project.schema.json#/properties/items/additionalProperties") |
+| Property              | Type     | Required | Nullable       | Defined by                                                                                                                                                                                          |
+| :-------------------- | :------- | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Additional Properties | `object` | Optional | cannot be null | [Weme UI Project JSON Schema Definitions](project-properties-installed-items-additionalproperties.md "https://weme-ui.github.io/schema/project.schema.json#/properties/items/additionalProperties") |
 
 ## Additional Properties
 
@@ -28,7 +28,7 @@ Additional properties are allowed, as long as they follow this schema:
 
 * is optional
 
-* Type: `object[]` ([Details](project-properties-installed-items-additionalproperties-items.md))
+* Type: `object` ([Details](project-properties-installed-items-additionalproperties.md))
 
 * cannot be null
 
@@ -36,4 +36,4 @@ Additional properties are allowed, as long as they follow this schema:
 
 ### additionalProperties Type
 
-`object[]` ([Details](project-properties-installed-items-additionalproperties-items.md))
+`object` ([Details](project-properties-installed-items-additionalproperties.md))
