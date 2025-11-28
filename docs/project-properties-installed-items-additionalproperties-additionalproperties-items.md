@@ -18,8 +18,27 @@ https://weme-ui.github.io/schema/project.schema.json#/properties/items/additiona
 
 | Property      | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                                                                     |
 | :------------ | :------- | :------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [name](#name) | `string` | Required | cannot be null | [Weme UI Project JSON Schema Definitions](project-properties-installed-items-additionalproperties-additionalproperties-items-properties-item-name.md "https://weme-ui.github.io/schema/project.schema.json#/properties/items/additionalProperties/additionalProperties/items/properties/name") |
 | [type](#type) | `string` | Required | cannot be null | [Weme UI Project JSON Schema Definitions](project-properties-installed-items-additionalproperties-additionalproperties-items-properties-item-type.md "https://weme-ui.github.io/schema/project.schema.json#/properties/items/additionalProperties/additionalProperties/items/properties/type") |
 | [path](#path) | `string` | Required | cannot be null | [Weme UI Project JSON Schema Definitions](project-properties-installed-items-additionalproperties-additionalproperties-items-properties-item-path.md "https://weme-ui.github.io/schema/project.schema.json#/properties/items/additionalProperties/additionalProperties/items/properties/path") |
+
+## name
+
+The name of the item.
+
+`name`
+
+* is required
+
+* Type: `string` ([Item name](project-properties-installed-items-additionalproperties-additionalproperties-items-properties-item-name.md))
+
+* cannot be null
+
+* defined in: [Weme UI Project JSON Schema Definitions](project-properties-installed-items-additionalproperties-additionalproperties-items-properties-item-name.md "https://weme-ui.github.io/schema/project.schema.json#/properties/items/additionalProperties/additionalProperties/items/properties/name")
+
+### name Type
+
+`string` ([Item name](project-properties-installed-items-additionalproperties-additionalproperties-items-properties-item-name.md))
 
 ## type
 

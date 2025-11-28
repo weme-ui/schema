@@ -193,6 +193,11 @@
           "items": {
             "type": "object",
             "properties": {
+              "name": {
+                "title": "Item name",
+                "description": "The name of the item.",
+                "type": "string"
+              },
               "type": {
                 "title": "Item type",
                 "description": "The type of the item.",
@@ -212,7 +217,7 @@
                 "type": "string"
               }
             },
-            "required": ["type", "path"],
+            "required": ["name", "type", "path"],
             "additionalProperties": false
           }
         }
