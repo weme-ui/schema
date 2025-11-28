@@ -26,7 +26,8 @@
             "title": "Repository URL",
             "description": "The URL of the repository.",
             "type": "string",
-            "format": "url"
+            "format": "url",
+            "default": "https://github.com/weme-ui/weme-ui"
           },
           "registry": {
             "title": "Registry name",
@@ -45,7 +46,8 @@
             "description": "Version of the repository.",
             "type": "string",
             "format": "semver",
-            "examples": ["1.0.0"]
+            "examples": ["1.0.0"],
+            "default": "latest"
           },
           "default": {
             "title": "Default registry",

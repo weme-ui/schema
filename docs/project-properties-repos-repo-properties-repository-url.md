@@ -17,3 +17,11 @@ The URL of the repository.
 ## repo Constraints
 
 **unknown format**: the value of this string must follow the format: `url`
+
+## repo Default Value
+
+The default value is:
+
+```json
+"https://github.com/weme-ui/weme-ui"
+```

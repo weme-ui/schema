@@ -46,6 +46,14 @@ The URL of the repository.
 
 **unknown format**: the value of this string must follow the format: `url`
 
+### repo Default Value
+
+The default value is:
+
+```json
+"https://github.com/weme-ui/weme-ui"
+```
+
 ## registry
 
 This is the name of the registry. It should be `<repo>/<scope>` format.
@@ -121,6 +129,14 @@ Version of the repository.
 ### version Constraints
 
 **unknown format**: the value of this string must follow the format: `semver`
+
+### version Default Value
+
+The default value is:
+
+```json
+"latest"
+```
 
 ### version Examples
 
