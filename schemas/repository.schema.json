@@ -3,7 +3,6 @@
   "$id": "https://weme-ui.github.io/schema/repository.schema.json",
   "title": "Weme UI Repository JSON Schema Definitions",
   "description": "This is the repository configuration for the registry.",
-  "meta:status": "stabilizing",
   "type": "object",
   "properties": {
     "$schema": {

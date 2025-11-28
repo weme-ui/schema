@@ -4,7 +4,7 @@
 https://weme-ui.github.io/schema/project.schema.json#/properties/repos/items/properties/registry
 ```
 
-This is the name of the registry. It should be `<owner>/<repo>/<scope>` format.
+This is the name of the registry. It should be `<repo>/<scope>` format.
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                             |
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :--------------------------------------------------------------------- |
@@ -19,7 +19,7 @@ This is the name of the registry. It should be `<owner>/<repo>/<scope>` format.
 **pattern**: the string must match the following regular expression:&#x20;
 
 ```regexp
-^[^A-Z]*\/[^A-Z]*\/[^A-Z]*$
+^[^A-Z]*\/[^A-Z]*$
 ```
 
-[try pattern](https://regexr.com/?expression=%5E%5B%5EA-Z%5D*%5C%2F%5B%5EA-Z%5D*%5C%2F%5B%5EA-Z%5D*%24 "try regular expression with regexr.com")
+[try pattern](https://regexr.com/?expression=%5E%5B%5EA-Z%5D*%5C%2F%5B%5EA-Z%5D*%24 "try regular expression with regexr.com")

@@ -18,14 +18,37 @@ The repository configuration.
 
 | Property              | Type      | Required | Nullable       | Defined by                                                                                                                                                                                                   |
 | :-------------------- | :-------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [repo](#repo)         | `string`  | Optional | cannot be null | [Weme UI Project JSON Schema Definitions](project-properties-repos-repo-properties-repository-url.md "https://weme-ui.github.io/schema/project.schema.json#/properties/repos/items/properties/repo")         |
 | [registry](#registry) | `string`  | Required | cannot be null | [Weme UI Project JSON Schema Definitions](project-properties-repos-repo-properties-registry-name.md "https://weme-ui.github.io/schema/project.schema.json#/properties/repos/items/properties/registry")      |
 | [prefix](#prefix)     | `string`  | Optional | cannot be null | [Weme UI Project JSON Schema Definitions](project-properties-repos-repo-properties-registry-item-prefix.md "https://weme-ui.github.io/schema/project.schema.json#/properties/repos/items/properties/prefix") |
 | [version](#version)   | `string`  | Optional | cannot be null | [Weme UI Project JSON Schema Definitions](project-properties-repos-repo-properties-registry-version.md "https://weme-ui.github.io/schema/project.schema.json#/properties/repos/items/properties/version")    |
 | [default](#default)   | `boolean` | Optional | cannot be null | [Weme UI Project JSON Schema Definitions](project-properties-repos-repo-properties-default-registry.md "https://weme-ui.github.io/schema/project.schema.json#/properties/repos/items/properties/default")    |
 
+## repo
+
+The URL of the repository.
+
+`repo`
+
+* is optional
+
+* Type: `string` ([Repository URL](project-properties-repos-repo-properties-repository-url.md))
+
+* cannot be null
+
+* defined in: [Weme UI Project JSON Schema Definitions](project-properties-repos-repo-properties-repository-url.md "https://weme-ui.github.io/schema/project.schema.json#/properties/repos/items/properties/repo")
+
+### repo Type
+
+`string` ([Repository URL](project-properties-repos-repo-properties-repository-url.md))
+
+### repo Constraints
+
+**unknown format**: the value of this string must follow the format: `url`
+
 ## registry
 
-This is the name of the registry. It should be `<owner>/<repo>/<scope>` format.
+This is the name of the registry. It should be `<repo>/<scope>` format.
 
 `registry`
 
@@ -46,10 +69,10 @@ This is the name of the registry. It should be `<owner>/<repo>/<scope>` format.
 **pattern**: the string must match the following regular expression:&#x20;
 
 ```regexp
-^[^A-Z]*\/[^A-Z]*\/[^A-Z]*$
+^[^A-Z]*\/[^A-Z]*$
 ```
 
-[try pattern](https://regexr.com/?expression=%5E%5B%5EA-Z%5D*%5C%2F%5B%5EA-Z%5D*%5C%2F%5B%5EA-Z%5D*%24 "try regular expression with regexr.com")
+[try pattern](https://regexr.com/?expression=%5E%5B%5EA-Z%5D*%5C%2F%5B%5EA-Z%5D*%24 "try regular expression with regexr.com")
 
 ## prefix
 
@@ -94,6 +117,16 @@ Version of the repository.
 ### version Type
 
 `string` ([Registry version](project-properties-repos-repo-properties-registry-version.md))
+
+### version Constraints
+
+**unknown format**: the value of this string must follow the format: `semver`
+
+### version Examples
+
+```json
+"1.0.0"
+```
 
 ## default
 

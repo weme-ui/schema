@@ -36,6 +36,8 @@
 
 * [UnoCSS Preset Options](./project-properties-unocss-preset-options.md "The UnoCSS Preset options") – `https://weme-ui.github.io/schema/project.schema.json#/properties/unocss`
 
+* [Untitled object in Weme UI Project JSON Schema Definitions](./project-properties-installed-items-additionalproperties-items.md) – `https://weme-ui.github.io/schema/project.schema.json#/properties/items/additionalProperties/items`
+
 * [Untitled object in Weme UI Registry JSON Schema Definitions](./registry-properties-registry-items-items.md) – `https://weme-ui.github.io/schema/registry.schema.json#/properties/items/items`
 
 ### Arrays

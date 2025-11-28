@@ -6,9 +6,9 @@ https://weme-ui.github.io/schema/project.schema.json
 
 The Weme UI CLI will load `weme.config.json` before running any command.
 
-| Abstract            | Extensible | Status      | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                           |
-| :------------------ | :--------- | :---------- | :----------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------------- |
-| Can be instantiated | No         | Stabilizing | No           | Forbidden         | Forbidden             | none                | [project.schema.json](../project.schema.json "open original schema") |
+| Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                           |
+| :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------------- |
+| Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [project.schema.json](../project.schema.json "open original schema") |
 
 ## Weme UI Project JSON Schema Definitions Type
 

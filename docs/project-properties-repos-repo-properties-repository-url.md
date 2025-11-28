@@ -1,15 +1,19 @@
-# Item path Schema
+# Repository URL Schema
 
 ```txt
-https://weme-ui.github.io/schema/project.schema.json#/properties/items/additionalProperties/properties/path
+https://weme-ui.github.io/schema/project.schema.json#/properties/repos/items/properties/repo
 ```
 
-The path to the item.
+The URL of the repository.
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                             |
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :--------------------------------------------------------------------- |
 | Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [project.schema.json\*](../project.schema.json "open original schema") |
 
-## path Type
+## repo Type
 
-`string` ([Item path](project-properties-installed-items-additionalproperties-properties-item-path.md))
+`string` ([Repository URL](project-properties-repos-repo-properties-repository-url.md))
+
+## repo Constraints
+
+**unknown format**: the value of this string must follow the format: `url`

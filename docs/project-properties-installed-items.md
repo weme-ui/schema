@@ -28,7 +28,7 @@ Additional properties are allowed, as long as they follow this schema:
 
 * is optional
 
-* Type: `array`
+* Type: `object[]` ([Details](project-properties-installed-items-additionalproperties-items.md))
 
 * cannot be null
 
@@ -36,4 +36,4 @@ Additional properties are allowed, as long as they follow this schema:
 
 ### additionalProperties Type
 
-`array`
+`object[]` ([Details](project-properties-installed-items-additionalproperties-items.md))

@@ -3,7 +3,6 @@
   "$id": "https://weme-ui.github.io/schema/project.schema.json",
   "title": "Weme UI Project JSON Schema Definitions",
   "description": "The Weme UI CLI will load `weme.config.json` before running any command.",
-  "meta:status": "stabilizing",
   "type": "object",
   "properties": {
     "$schema": {
@@ -23,11 +22,17 @@
         "description": "The repository configuration.",
         "type": "object",
         "properties": {
+          "repo": {
+            "title": "Repository URL",
+            "description": "The URL of the repository.",
+            "type": "string",
+            "format": "url"
+          },
           "registry": {
             "title": "Registry name",
-            "description": "This is the name of the registry. It should be `<owner>/<repo>/<scope>` format.",
+            "description": "This is the name of the registry. It should be `<repo>/<scope>` format.",
             "type": "string",
-            "pattern": "^[^A-Z]*\\/[^A-Z]*\\/[^A-Z]*$"
+            "pattern": "^[^A-Z]*\\/[^A-Z]*$"
           },
           "prefix": {
             "title": "Registry item prefix",
@@ -38,7 +43,9 @@
           "version": {
             "title": "Registry version",
             "description": "Version of the repository.",
-            "type": "string"
+            "type": "string",
+            "format": "semver",
+            "examples": ["1.0.0"]
           },
           "default": {
             "title": "Default registry",
@@ -165,31 +172,34 @@
         "title": "Registry name",
         "description": "The registry name.",
         "type": "string",
-        "pattern": "^[^A-Z]*\\/[^A-Z]*\\/[^A-Z]*$"
+        "pattern": "^[^A-Z]*\\/[^A-Z]*$"
       },
       "additionalProperties": {
         "type": "array",
-        "properties": {
-          "type": {
-            "title": "Item type",
-            "description": "The type of the item.",
-            "type": "string",
-            "enum": [
-              "component",
-              "layout",
-              "theme",
-              "block",
-              "page",
-              "init"
-            ]
+        "items": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "title": "Item type",
+              "description": "The type of the item.",
+              "type": "string",
+              "enum": [
+                "component",
+                "layout",
+                "theme",
+                "block",
+                "page",
+                "init"
+              ]
+            },
+            "path": {
+              "title": "Item path",
+              "description": "The path to the item.",
+              "type": "string"
+            }
           },
-          "path": {
-            "title": "Item path",
-            "description": "The path to the item.",
-            "type": "string"
-          }
-        },
-        "required": ["type", "path"]
+          "required": ["type", "path"]
+        }
       }
     }
   },

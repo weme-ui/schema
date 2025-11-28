@@ -6,9 +6,9 @@ https://weme-ui.github.io/schema/registry.schema.json
 
 Weme UI registry of components, composables, themes, blocks, etc.
 
-| Abstract            | Extensible | Status      | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                             |
-| :------------------ | :--------- | :---------- | :----------- | :---------------- | :-------------------- | :------------------ | :--------------------------------------------------------------------- |
-| Can be instantiated | No         | Stabilizing | No           | Forbidden         | Allowed               | none                | [registry.schema.json](../registry.schema.json "open original schema") |
+| Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                             |
+| :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :--------------------------------------------------------------------- |
+| Can be instantiated | No         | Unknown status | No           | Forbidden         | Allowed               | none                | [registry.schema.json](../registry.schema.json "open original schema") |
 
 ## Weme UI Registry JSON Schema Definitions Type
 

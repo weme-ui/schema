@@ -13,3 +13,13 @@ Version of the repository.
 ## version Type
 
 `string` ([Registry version](project-properties-repos-repo-properties-registry-version.md))
+
+## version Constraints
+
+**unknown format**: the value of this string must follow the format: `semver`
+
+## version Examples
+
+```json
+"1.0.0"
+```

@@ -6,9 +6,9 @@ https://weme-ui.github.io/schema/repository.schema.json
 
 This is the repository configuration for the registry.
 
-| Abstract            | Extensible | Status      | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                 |
-| :------------------ | :--------- | :---------- | :----------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------------------- |
-| Can be instantiated | No         | Stabilizing | No           | Forbidden         | Forbidden             | none                | [repository.schema.json](../repository.schema.json "open original schema") |
+| Abstract            | Extensible | Status         | Identifiable | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                 |
+| :------------------ | :--------- | :------------- | :----------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------------------- |
+| Can be instantiated | No         | Unknown status | No           | Forbidden         | Forbidden             | none                | [repository.schema.json](../repository.schema.json "open original schema") |
 
 ## Weme UI Repository JSON Schema Definitions Type
 

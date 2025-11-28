@@ -3,7 +3,6 @@
   "$id": "https://weme-ui.github.io/schema/registry.schema.json",
   "title": "Weme UI Registry JSON Schema Definitions",
   "description": "Weme UI registry of components, composables, themes, blocks, etc.",
-  "meta:status": "stabilizing",
   "type": "object",
   "properties": {
     "$schema": {

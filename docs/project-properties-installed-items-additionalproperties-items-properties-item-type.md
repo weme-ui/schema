@@ -1,7 +1,7 @@
 # Item type Schema
 
 ```txt
-https://weme-ui.github.io/schema/project.schema.json#/properties/items/additionalProperties/properties/type
+https://weme-ui.github.io/schema/project.schema.json#/properties/items/additionalProperties/items/properties/type
 ```
 
 The type of the item.
@@ -12,7 +12,7 @@ The type of the item.
 
 ## type Type
 
-`string` ([Item type](project-properties-installed-items-additionalproperties-properties-item-type.md))
+`string` ([Item type](project-properties-installed-items-additionalproperties-items-properties-item-type.md))
 
 ## type Constraints
 

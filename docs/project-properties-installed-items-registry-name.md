@@ -19,7 +19,7 @@ The registry name.
 **pattern**: the string must match the following regular expression:&#x20;
 
 ```regexp
-^[^A-Z]*\/[^A-Z]*\/[^A-Z]*$
+^[^A-Z]*\/[^A-Z]*$
 ```
 
-[try pattern](https://regexr.com/?expression=%5E%5B%5EA-Z%5D*%5C%2F%5B%5EA-Z%5D*%5C%2F%5B%5EA-Z%5D*%24 "try regular expression with regexr.com")
+[try pattern](https://regexr.com/?expression=%5E%5B%5EA-Z%5D*%5C%2F%5B%5EA-Z%5D*%24 "try regular expression with regexr.com")
