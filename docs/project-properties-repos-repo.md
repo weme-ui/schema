@@ -21,7 +21,6 @@ The repository configuration.
 | [repo](#repo)         | `string`  | Optional | cannot be null | [Weme UI Project JSON Schema Definitions](project-properties-repos-repo-properties-repository-url.md "https://weme-ui.github.io/schema/project.schema.json#/properties/repos/items/properties/repo")         |
 | [registry](#registry) | `string`  | Required | cannot be null | [Weme UI Project JSON Schema Definitions](project-properties-repos-repo-properties-registry-name.md "https://weme-ui.github.io/schema/project.schema.json#/properties/repos/items/properties/registry")      |
 | [prefix](#prefix)     | `string`  | Optional | cannot be null | [Weme UI Project JSON Schema Definitions](project-properties-repos-repo-properties-registry-item-prefix.md "https://weme-ui.github.io/schema/project.schema.json#/properties/repos/items/properties/prefix") |
-| [version](#version)   | `string`  | Optional | cannot be null | [Weme UI Project JSON Schema Definitions](project-properties-repos-repo-properties-registry-version.md "https://weme-ui.github.io/schema/project.schema.json#/properties/repos/items/properties/version")    |
 | [default](#default)   | `boolean` | Optional | cannot be null | [Weme UI Project JSON Schema Definitions](project-properties-repos-repo-properties-default-registry.md "https://weme-ui.github.io/schema/project.schema.json#/properties/repos/items/properties/default")    |
 
 ## repo
@@ -106,42 +105,6 @@ The default value is:
 
 ```json
 "ui"
-```
-
-## version
-
-Version of the repository.
-
-`version`
-
-* is optional
-
-* Type: `string` ([Registry version](project-properties-repos-repo-properties-registry-version.md))
-
-* cannot be null
-
-* defined in: [Weme UI Project JSON Schema Definitions](project-properties-repos-repo-properties-registry-version.md "https://weme-ui.github.io/schema/project.schema.json#/properties/repos/items/properties/version")
-
-### version Type
-
-`string` ([Registry version](project-properties-repos-repo-properties-registry-version.md))
-
-### version Constraints
-
-**unknown format**: the value of this string must follow the format: `semver`
-
-### version Default Value
-
-The default value is:
-
-```json
-"latest"
-```
-
-### version Examples
-
-```json
-"1.0.0"
 ```
 
 ## default

@@ -41,14 +41,6 @@
             "type": "string",
             "default": "ui"
           },
-          "version": {
-            "title": "Registry version",
-            "description": "Version of the repository.",
-            "type": "string",
-            "format": "semver",
-            "examples": ["1.0.0"],
-            "default": "latest"
-          },
           "default": {
             "title": "Default registry",
             "description": "Whether to use this registry as the default one.",
