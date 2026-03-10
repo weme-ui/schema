@@ -1,25 +1,23 @@
-# Registry Name Schema
+# Config Registries Schema
 
 ```txt
-https://weme-ui.github.io/schema/v2/config.schema.json#/properties/repos/items/properties/registry
+https://weme-ui.github.io/schema/v2/config.schema.json#/properties/registries
 ```
 
-The name of the registry, in the format of `repo/registry`.
+The registries used in the project.
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                 |
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------------------- |
 | Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [config.schema.json\*](../../v2/config.schema.json "open original schema") |
 
-## registry Type
+## registries Type
 
-`string` ([Registry Name](config-properties-config-repositories-config-registry-properties-registry-name.md))
+`object[]` ([Config Registry](config-properties-config-registries-config-registry.md))
 
-## registry Constraints
+## registries Default Value
 
-**pattern**: the string must match the following regular expression:&#x20;
+The default value is:
 
-```regexp
-^[^A-Z]*(\/)[^A-Z]*$
+```json
+[]
 ```
-
-[try pattern](https://regexr.com/?expression=%5E%5B%5EA-Z%5D*\(%5C%2F\)%5B%5EA-Z%5D*%24 "try regular expression with regexr.com")

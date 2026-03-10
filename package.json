@@ -1,8 +1,9 @@
 {
-  "name": "schema",
+  "name": "@weme-ui/schema",
   "type": "module",
-  "version": "1.0.0~dev",
+  "version": "2.0.0",
   "packageManager": "pnpm@10.32.0",
+  "description": "JSON schema sources for Weme UI.",
   "author": "Allen Luo <luoyi@mouji.net>",
   "license": "MIT",
   "homepage": "https://weme-ui.github.io/schema",
@@ -13,23 +14,77 @@
   "bugs": {
     "url": "https://github.com/weme-ui/schema/issues"
   },
+  "keywords": [
+    "weme-ui",
+    "ui-components",
+    "unocss",
+    "reka-ui"
+  ],
   "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.mts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "engines": {
-    "node": ">=22.14.0",
-    "pnpm": ">=10.13.0"
+    "node": ">=24.14.0",
+    "pnpm": ">=10.30.0"
   },
   "scripts": {
-    "build": "pnpm run build:v1 && pnpm run build:v2",
-    "build:v1": "premove ./docs/v1 && jsonschema2md -d ./src/v1 -x ./v1 -o ./docs/v1",
-    "build:v2": "premove ./docs/v2 && jsonschema2md -d ./src/v2 -x ./v2 -o ./docs/v2",
-    "clean": "premove ./v1 ./v2 ./docs/v1 ./docs/v2",
+    "build": "tsdown && pnpm build:json",
+    "build:json": "pnpm gen:json && pnpm /^build:json:/",
+    "build:json:v1": "premove ./docs/v1 && jsonschema2md -d ./schemas/v1 -x ./v1 -o ./docs/v1",
+    "build:json:v2": "premove ./docs/v2 && jsonschema2md -d ./schemas/v2 -x ./v2 -o ./docs/v2",
+    "gen:json": "esno ./src/v2/json.ts",
+    "clean": "premove ./v1 ./v2 ./docs/v1 ./docs/v2 ./schemas/v2",
     "taze": "taze major -I -r",
+    "lint": "eslint .",
+    "prepublishOnly": "pnpm build",
+    "release": "bumpp",
     "preview": "serve -l 3000"
   },
+  "peerDependencies": {
+    "zod": "^4.3.6"
+  },
+  "dependencies": {
+    "zod": "catalog:"
+  },
   "devDependencies": {
-    "@adobe/jsonschema2md": "^8.0.10",
-    "premove": "^4.0.0",
-    "serve": "^14.2.0",
-    "taze": "^19.10.0"
+    "@adobe/jsonschema2md": "catalog:",
+    "@antfu/eslint-config": "catalog:",
+    "@types/node": "catalog:",
+    "bumpp": "catalog:",
+    "eslint": "catalog:",
+    "esno": "catalog:",
+    "jsonc-eslint-parser": "catalog:",
+    "nano-staged": "catalog:",
+    "premove": "catalog:",
+    "serve": "catalog:",
+    "simple-git-hooks": "catalog:",
+    "taze": "catalog:",
+    "tsdown": "catalog:",
+    "typescript": "catalog:",
+    "yaml-eslint-parser": "catalog:"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "nano-staged"
+  },
+  "nano-staged": {
+    "*.{vue,ts,tsx,mjs,cjs}": "eslint --fix"
   }
 }

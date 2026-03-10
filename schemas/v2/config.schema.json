@@ -1,8 +1,5 @@
 {
   "$schema": "https://json-schema.org/draft-07/schema#",
-  "$id": "https://weme-ui.github.io/schema/v2/config.schema.json",
-  "title": "Weme UI Project Config JSON Schema Definitions",
-  "description": "This schema defines the structure of the project config JSON file used in Weme UI.",
   "type": "object",
   "properties": {
     "$schema": {
@@ -71,10 +68,10 @@
       "title": "Config Paths",
       "description": "The paths used in the project config."
     },
-    "repos": {
+    "registries": {
       "default": [],
-      "title": "Config Repositories",
-      "description": "The repositories used in the project.",
+      "title": "Config Registries",
+      "description": "The registries used in the project.",
       "type": "array",
       "items": {
         "type": "object",
@@ -84,7 +81,7 @@
             "title": "Repository Name/URL",
             "description": "The name/URL of the repository."
           },
-          "registry": {
+          "name": {
             "type": "string",
             "pattern": "^[^A-Z]*(\\/)[^A-Z]*$",
             "title": "Registry Name",
@@ -105,7 +102,7 @@
         },
         "required": [
           "repo",
-          "registry",
+          "name",
           "prefix"
         ],
         "additionalProperties": false,
@@ -117,7 +114,10 @@
   "required": [
     "$schema",
     "paths",
-    "repos"
+    "registries"
   ],
-  "additionalProperties": false
+  "additionalProperties": false,
+  "$id": "https://weme-ui.github.io/schema/v2/config.schema.json",
+  "title": "Weme UI Project Config JSON Schema Definitions",
+  "description": "This schema defines the structure of the project config JSON file used in Weme UI."
 }

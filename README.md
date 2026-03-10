@@ -1,5 +1,5 @@
 <p align="center">
-  <img align="center" src="https://raw.githubusercontent.com/moujinet/assets/main/weme-ui/png/circle-128.png" height="128" />
+  <img align="center" src="https://raw.githubusercontent.com/moujinet/assets/main/weme-ui/png/circle-128.png" alt="Weme UI Logo" height="128" />
   <h1 align="center">
     Weme UI <sup style="color: #4CBBA5">Schema</sup>
   </h1>
@@ -8,7 +8,7 @@
 [![npm version][npm-version-src]][npm-version-href]
 [![License][license-src]][license-href]
 
-JSON Schemas for Weme UI. 
+JSON Schemas for Weme UI.
 
 - 📖 [Documentation](docs/v2).
 

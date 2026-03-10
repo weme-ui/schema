@@ -1,15 +1,15 @@
-# Default Registry Schema
+# Repository Name/URL Schema
 
 ```txt
-https://weme-ui.github.io/schema/v2/config.schema.json#/properties/repos/items/properties/default
+https://weme-ui.github.io/schema/v2/config.schema.json#/properties/registries/items/properties/repo
 ```
 
-Whether this registry is the default registry, which will be used when the registry is not specified in the component usage.
+The name/URL of the repository.
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                 |
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------------------- |
 | Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [config.schema.json\*](../../v2/config.schema.json "open original schema") |
 
-## default Type
+## repo Type
 
-`boolean` ([Default Registry](config-properties-config-repositories-config-registry-properties-default-registry.md))
+`string` ([Repository Name/URL](config-properties-config-registries-config-registry-properties-repository-nameurl.md))

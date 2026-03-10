@@ -1,8 +1,5 @@
 {
   "$schema": "https://json-schema.org/draft-07/schema#",
-  "$id": "https://weme-ui.github.io/schema/v2/repository.schema.json",
-  "title": "Weme UI Repository JSON Schema Definitions",
-  "description": "This schema defines the structure of the repository JSON file used in Weme UI.",
   "type": "object",
   "properties": {
     "$schema": {
@@ -78,5 +75,8 @@
     "version",
     "registries"
   ],
-  "additionalProperties": false
+  "additionalProperties": false,
+  "$id": "https://weme-ui.github.io/schema/v2/repository.schema.json",
+  "title": "Weme UI Repository JSON Schema Definitions",
+  "description": "This schema defines the structure of the repository JSON file used in Weme UI."
 }

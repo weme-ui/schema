@@ -1,8 +1,5 @@
 {
   "$schema": "https://json-schema.org/draft-07/schema#",
-  "$id": "https://weme-ui.github.io/schema/v2/registry.schema.json",
-  "title": "Weme UI Registry JSON Schema Definitions",
-  "description": "This schema defines the structure of the registry JSON file used in Weme UI.",
   "type": "object",
   "properties": {
     "$schema": {
@@ -219,5 +216,8 @@
     "prefix",
     "items"
   ],
-  "additionalProperties": false
+  "additionalProperties": false,
+  "$id": "https://weme-ui.github.io/schema/v2/registry.schema.json",
+  "title": "Weme UI Registry JSON Schema Definitions",
+  "description": "This schema defines the structure of the registry JSON file used in Weme UI."
 }

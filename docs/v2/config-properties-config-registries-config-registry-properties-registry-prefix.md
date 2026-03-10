@@ -1,15 +1,27 @@
-# Repository Name/URL Schema
+# Registry Prefix Schema
 
 ```txt
-https://weme-ui.github.io/schema/v2/config.schema.json#/properties/repos/items/properties/repo
+https://weme-ui.github.io/schema/v2/config.schema.json#/properties/registries/items/properties/prefix
 ```
 
-The name/URL of the repository.
+The prefix of the components from this registry.
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                 |
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------------------- |
 | Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [config.schema.json\*](../../v2/config.schema.json "open original schema") |
 
-## repo Type
+## prefix Type
 
-`string` ([Repository Name/URL](config-properties-config-repositories-config-registry-properties-repository-nameurl.md))
+`string` ([Registry Prefix](config-properties-config-registries-config-registry-properties-registry-prefix.md))
+
+## prefix Constraints
+
+**pattern**: the string must match the following regular expression:&#x20;
+
+```regexp
+^[^A-Z]*$
+```
+
+[try pattern](https://regexr.com/?expression=%5E%5B%5EA-Z%5D*%24 "try regular expression with regexr.com")
+
+**unknown format**: the value of this string must follow the format: `lowercase`

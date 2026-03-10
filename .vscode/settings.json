@@ -1,6 +1,4 @@
 {
-  "typescript.tsdk": "node_modules/typescript/lib",
-
   // Disable the accessibility support
   "editor.accessibilitySupport": "off",
 

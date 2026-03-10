@@ -16,11 +16,11 @@ This schema defines the structure of the project config JSON file used in Weme U
 
 # Weme UI Project Config JSON Schema Definitions Properties
 
-| Property           | Type     | Required | Nullable       | Defined by                                                                                                                                                            |
-| :----------------- | :------- | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [$schema](#schema) | `string` | Required | cannot be null | [Weme UI Project Config JSON Schema Definitions](config-properties-config-schema-url.md "https://weme-ui.github.io/schema/v2/config.schema.json#/properties/$schema") |
-| [paths](#paths)    | `object` | Required | cannot be null | [Weme UI Project Config JSON Schema Definitions](config-properties-config-paths.md "https://weme-ui.github.io/schema/v2/config.schema.json#/properties/paths")        |
-| [repos](#repos)    | `array`  | Required | cannot be null | [Weme UI Project Config JSON Schema Definitions](config-properties-config-repositories.md "https://weme-ui.github.io/schema/v2/config.schema.json#/properties/repos") |
+| Property                  | Type     | Required | Nullable       | Defined by                                                                                                                                                               |
+| :------------------------ | :------- | :------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [$schema](#schema)        | `string` | Required | cannot be null | [Weme UI Project Config JSON Schema Definitions](config-properties-config-schema-url.md "https://weme-ui.github.io/schema/v2/config.schema.json#/properties/$schema")    |
+| [paths](#paths)           | `object` | Required | cannot be null | [Weme UI Project Config JSON Schema Definitions](config-properties-config-paths.md "https://weme-ui.github.io/schema/v2/config.schema.json#/properties/paths")           |
+| [registries](#registries) | `array`  | Required | cannot be null | [Weme UI Project Config JSON Schema Definitions](config-properties-config-registries.md "https://weme-ui.github.io/schema/v2/config.schema.json#/properties/registries") |
 
 ## $schema
 
@@ -70,25 +70,25 @@ The paths used in the project config.
 
 `object` ([Config Paths](config-properties-config-paths.md))
 
-## repos
+## registries
 
-The repositories used in the project.
+The registries used in the project.
 
-`repos`
+`registries`
 
 * is required
 
-* Type: `object[]` ([Config Registry](config-properties-config-repositories-config-registry.md))
+* Type: `object[]` ([Config Registry](config-properties-config-registries-config-registry.md))
 
 * cannot be null
 
-* defined in: [Weme UI Project Config JSON Schema Definitions](config-properties-config-repositories.md "https://weme-ui.github.io/schema/v2/config.schema.json#/properties/repos")
+* defined in: [Weme UI Project Config JSON Schema Definitions](config-properties-config-registries.md "https://weme-ui.github.io/schema/v2/config.schema.json#/properties/registries")
 
-### repos Type
+### registries Type
 
-`object[]` ([Config Registry](config-properties-config-repositories-config-registry.md))
+`object[]` ([Config Registry](config-properties-config-registries-config-registry.md))
 
-### repos Default Value
+### registries Default Value
 
 The default value is:
 

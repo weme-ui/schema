@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "default": "https://weme-ui.github.io/schema/v2/manifest.schema.json",
+      "title": "Manifest Schema URL",
+      "description": "The Schema URL, which should be `https://weme-ui.github.io/schema/v2/manifest.schema.json`",
+      "type": "string",
+      "format": "uri"
+    },
+    "lastUpdate": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d\\.\\d{3}(?:Z))$",
+      "title": "Last Update",
+      "description": "The last update time of the manifest."
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "format": "lowercase",
+            "pattern": "^[^A-Z]*$",
+            "title": "Manifest Item Name",
+            "description": "The name of the manifest item."
+          },
+          "scope": {
+            "type": "string",
+            "enum": [
+              "init",
+              "component",
+              "layout",
+              "theme",
+              "page",
+              "plugin"
+            ],
+            "title": "Registry Item Scope",
+            "description": "The scope of the registry item."
+          },
+          "files": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "component",
+                    "type",
+                    "style",
+                    "locale",
+                    "composable",
+                    "utility",
+                    "file"
+                  ],
+                  "title": "Registry Item File Type",
+                  "description": "The type of the registry item file."
+                },
+                "source": {
+                  "type": "string",
+                  "format": "uri",
+                  "title": "Manifest Item File Source",
+                  "description": "The source of the manifest item file."
+                },
+                "dest": {
+                  "type": "string",
+                  "title": "Manifest Item File Destination",
+                  "description": "The destination of the manifest item file."
+                },
+                "hash": {
+                  "type": "string",
+                  "title": "Manifest Item File Hash",
+                  "description": "The hash of the manifest item file."
+                }
+              },
+              "required": [
+                "type",
+                "source",
+                "dest",
+                "hash"
+              ],
+              "additionalProperties": false,
+              "title": "Manifest Item File",
+              "description": "A file in the manifest item."
+            },
+            "title": "Manifest Item Files",
+            "description": "The files of the manifest item."
+          }
+        },
+        "required": [
+          "name",
+          "scope",
+          "files"
+        ],
+        "additionalProperties": false,
+        "title": "Manifest Item",
+        "description": "An item in the manifest."
+      },
+      "title": "Manifest Items",
+      "description": "The items in the manifest."
+    }
+  },
+  "required": [
+    "$schema",
+    "lastUpdate",
+    "items"
+  ],
+  "additionalProperties": false,
+  "$id": "https://weme-ui.github.io/schema/v2/manifest.schema.json",
+  "title": "Weme UI Manifest JSON Schema Definitions",
+  "description": "This schema defines the structure of the manifest JSON file used in Weme UI."
+}

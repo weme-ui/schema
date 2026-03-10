@@ -2,6 +2,8 @@
 
 ## Top-level Schemas
 
+* [Weme UI Manifest JSON Schema Definitions](./manifest.md "This schema defines the structure of the manifest JSON file used in Weme UI") – `https://weme-ui.github.io/schema/v2/manifest.schema.json`
+
 * [Weme UI Project Config JSON Schema Definitions](./config.md "This schema defines the structure of the project config JSON file used in Weme UI") – `https://weme-ui.github.io/schema/v2/config.schema.json`
 
 * [Weme UI Registry JSON Schema Definitions](./registry.md "This schema defines the structure of the registry JSON file used in Weme UI") – `https://weme-ui.github.io/schema/v2/registry.schema.json`
@@ -14,7 +16,11 @@
 
 * [Config Paths](./config-properties-config-paths.md "The paths used in the project config") – `https://weme-ui.github.io/schema/v2/config.schema.json#/properties/paths`
 
-* [Config Registry](./config-properties-config-repositories-config-registry.md "A registry used in the project config") – `https://weme-ui.github.io/schema/v2/config.schema.json#/properties/repos/items`
+* [Config Registry](./config-properties-config-registries-config-registry.md "A registry used in the project config") – `https://weme-ui.github.io/schema/v2/config.schema.json#/properties/registries/items`
+
+* [Manifest Item](./manifest-properties-manifest-items-manifest-item.md "An item in the manifest") – `https://weme-ui.github.io/schema/v2/manifest.schema.json#/properties/items/items`
+
+* [Manifest Item File](./manifest-properties-manifest-items-manifest-item-properties-manifest-item-files-manifest-item-file.md "A file in the manifest item") – `https://weme-ui.github.io/schema/v2/manifest.schema.json#/properties/items/items/properties/files/items`
 
 * [Registry Item CSS Variables](./registry-properties-registry-items-items-properties-registry-item-css-variables.md "The CSS variables of the registry item") – `https://weme-ui.github.io/schema/v2/registry.schema.json#/properties/items/items/properties/cssVariables`
 
@@ -30,7 +36,11 @@
 
 ### Arrays
 
-* [Config Repositories](./config-properties-config-repositories.md "The repositories used in the project") – `https://weme-ui.github.io/schema/v2/config.schema.json#/properties/repos`
+* [Config Registries](./config-properties-config-registries.md "The registries used in the project") – `https://weme-ui.github.io/schema/v2/config.schema.json#/properties/registries`
+
+* [Manifest Item Files](./manifest-properties-manifest-items-manifest-item-properties-manifest-item-files.md "The files of the manifest item") – `https://weme-ui.github.io/schema/v2/manifest.schema.json#/properties/items/items/properties/files`
+
+* [Manifest Items](./manifest-properties-manifest-items.md "The items in the manifest") – `https://weme-ui.github.io/schema/v2/manifest.schema.json#/properties/items`
 
 * [Registry Item Dependencies](./registry-properties-registry-items-items-properties-registry-item-dependencies.md "The names of other items that this item depends on") – `https://weme-ui.github.io/schema/v2/registry.schema.json#/properties/items/items/properties/dependencies`
 
