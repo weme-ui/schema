@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://weme-ui.github.io/schema/v2/repository.schema.json",
+  "title": "Weme UI Repository JSON Schema Definitions",
+  "description": "This schema defines the structure of the repository JSON file used in Weme UI.",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "default": "https://weme-ui.github.io/schema/v2/repository.schema.json",
+      "title": "Repository Schema URL",
+      "description": "The Schema URL, which should be `https://weme-ui.github.io/schema/v2/repository.schema.json`",
+      "type": "string",
+      "format": "uri"
+    },
+    "repo": {
+      "type": "string",
+      "format": "lowercase",
+      "pattern": "^[^A-Z]*$",
+      "title": "Repository Name",
+      "description": "The name of the repository."
+    },
+    "owner": {
+      "type": "string",
+      "format": "lowercase",
+      "pattern": "^[^A-Z]*$",
+      "title": "Repository Owner",
+      "description": "The owner of the repository."
+    },
+    "version": {
+      "type": "string",
+      "title": "Repository Version",
+      "description": "The version of the repository."
+    },
+    "registries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "pattern": "^[^A-Z]*(\\/)[^A-Z]*$",
+            "title": "Registry Name",
+            "description": "The name of the registry, in the format of `repo/registry`."
+          },
+          "url": {
+            "type": "string",
+            "format": "lowercase",
+            "pattern": "^[^A-Z]*$",
+            "title": "Registry URL",
+            "description": "The URL of the registry, which should point to the registry's `registry.json` file."
+          },
+          "description": {
+            "title": "Registry Description",
+            "description": "The description of the registry.",
+            "type": "string"
+          },
+          "prefix": {
+            "type": "string",
+            "format": "lowercase",
+            "pattern": "^[^A-Z]*$",
+            "title": "Registry Prefix",
+            "description": "The prefix of the components from this registry."
+          }
+        },
+        "required": [
+          "name",
+          "url",
+          "prefix"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "$schema",
+    "repo",
+    "owner",
+    "version",
+    "registries"
+  ],
+  "additionalProperties": false
+}

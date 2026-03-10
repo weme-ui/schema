@@ -10,7 +10,7 @@
 
 JSON Schemas for Weme UI. 
 
-- 📖 [Documentation](docs).
+- 📖 [Documentation](docs/v2).
 
 ------
 
