@@ -5,14 +5,85 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Weme UI Schema</title>
   <link rel="stylesheet" href="/schema/public/style.css">
-  <meta name="description" content="Re-usable UI components with Reka UI and UnoCSS.">
+  <meta name="description" content="JSON Schemas for Weme UI - A modern UI framework.">
   <link rel="icon" href="/schema/public/favicon.ico" sizes="any">
   <link rel="icon" href="/schema/public/weme.svg" type="image/svg+xml">
-  <meta name="theme-color" content="#fff">
+  <meta name="theme-color" content="#0a0a0a">
 </head>
 
 <body>
-  <p>Weme UI Schema</p>
-</body>
+  <div class="background">
+    <div class="grid-lines"></div>
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+  </div>
 
+  <main class="container">
+    <header class="hero">
+      <div class="badge" style="--delay: 0">JSON Schema</div>
+      <h1 class="title" style="--delay: 1">
+        <span class="title-line">Weme UI</span>
+        <span class="title-line accent" style="--delay: 2">Schema</span>
+      </h1>
+      <p class="description" style="--delay: 3">
+        定义 Weme UI 项目的配置结构，提供完整的 JSON Schema 验证与自动补全支持。
+      </p>
+      <div class="stats" style="--delay: 4">
+        <div class="stat">
+          <span class="stat-value">2</span>
+          <span class="stat-label">版本</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-value">6</span>
+          <span class="stat-label">Schema</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-value">MIT</span>
+          <span class="stat-label">许可证</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="versions">
+      <a href="/schema/v1/" class="version-card v1" style="--delay: 5">
+        <div class="version-header">
+          <span class="version-tag">v1</span>
+          <span class="version-badge legacy">Legacy</span>
+        </div>
+        <h2 class="version-title">初始版本</h2>
+        <p class="version-desc">包含 project、registry、repository 的完整定义。</p>
+        <div class="version-arrow">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </div>
+      </a>
+
+      <a href="/schema/v2/" class="version-card v2" style="--delay: 6">
+        <div class="version-header">
+          <span class="version-tag">v2</span>
+          <span class="version-badge current">Current</span>
+        </div>
+        <h2 class="version-title">最新版本</h2>
+        <p class="version-desc">重构配置结构，支持多仓库注册表，更灵活的项目配置。</p>
+        <div class="version-arrow">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </div>
+      </a>
+    </section>
+
+    <footer class="footer" style="--delay: 7">
+      <p>Weme UI Schema &copy; 2025</p>
+      <div class="footer-links">
+        <a href="https://github.com/weme-ui/schema" target="_blank" rel="noopener">GitHub</a>
+        <span class="footer-divider">·</span>
+        <a href="https://weme-ui.github.io/schema" target="_blank" rel="noopener">Docs</a>
+      </div>
+    </footer>
+  </main>
+</body>
 </html>

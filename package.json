@@ -23,11 +23,13 @@
     "build:v1": "premove ./docs/v1 && jsonschema2md -d ./src/v1 -x ./v1 -o ./docs/v1",
     "build:v2": "premove ./docs/v2 && jsonschema2md -d ./src/v2 -x ./v2 -o ./docs/v2",
     "clean": "premove ./v1 ./v2 ./docs/v1 ./docs/v2",
-    "taze": "taze major -I -r"
+    "taze": "taze major -I -r",
+    "preview": "serve -l 3000"
   },
   "devDependencies": {
     "@adobe/jsonschema2md": "^8.0.10",
     "premove": "^4.0.0",
+    "serve": "^14.2.0",
     "taze": "^19.10.0"
   }
 }
