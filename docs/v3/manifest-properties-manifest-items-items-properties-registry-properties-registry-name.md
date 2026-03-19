@@ -1,7 +1,7 @@
 # Registry Name Schema
 
 ```txt
-https://weme-ui.github.io/schema/v3/manifest.schema.json#/properties/items/items/properties/registry
+https://weme-ui.github.io/schema/v3/manifest.schema.json#/properties/items/items/properties/registry/properties/name
 ```
 
 The name of the registry, in the format of `owner/repo`.
@@ -10,11 +10,11 @@ The name of the registry, in the format of `owner/repo`.
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :----------------------------------------------------------------------------- |
 | Can be instantiated | No         | Unknown status | Unknown identifiability | Forbidden         | Allowed               | none                | [manifest.schema.json\*](../../v3/manifest.schema.json "open original schema") |
 
-## registry Type
+## name Type
 
-`string` ([Registry Name](manifest-properties-manifest-items-items-properties-registry-name.md))
+`string` ([Registry Name](manifest-properties-manifest-items-items-properties-registry-properties-registry-name.md))
 
-## registry Constraints
+## name Constraints
 
 **pattern**: the string must match the following regular expression:&#x20;
 

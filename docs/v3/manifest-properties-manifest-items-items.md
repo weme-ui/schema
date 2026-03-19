@@ -26,8 +26,10 @@ https://weme-ui.github.io/schema/v3/manifest.schema.json#/properties/items/items
 | [localDependencies](#localdependencies) | `array`  | Optional | cannot be null | [Weme UI Manifest JSON Schema Definitions (v3)](manifest-properties-manifest-items-items-properties-item-dependencies-in-the-same-registry.md "https://weme-ui.github.io/schema/v3/manifest.schema.json#/properties/items/items/properties/localDependencies") |
 | [files](#files)                         | `array`  | Required | cannot be null | [Weme UI Manifest JSON Schema Definitions (v3)](manifest-properties-manifest-items-items-properties-item-files.md "https://weme-ui.github.io/schema/v3/manifest.schema.json#/properties/items/items/properties/files")                                         |
 | [cssVariables](#cssvariables)           | `object` | Optional | cannot be null | [Weme UI Manifest JSON Schema Definitions (v3)](manifest-properties-manifest-items-items-properties-item-css-variables.md "https://weme-ui.github.io/schema/v3/manifest.schema.json#/properties/items/items/properties/cssVariables")                          |
-| [registry](#registry)                   | `string` | Required | cannot be null | [Weme UI Manifest JSON Schema Definitions (v3)](manifest-properties-manifest-items-items-properties-registry-name.md "https://weme-ui.github.io/schema/v3/manifest.schema.json#/properties/items/items/properties/registry")                                   |
+| [registry](#registry)                   | `object` | Required | cannot be null | [Weme UI Manifest JSON Schema Definitions (v3)](manifest-properties-manifest-items-items-properties-registry.md "https://weme-ui.github.io/schema/v3/manifest.schema.json#/properties/items/items/properties/registry")                                        |
 | [library](#library)                     | `object` | Required | cannot be null | [Weme UI Manifest JSON Schema Definitions (v3)](manifest-properties-manifest-items-items-properties-library.md "https://weme-ui.github.io/schema/v3/manifest.schema.json#/properties/items/items/properties/library")                                          |
+| [version](#version)                     | `object` | Required | cannot be null | [Weme UI Manifest JSON Schema Definitions (v3)](manifest-properties-manifest-items-items-properties-version.md "https://weme-ui.github.io/schema/v3/manifest.schema.json#/properties/items/items/properties/version")                                          |
+| [hash](#hash)                           | `object` | Required | cannot be null | [Weme UI Manifest JSON Schema Definitions (v3)](manifest-properties-manifest-items-items-properties-hash.md "https://weme-ui.github.io/schema/v3/manifest.schema.json#/properties/items/items/properties/hash")                                                |
 
 ## scope
 
@@ -234,31 +236,21 @@ The CSS variables of the registry library item.
 
 ## registry
 
-The name of the registry, in the format of `owner/repo`.
+
 
 `registry`
 
 * is required
 
-* Type: `string` ([Registry Name](manifest-properties-manifest-items-items-properties-registry-name.md))
+* Type: `object` ([Details](manifest-properties-manifest-items-items-properties-registry.md))
 
 * cannot be null
 
-* defined in: [Weme UI Manifest JSON Schema Definitions (v3)](manifest-properties-manifest-items-items-properties-registry-name.md "https://weme-ui.github.io/schema/v3/manifest.schema.json#/properties/items/items/properties/registry")
+* defined in: [Weme UI Manifest JSON Schema Definitions (v3)](manifest-properties-manifest-items-items-properties-registry.md "https://weme-ui.github.io/schema/v3/manifest.schema.json#/properties/items/items/properties/registry")
 
 ### registry Type
 
-`string` ([Registry Name](manifest-properties-manifest-items-items-properties-registry-name.md))
-
-### registry Constraints
-
-**pattern**: the string must match the following regular expression:&#x20;
-
-```regexp
-^[\s\S]{0,}(\/)[\s\S]{0,}$
-```
-
-[try pattern](https://regexr.com/?expression=%5E%5B%5Cs%5CS%5D%7B0%2C%7D\(%5C%2F\)%5B%5Cs%5CS%5D%7B0%2C%7D%24 "try regular expression with regexr.com")
+`object` ([Details](manifest-properties-manifest-items-items-properties-registry.md))
 
 ## library
 
@@ -277,3 +269,39 @@ The name of the registry, in the format of `owner/repo`.
 ### library Type
 
 `object` ([Details](manifest-properties-manifest-items-items-properties-library.md))
+
+## version
+
+
+
+`version`
+
+* is required
+
+* Type: `object` ([Details](manifest-properties-manifest-items-items-properties-version.md))
+
+* cannot be null
+
+* defined in: [Weme UI Manifest JSON Schema Definitions (v3)](manifest-properties-manifest-items-items-properties-version.md "https://weme-ui.github.io/schema/v3/manifest.schema.json#/properties/items/items/properties/version")
+
+### version Type
+
+`object` ([Details](manifest-properties-manifest-items-items-properties-version.md))
+
+## hash
+
+
+
+`hash`
+
+* is required
+
+* Type: `object` ([Details](manifest-properties-manifest-items-items-properties-hash.md))
+
+* cannot be null
+
+* defined in: [Weme UI Manifest JSON Schema Definitions (v3)](manifest-properties-manifest-items-items-properties-hash.md "https://weme-ui.github.io/schema/v3/manifest.schema.json#/properties/items/items/properties/hash")
+
+### hash Type
+
+`object` ([Details](manifest-properties-manifest-items-items-properties-hash.md))

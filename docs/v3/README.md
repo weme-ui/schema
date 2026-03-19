@@ -34,7 +34,13 @@
 
 * [Untitled object in Weme UI Manifest JSON Schema Definitions (v3)](./manifest-properties-manifest-items-items-properties-item-css-variables-additionalproperties-anyof-0.md) – `https://weme-ui.github.io/schema/v3/manifest.schema.json#/properties/items/items/properties/cssVariables/additionalProperties/anyOf/0`
 
+* [Untitled object in Weme UI Manifest JSON Schema Definitions (v3)](./manifest-properties-manifest-items-items-properties-registry.md) – `https://weme-ui.github.io/schema/v3/manifest.schema.json#/properties/items/items/properties/registry`
+
 * [Untitled object in Weme UI Manifest JSON Schema Definitions (v3)](./manifest-properties-manifest-items-items-properties-library.md) – `https://weme-ui.github.io/schema/v3/manifest.schema.json#/properties/items/items/properties/library`
+
+* [Untitled object in Weme UI Manifest JSON Schema Definitions (v3)](./manifest-properties-manifest-items-items-properties-version.md) – `https://weme-ui.github.io/schema/v3/manifest.schema.json#/properties/items/items/properties/version`
+
+* [Untitled object in Weme UI Manifest JSON Schema Definitions (v3)](./manifest-properties-manifest-items-items-properties-hash.md) – `https://weme-ui.github.io/schema/v3/manifest.schema.json#/properties/items/items/properties/hash`
 
 * [Untitled object in Weme UI Registry JSON Schema Definitions (v3)](./registry-properties-registry-libraries-library-properties-library-items-registry-library-item-properties-item-files-registry-item-file-oneof-0.md) – `https://weme-ui.github.io/schema/v3/registry.schema.json#/properties/libraries/items/properties/items/items/properties/files/items/oneOf/0`
 

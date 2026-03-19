@@ -213,11 +213,20 @@
             }
           },
           "registry": {
-            "type": "string",
-            "pattern": "^[\\s\\S]{0,}(\\/)[\\s\\S]{0,}$",
-            "title": "Registry Name",
-            "description": "The name of the registry, in the format of `owner/repo`.",
-            "example": "@weme-ui/weme-ui"
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "pattern": "^[\\s\\S]{0,}(\\/)[\\s\\S]{0,}$",
+                "title": "Registry Name",
+                "description": "The name of the registry, in the format of `owner/repo`.",
+                "example": "@weme-ui/weme-ui"
+              }
+            },
+            "required": [
+              "name"
+            ],
+            "additionalProperties": false
           },
           "library": {
             "type": "object",
@@ -235,6 +244,35 @@
               "name"
             ],
             "additionalProperties": false
+          },
+          "version": {
+            "type": "object",
+            "properties": {
+              "version": {
+                "default": "1.0.0",
+                "title": "Registry Version",
+                "description": "The version of the registry.",
+                "examples": [
+                  "1.0.0"
+                ],
+                "type": "string"
+              }
+            },
+            "required": [
+              "version"
+            ],
+            "additionalProperties": false
+          },
+          "hash": {
+            "type": "object",
+            "properties": {
+              "hash": {
+                "title": "Registry Hash",
+                "description": "The SHA1 hash of the registry, DO NOT edit this manually.",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
           }
         },
         "required": [
@@ -242,7 +280,9 @@
           "name",
           "files",
           "registry",
-          "library"
+          "library",
+          "version",
+          "hash"
         ],
         "additionalProperties": false
       },
