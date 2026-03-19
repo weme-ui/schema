@@ -12,7 +12,7 @@ JSON Schemas for Weme UI.
 
 - 📖 [Documentation](docs/v2).
 
-------
+---
 
 ## License
 

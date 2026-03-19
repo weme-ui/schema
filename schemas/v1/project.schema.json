@@ -107,9 +107,7 @@
           "default": "~/utils"
         }
       },
-      "required": [
-        "components"
-      ],
+      "required": ["components"],
       "additionalProperties": false
     },
 
@@ -194,14 +192,7 @@
                 "title": "Item type",
                 "description": "The type of the item.",
                 "type": "string",
-                "enum": [
-                  "component",
-                  "layout",
-                  "theme",
-                  "block",
-                  "page",
-                  "init"
-                ]
+                "enum": ["component", "layout", "theme", "block", "page", "init"]
               },
               "path": {
                 "title": "Item path",

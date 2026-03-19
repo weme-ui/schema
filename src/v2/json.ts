@@ -1,8 +1,13 @@
-/* eslint-disable no-console */
+/* oxlint-disable no-console */
 import { existsSync, mkdirSync, rmSync, writeFileSync } from 'node:fs'
 import { z } from 'zod'
 import { ConfigSchemaV2 } from './config'
-import { CONFIG_SCHEMA_URL, MANIFEST_SCHEMA_URL, REGISTRY_SCHEMA_URL, REPOSITORY_SCHEMA_URL } from './constants'
+import {
+  CONFIG_SCHEMA_URL,
+  MANIFEST_SCHEMA_URL,
+  REGISTRY_SCHEMA_URL,
+  REPOSITORY_SCHEMA_URL,
+} from './constants'
 import { ManifestSchemaV2 } from './manifest'
 import { RegistrySchemaV2 } from './registry'
 import { RepositorySchemaV2 } from './repository'
@@ -31,18 +36,19 @@ function outputJson(): void {
   mkdirSync('./schemas/v2', { recursive: true })
 
   schemaMapping.forEach((item) => {
-    const content = `${JSON.stringify(z.toJSONSchema(item.schema, {
-      target: 'draft-07',
-    }), null, 2)
-      .replaceAll('"$schema": "http://', '"$schema": "https://')
-    }\n`
+    const content = `${JSON.stringify(
+      z.toJSONSchema(item.schema, {
+        target: 'draft-07',
+      }),
+      null,
+      2,
+    ).replaceAll('"$schema": "http://', '"$schema": "https://')}\n`
 
     // Write to file
     try {
       writeFileSync(`./schemas/v2/${item.name}`, content, 'utf-8')
       console.log(` ✅ ${item.name} generated successfully.`)
-    }
-    catch (error) {
+    } catch (error) {
       console.error(` ❌ Failed to generate ${item.name}:`, error)
     }
   })
