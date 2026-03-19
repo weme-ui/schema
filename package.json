@@ -45,8 +45,9 @@
     "build:json": "pnpm gen:json && pnpm /^build:json:/",
     "build:json:v1": "premove ./docs/v1 && jsonschema2md -d ./schemas/v1 -x ./v1 -o ./docs/v1",
     "build:json:v2": "premove ./docs/v2 && jsonschema2md -d ./schemas/v2 -x ./v2 -o ./docs/v2",
-    "gen:json": "esno ./src/v2/json.ts",
-    "clean": "premove ./v1 ./v2 ./docs/v1 ./docs/v2 ./schemas/v2",
+    "build:json:v3": "premove ./docs/v3 && jsonschema2md -d ./schemas/v3 -x ./v3 -o ./docs/v3",
+    "gen:json": "esno ./src/json.ts",
+    "clean": "premove ./v1 ./v2 ./v3 ./docs ./schemas",
     "taze": "taze major -I -r",
     "lint": "oxlint",
     "format": "oxfmt",
@@ -89,5 +90,5 @@
     "node": ">=24.14.0",
     "pnpm": ">=10.30.0"
   },
-  "packageManager": "pnpm@10.32.0"
+  "packageManager": "pnpm@10.32.1"
 }

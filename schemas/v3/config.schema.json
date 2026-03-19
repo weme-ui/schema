@@ -1,0 +1,171 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "default": "https://weme-ui.github.io/schema/v3/config.schema.json",
+      "title": "Project Config Schema URL",
+      "description": "The Schema URL, which should be `https://weme-ui.github.io/schema/v3/config.schema.json`",
+      "examples": [
+        "https://weme-ui.github.io/schema/v3/config.schema.json"
+      ],
+      "type": "string",
+      "format": "uri"
+    },
+    "paths": {
+      "type": "object",
+      "properties": {
+        "components": {
+          "default": "~/components",
+          "title": "Components Path",
+          "description": "The path of the components directory.",
+          "examples": [
+            "~/components"
+          ],
+          "type": "string"
+        },
+        "composables": {
+          "title": "Composables Path",
+          "description": "The path of the composables directory.",
+          "examples": [
+            "~/composables"
+          ],
+          "type": "string"
+        },
+        "layouts": {
+          "title": "Layouts Path",
+          "description": "The path of the layouts directory.",
+          "examples": [
+            "~/layouts"
+          ],
+          "type": "string"
+        },
+        "plugins": {
+          "title": "Plugins Path",
+          "description": "The path of the plugins directory.",
+          "examples": [
+            "~/plugins"
+          ],
+          "type": "string"
+        },
+        "themes": {
+          "title": "Themes Path",
+          "description": "The path of the themes directory.",
+          "examples": [
+            "~/themes"
+          ],
+          "type": "string"
+        },
+        "pages": {
+          "title": "Pages Path",
+          "description": "The path of the pages directory.",
+          "examples": [
+            "~/pages"
+          ],
+          "type": "string"
+        },
+        "types": {
+          "title": "Types Path",
+          "description": "The path of the types directory.",
+          "examples": [
+            "~/types"
+          ],
+          "type": "string"
+        },
+        "utils": {
+          "title": "Utils Path",
+          "description": "The path of the utils directory.",
+          "examples": [
+            "~/utils"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "components"
+      ],
+      "additionalProperties": false,
+      "title": "Project Paths",
+      "description": "The paths used in the project."
+    },
+    "registries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "pattern": "^[\\s\\S]{0,}(\\/)[\\s\\S]{0,}$",
+            "title": "Registry Name",
+            "description": "The name of the registry, in the format of `owner/repo`.",
+            "example": "@weme-ui/weme-ui"
+          },
+          "url": {
+            "type": "string",
+            "title": "Registry URL",
+            "description": "The URL of the registry's `registry.json` file.",
+            "examples": [
+              "weme-ui/weme-ui"
+            ]
+          },
+          "library": {
+            "type": "string",
+            "title": "Library Name",
+            "description": "The name of the library.",
+            "examples": [
+              "slim"
+            ]
+          },
+          "prefix": {
+            "default": "ui",
+            "title": "Library Prefix",
+            "description": "The prefix of the library.",
+            "examples": [
+              "ui"
+            ],
+            "type": "string"
+          },
+          "default": {
+            "title": "Default Registry",
+            "description": "Whether to use this registry as the default one.",
+            "examples": [
+              true
+            ],
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "name",
+          "url",
+          "library",
+          "prefix"
+        ],
+        "additionalProperties": false,
+        "title": "Registry Information",
+        "description": "A registry used in the project."
+      },
+      "title": "Project Registries",
+      "description": "The registries used in the project."
+    },
+    "cssVariables": {
+      "title": "CSS Variables",
+      "description": "The CSS variables, which will be merged into the `uno.config.ts` file.",
+      "type": "object",
+      "propertyNames": {
+        "type": "string"
+      },
+      "additionalProperties": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "$schema",
+    "paths",
+    "registries"
+  ],
+  "additionalProperties": false,
+  "$id": "https://weme-ui.github.io/schema/v3/config.schema.json",
+  "title": "Weme UI Project Config JSON Schema Definitions (v3)",
+  "description": "This schema defines the structure of the project JSON file used in Weme UI."
+}

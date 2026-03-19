@@ -1,0 +1,261 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "default": "https://weme-ui.github.io/schema/v3/manifest.schema.json",
+      "title": "Manifest Schema URL",
+      "description": "The Schema URL, which should be `https://weme-ui.github.io/schema/v3/manifest.schema.json`",
+      "examples": [
+        "https://weme-ui.github.io/schema/v3/manifest.schema.json"
+      ],
+      "type": "string",
+      "format": "uri"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "scope": {
+            "type": "string",
+            "enum": [
+              "component",
+              "layout",
+              "theme",
+              "plugin",
+              "page"
+            ],
+            "title": "Item Scope",
+            "description": "The scope of the registry library item.",
+            "examples": [
+              "component"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "title": "Item Name",
+            "description": "The name of the registry library item.",
+            "examples": [
+              "button"
+            ]
+          },
+          "description": {
+            "title": "Item Description",
+            "description": "The description of the registry library item.",
+            "type": "string"
+          },
+          "dependencies": {
+            "title": "Item Dependencies",
+            "description": "The package dependencies of the registry library item.",
+            "examples": [
+              [
+                "react",
+                "react-dom@^18.0.0"
+              ]
+            ],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "devDependencies": {
+            "title": "Item Dev Dependencies",
+            "description": "The package dev dependencies of the registry library item.",
+            "examples": [
+              [
+                "unocss",
+                "tsdown@^0.21.0"
+              ]
+            ],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "localDependencies": {
+            "title": "Item Dependencies In The Same Registry",
+            "description": "The local dependencies of the registry library item.",
+            "examples": [
+              [
+                "icon",
+                "slim/button"
+              ]
+            ],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "files": {
+            "default": [],
+            "title": "Item Files",
+            "description": "The files of the registry library item.",
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "file"
+                      ],
+                      "title": "Registry Item File Type",
+                      "description": "The type of the registry item file.",
+                      "examples": [
+                        "file"
+                      ]
+                    },
+                    "path": {
+                      "type": "string",
+                      "title": "Registry Item File Path",
+                      "description": "The path of the registry item file.",
+                      "examples": [
+                        "path/to/file"
+                      ]
+                    },
+                    "target": {
+                      "type": "string",
+                      "title": "Registry Item File Target",
+                      "description": "The target of the registry item file.",
+                      "examples": [
+                        "~/path/to/target"
+                      ]
+                    },
+                    "hash": {
+                      "type": "string",
+                      "title": "Registry Item File Hash",
+                      "description": "The hash of the registry item file."
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "path",
+                    "target",
+                    "hash"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "component",
+                        "type",
+                        "style",
+                        "locale",
+                        "composable",
+                        "utility"
+                      ],
+                      "title": "Registry Item File Type",
+                      "description": "The type of the registry item file.",
+                      "examples": [
+                        "component"
+                      ]
+                    },
+                    "path": {
+                      "type": "string",
+                      "title": "Registry Item File Path",
+                      "description": "The path of the registry item file.",
+                      "examples": [
+                        "components/button/button.vue"
+                      ]
+                    },
+                    "target": {
+                      "title": "Registry Item File Target",
+                      "description": "The target of the registry item file.",
+                      "type": "string"
+                    },
+                    "hash": {
+                      "type": "string",
+                      "title": "Registry Item File Hash",
+                      "description": "The hash of the registry item file."
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "path",
+                    "hash"
+                  ],
+                  "additionalProperties": false
+                }
+              ],
+              "title": "Registry Item File",
+              "description": "A file in the registry library item."
+            }
+          },
+          "cssVariables": {
+            "title": "Item CSS Variables",
+            "description": "The CSS variables of the registry library item.",
+            "type": "object",
+            "propertyNames": {
+              "type": "string"
+            },
+            "additionalProperties": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "propertyNames": {
+                    "type": "string"
+                  },
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "registry": {
+            "type": "string",
+            "pattern": "^[\\s\\S]{0,}(\\/)[\\s\\S]{0,}$",
+            "title": "Registry Name",
+            "description": "The name of the registry, in the format of `owner/repo`.",
+            "example": "@weme-ui/weme-ui"
+          },
+          "library": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "title": "Library Name",
+                "description": "The name of the library.",
+                "examples": [
+                  "slim"
+                ]
+              }
+            },
+            "required": [
+              "name"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "scope",
+          "name",
+          "files",
+          "registry",
+          "library"
+        ],
+        "additionalProperties": false
+      },
+      "title": "Manifest Items",
+      "description": "The items in the manifest."
+    }
+  },
+  "required": [
+    "$schema",
+    "items"
+  ],
+  "additionalProperties": false,
+  "$id": "https://weme-ui.github.io/schema/v3/manifest.schema.json",
+  "title": "Weme UI Manifest JSON Schema Definitions (v3)",
+  "description": "This schema defines the structure of the manifest JSON file used in Weme UI."
+}

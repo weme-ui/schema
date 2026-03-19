@@ -2,13 +2,14 @@
   "$schema": "./node_modules/oxlint/configuration_schema.json",
   "categories": {
     "correctness": "error",
-    "perf": "error"
+    "perf": "error",
   },
   "options": {
     "typeAware": true,
-    "typeCheck": true
+    "typeCheck": true,
   },
   "ignorePatterns": [
+    "src/json.ts",
     "src/v2/json.ts",
     "dist/**",
     "node_modules/**",
@@ -16,6 +17,6 @@
     "v1/**",
     "v2/**",
     "docs/**",
-    ".vscode/**"
-  ]
+    ".vscode/**",
+  ],
 }
