@@ -2,7 +2,7 @@ import { z } from 'zod'
 import { MANIFEST_SCHEMA_URL } from './constants'
 import { RegistryLibraryItem } from './registry/item'
 import { RegistryLibrary } from './registry/library'
-import { RegistryName } from './registry.schema'
+import { RegistrySchema } from './registry.schema'
 
 /**
  * Weme UI manifest schema.
@@ -35,11 +35,19 @@ export const ManifestSchema = z
           /**
            * The registry name of the item
            */
-          registry: RegistryName,
+          registry: RegistrySchema.pick({ name: true }),
           /**
            * The library name of the item
            */
           library: RegistryLibrary.pick({ name: true }),
+          /**
+           * The version of the registry
+           */
+          version: RegistrySchema.pick({ version: true }),
+          /**
+           * The hash of the registry
+           */
+          hash: RegistrySchema.pick({ hash: true }),
         }),
       )
       .meta({
