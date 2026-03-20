@@ -100,14 +100,14 @@
             "pattern": "^[\\s\\S]{0,}(\\/)[\\s\\S]{0,}$",
             "title": "Registry Name",
             "description": "The name of the registry, in the format of `owner/repo`.",
-            "example": "@weme-ui/weme-ui"
+            "example": "weme-ui/weme-ui"
           },
           "url": {
             "type": "string",
             "title": "Registry URL",
             "description": "The URL of the registry's `registry.json` file.",
             "examples": [
-              "weme-ui/weme-ui"
+              "@weme-ui/weme-ui"
             ]
           },
           "library": {

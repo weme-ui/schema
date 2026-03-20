@@ -66,7 +66,7 @@
     "nano-staged": "catalog:",
     "oxfmt": "^0.41.0",
     "oxlint": "^1.56.0",
-    "oxlint-tsgolint": "^0.17.0",
+    "oxlint-tsgolint": "^0.17.1",
     "premove": "catalog:",
     "serve": "catalog:",
     "simple-git-hooks": "catalog:",

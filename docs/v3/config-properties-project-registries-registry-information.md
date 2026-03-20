@@ -73,7 +73,7 @@ The URL of the registry's `registry.json` file.
 ### url Examples
 
 ```json
-"weme-ui/weme-ui"
+"@weme-ui/weme-ui"
 ```
 
 ## library

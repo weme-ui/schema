@@ -10,13 +10,25 @@
 
 JSON Schemas for Weme UI.
 
-- 📖 [Documentation](docs/v2).
+- 📖 [Documentation](docs/v3).
+
+---
+
+## Usage
+
+When you clone this repository locally, you can use `@mouji/json-viewer` to view the JSON schema files with a better experience.
+
+```bash
+pnpm dlx @mouji/json-viewer ./schemas/v3
+```
+
+This command will launch a browser displaying your specified JSON files using the [vercel-labs/visual-json](https://github.com/vercel-labs/visual-json) UI, providing a much better viewing experience.
 
 ---
 
 ## License
 
-[MIT][license-href] License © 2025 [weme-ui][github-href]
+[MIT][license-href] License © 2026 [weme-ui][github-href]
 
 [npm-version-src]: https://img.shields.io/npm/v/@weme-ui/schema?style=flat&colorA=1d2129&colorB=4CBBA5
 [npm-version-href]: https://npmjs.com/package/@weme-ui/schema

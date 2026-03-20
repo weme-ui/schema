@@ -5,14 +5,14 @@ import { RegistryLibrary } from './registry/library'
 /**
  * Registry name
  *
- * @example '@weme-ui/weme-ui'
+ * @example 'weme-ui/weme-ui'
  */
 export const RegistryName = z
   .templateLiteral([z.string().trim(), z.literal('/'), z.string().trim()])
   .meta({
     title: 'Registry Name',
     description: 'The name of the registry, in the format of `owner/repo`.',
-    example: '@weme-ui/weme-ui',
+    example: 'weme-ui/weme-ui',
   })
 
 /**
@@ -42,7 +42,7 @@ export const RegistrySchema = z
     /**
      * Registry name, in the format of `owner/repo`
      *
-     * @example '@weme-ui/weme-ui'
+     * @example 'weme-ui/weme-ui'
      */
     name: RegistryName,
 

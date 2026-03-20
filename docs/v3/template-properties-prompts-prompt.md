@@ -18,12 +18,31 @@ A variant of the prompt.
 
 | Property            | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                        |
 | :------------------ | :------- | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [use](#use)         | `array`  | Optional | cannot be null | [Weme UI Skeleton Template JSON Schema Definitions (v3)](template-properties-prompts-prompt-properties-prompt-template.md "https://weme-ui.github.io/schema/v3/template.schema.json#/properties/prompts/items/properties/use")    |
 | [type](#type)       | `string` | Required | cannot be null | [Weme UI Skeleton Template JSON Schema Definitions (v3)](template-properties-prompts-prompt-properties-prompt-type.md "https://weme-ui.github.io/schema/v3/template.schema.json#/properties/prompts/items/properties/type")       |
 | [name](#name)       | `string` | Required | cannot be null | [Weme UI Skeleton Template JSON Schema Definitions (v3)](template-properties-prompts-prompt-properties-prompt-name.md "https://weme-ui.github.io/schema/v3/template.schema.json#/properties/prompts/items/properties/name")       |
 | [message](#message) | `string` | Optional | cannot be null | [Weme UI Skeleton Template JSON Schema Definitions (v3)](template-properties-prompts-prompt-properties-prompt-message.md "https://weme-ui.github.io/schema/v3/template.schema.json#/properties/prompts/items/properties/message") |
 | [initial](#initial) | `string` | Optional | cannot be null | [Weme UI Skeleton Template JSON Schema Definitions (v3)](template-properties-prompts-prompt-properties-prompt-initial.md "https://weme-ui.github.io/schema/v3/template.schema.json#/properties/prompts/items/properties/initial") |
 | [choices](#choices) | `array`  | Optional | cannot be null | [Weme UI Skeleton Template JSON Schema Definitions (v3)](template-properties-prompts-prompt-properties-prompt-choices.md "https://weme-ui.github.io/schema/v3/template.schema.json#/properties/prompts/items/properties/choices") |
 | [hint](#hint)       | `string` | Optional | cannot be null | [Weme UI Skeleton Template JSON Schema Definitions (v3)](template-properties-prompts-prompt-properties-prompt-hint.md "https://weme-ui.github.io/schema/v3/template.schema.json#/properties/prompts/items/properties/hint")       |
+
+## use
+
+Which template this prompt belongs to.
+
+`use`
+
+* is optional
+
+* Type: `string[]`
+
+* cannot be null
+
+* defined in: [Weme UI Skeleton Template JSON Schema Definitions (v3)](template-properties-prompts-prompt-properties-prompt-template.md "https://weme-ui.github.io/schema/v3/template.schema.json#/properties/prompts/items/properties/use")
+
+### use Type
+
+`string[]`
 
 ## type
 

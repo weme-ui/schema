@@ -3,6 +3,8 @@ import { TEMPLATE_SCHEMA_URL } from './constants'
 
 /**
  * Template
+ *
+ * Which CLI will use to create a skeleton project, with different variants and prompts.
  */
 const Template = z
   .object({
@@ -69,6 +71,13 @@ const Template = z
  */
 const Prompt = z
   .object({
+    /**
+     * Which template this prompt belongs to
+     */
+    use: z.array(z.string().trim()).optional().meta({
+      title: 'Prompt Template',
+      description: 'Which template this prompt belongs to.',
+    }),
     /**
      * Prompt type
      */

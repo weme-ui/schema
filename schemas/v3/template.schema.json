@@ -77,6 +77,14 @@
       "items": {
         "type": "object",
         "properties": {
+          "use": {
+            "title": "Prompt Template",
+            "description": "Which template this prompt belongs to.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
           "type": {
             "type": "string",
             "enum": [

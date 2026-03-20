@@ -3,5 +3,14 @@
   "semi": false,
   "singleQuote": true,
   "jsxSingleQuote": true,
-  "ignorePatterns": ["dist/**", "node_modules/**", "public/**"]
+  "ignorePatterns": [
+    "dist/**",
+    "node_modules/**",
+    "public/**",
+    "v1/*.json",
+    "v2/*.json",
+    "v3/*.json",
+    "docs/**",
+    ".vscode/**"
+  ]
 }

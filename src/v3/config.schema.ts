@@ -89,7 +89,7 @@ export const ConfigSchema = z
             /**
              * Registry name
              *
-             * @example '@weme-ui/weme-ui'
+             * @example 'weme-ui/weme-ui'
              */
             name: RegistryName,
 
@@ -98,12 +98,12 @@ export const ConfigSchema = z
              *
              * **List of supported registry URLs:**
              *
-             * - **Protocol**: `github:weme-ui/weme-ui` or `weme-ui/weme-ui` (using `github` protocol by default)
+             * - **Protocol**: `github:weme-ui/weme-ui` or `@weme-ui/weme-ui` (using `github` protocol by default)
              * - **URI**: `https://github.com/weme-ui/weme-ui`
              * - **Local**: `local:path/to/registry`
              *
              * @usage `pnpm dlx @weme-ui/weme-ui tap <registry_url>`
-             * @example 'weme-ui/weme-ui'
+             * @example '@weme-ui/weme-ui'
              */
             url: z
               .string()
@@ -111,7 +111,7 @@ export const ConfigSchema = z
               .meta({
                 title: 'Registry URL',
                 description: `The URL of the registry's \`${REGISTRY_FILE_NAME}\` file.`,
-                examples: ['weme-ui/weme-ui'],
+                examples: ['@weme-ui/weme-ui'],
               }),
 
             /**

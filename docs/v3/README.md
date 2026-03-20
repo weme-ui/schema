@@ -82,6 +82,8 @@
 
 * [Prompt Choices](./template-properties-prompts-prompt-properties-prompt-choices.md "The choices of the prompt") – `https://weme-ui.github.io/schema/v3/template.schema.json#/properties/prompts/items/properties/choices`
 
+* [Prompt Template](./template-properties-prompts-prompt-properties-prompt-template.md "Which template this prompt belongs to") – `https://weme-ui.github.io/schema/v3/template.schema.json#/properties/prompts/items/properties/use`
+
 * [Prompts](./template-properties-prompts.md "The prompts of the skeleton") – `https://weme-ui.github.io/schema/v3/template.schema.json#/properties/prompts`
 
 * [Registry Libraries](./registry-properties-registry-libraries.md "The libraries in the registry") – `https://weme-ui.github.io/schema/v3/registry.schema.json#/properties/libraries`
