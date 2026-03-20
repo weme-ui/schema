@@ -18,6 +18,8 @@ import {
   CONFIG_SCHEMA_URL as CONFIG_SCHEMA_URL_V3,
   MANIFEST_SCHEMA_URL as MANIFEST_SCHEMA_URL_V3,
   ManifestSchema as ManifestSchemaV3,
+  TEMPLATE_SCHEMA_URL as TEMPLATE_SCHEMA_URL_V3,
+  TemplateSchema as TemplateSchemaV3,
 } from './v3'
 
 interface SchemaData {
@@ -72,6 +74,12 @@ const schemas: SchemaData[] = [
     name: 'manifest.schema.json',
     schema: ManifestSchemaV3,
     url: MANIFEST_SCHEMA_URL_V3,
+  },
+  {
+    version: 'v3',
+    name: 'template.schema.json',
+    schema: TemplateSchemaV3,
+    url: TEMPLATE_SCHEMA_URL_V3,
   },
 ]
 

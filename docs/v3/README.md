@@ -8,6 +8,8 @@
 
 * [Weme UI Registry JSON Schema Definitions (v3)](./registry.md "This schema defines the structure of the registry JSON file used in Weme UI") – `https://weme-ui.github.io/schema/v3/registry.schema.json`
 
+* [Weme UI Skeleton Template JSON Schema Definitions (v3)](./template.md "This schema defines the structure of the skeleton template JSON file used in Weme UI CLI init command") – `https://weme-ui.github.io/schema/v3/template.schema.json`
+
 ## Other Schemas
 
 ### Objects
@@ -22,9 +24,13 @@
 
 * [Project Paths](./config-properties-project-paths.md "The paths used in the project") – `https://weme-ui.github.io/schema/v3/config.schema.json#/properties/paths`
 
+* [Prompt](./template-properties-prompts-prompt.md "A variant of the prompt") – `https://weme-ui.github.io/schema/v3/template.schema.json#/properties/prompts/items`
+
 * [Registry Information](./config-properties-project-registries-registry-information.md "A registry used in the project") – `https://weme-ui.github.io/schema/v3/config.schema.json#/properties/registries/items`
 
 * [Registry Library Item](./registry-properties-registry-libraries-library-properties-library-items-registry-library-item.md "An item in the registry library") – `https://weme-ui.github.io/schema/v3/registry.schema.json#/properties/libraries/items/properties/items/items`
+
+* [Template](./template-properties-templates-template.md "A variant of the template") – `https://weme-ui.github.io/schema/v3/template.schema.json#/properties/templates/items`
 
 * [Untitled object in Weme UI Manifest JSON Schema Definitions (v3)](./manifest-properties-manifest-items-items.md) – `https://weme-ui.github.io/schema/v3/manifest.schema.json#/properties/items/items`
 
@@ -47,6 +53,8 @@
 * [Untitled object in Weme UI Registry JSON Schema Definitions (v3)](./registry-properties-registry-libraries-library-properties-library-items-registry-library-item-properties-item-files-registry-item-file-oneof-1.md) – `https://weme-ui.github.io/schema/v3/registry.schema.json#/properties/libraries/items/properties/items/items/properties/files/items/oneOf/1`
 
 * [Untitled object in Weme UI Registry JSON Schema Definitions (v3)](./registry-properties-registry-libraries-library-properties-library-items-registry-library-item-properties-item-css-variables-additionalproperties-anyof-0.md) – `https://weme-ui.github.io/schema/v3/registry.schema.json#/properties/libraries/items/properties/items/items/properties/cssVariables/additionalProperties/anyOf/0`
+
+* [Untitled object in Weme UI Skeleton Template JSON Schema Definitions (v3)](./template-properties-templates-template-properties-template-files-items.md) – `https://weme-ui.github.io/schema/v3/template.schema.json#/properties/templates/items/properties/files/items`
 
 ### Arrays
 
@@ -72,7 +80,15 @@
 
 * [Project Registries](./config-properties-project-registries.md "The registries used in the project") – `https://weme-ui.github.io/schema/v3/config.schema.json#/properties/registries`
 
+* [Prompt Choices](./template-properties-prompts-prompt-properties-prompt-choices.md "The choices of the prompt") – `https://weme-ui.github.io/schema/v3/template.schema.json#/properties/prompts/items/properties/choices`
+
+* [Prompts](./template-properties-prompts.md "The prompts of the skeleton") – `https://weme-ui.github.io/schema/v3/template.schema.json#/properties/prompts`
+
 * [Registry Libraries](./registry-properties-registry-libraries.md "The libraries in the registry") – `https://weme-ui.github.io/schema/v3/registry.schema.json#/properties/libraries`
+
+* [Template Files](./template-properties-templates-template-properties-template-files.md "The files of the template") – `https://weme-ui.github.io/schema/v3/template.schema.json#/properties/templates/items/properties/files`
+
+* [Templates](./template-properties-templates.md "The templates of the skeleton") – `https://weme-ui.github.io/schema/v3/template.schema.json#/properties/templates`
 
 ## Version Note
 
