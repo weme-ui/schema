@@ -89,6 +89,8 @@
       "description": "The paths used in the project."
     },
     "registries": {
+      "title": "Project Registries",
+      "description": "The registries used in the project.",
       "type": "array",
       "items": {
         "type": "object",
@@ -143,9 +145,7 @@
         "additionalProperties": false,
         "title": "Registry Information",
         "description": "A registry used in the project."
-      },
-      "title": "Project Registries",
-      "description": "The registries used in the project."
+      }
     },
     "cssVariables": {
       "title": "CSS Variables",
@@ -161,8 +161,7 @@
   },
   "required": [
     "$schema",
-    "paths",
-    "registries"
+    "paths"
   ],
   "additionalProperties": false,
   "$id": "https://weme-ui.github.io/schema/v3/config.schema.json",

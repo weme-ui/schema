@@ -18,7 +18,7 @@ https://weme-ui.github.io/schema/v3/manifest.schema.json#/properties/items/items
 
 | Property            | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                                                           |
 | :------------------ | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [version](#version) | `string` | Required | cannot be null | [Weme UI Manifest JSON Schema Definitions (v3)](manifest-properties-manifest-items-items-properties-version-properties-registry-version.md "https://weme-ui.github.io/schema/v3/manifest.schema.json#/properties/items/items/properties/version/properties/version") |
+| [version](#version) | `string` | Optional | cannot be null | [Weme UI Manifest JSON Schema Definitions (v3)](manifest-properties-manifest-items-items-properties-version-properties-registry-version.md "https://weme-ui.github.io/schema/v3/manifest.schema.json#/properties/items/items/properties/version/properties/version") |
 
 ## version
 
@@ -26,7 +26,7 @@ The version of the registry.
 
 `version`
 
-* is required
+* is optional
 
 * Type: `string` ([Registry Version](manifest-properties-manifest-items-items-properties-version-properties-registry-version.md))
 

@@ -72,6 +72,7 @@ export const RegistrySchema = z
       .string()
       .trim()
       .default('1.0.0')
+      .optional()
       .meta({
         title: 'Registry Version',
         description: 'The version of the registry.',

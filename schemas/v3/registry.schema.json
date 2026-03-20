@@ -28,12 +28,12 @@
       "type": "string"
     },
     "version": {
-      "default": "1.0.0",
       "title": "Registry Version",
       "description": "The version of the registry.",
       "examples": [
         "1.0.0"
       ],
+      "default": "1.0.0",
       "type": "string"
     },
     "libraries": {
@@ -303,7 +303,6 @@
   "required": [
     "$schema",
     "name",
-    "version",
     "libraries"
   ],
   "additionalProperties": false,

@@ -20,7 +20,7 @@ This schema defines the structure of the project JSON file used in Weme UI.
 | :---------------------------- | :------- | :------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [$schema](#schema)            | `string` | Required | cannot be null | [Weme UI Project Config JSON Schema Definitions (v3)](config-properties-project-config-schema-url.md "https://weme-ui.github.io/schema/v3/config.schema.json#/properties/$schema") |
 | [paths](#paths)               | `object` | Required | cannot be null | [Weme UI Project Config JSON Schema Definitions (v3)](config-properties-project-paths.md "https://weme-ui.github.io/schema/v3/config.schema.json#/properties/paths")               |
-| [registries](#registries)     | `array`  | Required | cannot be null | [Weme UI Project Config JSON Schema Definitions (v3)](config-properties-project-registries.md "https://weme-ui.github.io/schema/v3/config.schema.json#/properties/registries")     |
+| [registries](#registries)     | `array`  | Optional | cannot be null | [Weme UI Project Config JSON Schema Definitions (v3)](config-properties-project-registries.md "https://weme-ui.github.io/schema/v3/config.schema.json#/properties/registries")     |
 | [cssVariables](#cssvariables) | `object` | Optional | cannot be null | [Weme UI Project Config JSON Schema Definitions (v3)](config-properties-css-variables.md "https://weme-ui.github.io/schema/v3/config.schema.json#/properties/cssVariables")        |
 
 ## $schema
@@ -83,7 +83,7 @@ The registries used in the project.
 
 `registries`
 
-* is required
+* is optional
 
 * Type: `object[]` ([Registry Information](config-properties-project-registries-registry-information.md))
 

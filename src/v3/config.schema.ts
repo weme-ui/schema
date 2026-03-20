@@ -160,6 +160,7 @@ export const ConfigSchema = z
             description: 'A registry used in the project.',
           }),
       )
+      .optional()
       .meta({
         title: 'Project Registries',
         description: 'The registries used in the project.',

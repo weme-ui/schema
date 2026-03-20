@@ -19,7 +19,7 @@ This schema defines the structure of the manifest JSON file used in Weme UI.
 | Property           | Type     | Required | Nullable       | Defined by                                                                                                                                                                 |
 | :----------------- | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [$schema](#schema) | `string` | Required | cannot be null | [Weme UI Manifest JSON Schema Definitions (v3)](manifest-properties-manifest-schema-url.md "https://weme-ui.github.io/schema/v3/manifest.schema.json#/properties/$schema") |
-| [items](#items)    | `array`  | Required | cannot be null | [Weme UI Manifest JSON Schema Definitions (v3)](manifest-properties-manifest-items.md "https://weme-ui.github.io/schema/v3/manifest.schema.json#/properties/items")        |
+| [items](#items)    | `array`  | Optional | cannot be null | [Weme UI Manifest JSON Schema Definitions (v3)](manifest-properties-manifest-items.md "https://weme-ui.github.io/schema/v3/manifest.schema.json#/properties/items")        |
 
 ## $schema
 
@@ -63,7 +63,7 @@ The items in the manifest.
 
 `items`
 
-* is required
+* is optional
 
 * Type: `object[]` ([Details](manifest-properties-manifest-items-items.md))
 

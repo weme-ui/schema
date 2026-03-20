@@ -13,6 +13,8 @@
       "format": "uri"
     },
     "items": {
+      "title": "Manifest Items",
+      "description": "The items in the manifest.",
       "type": "array",
       "items": {
         "type": "object",
@@ -249,18 +251,15 @@
             "type": "object",
             "properties": {
               "version": {
-                "default": "1.0.0",
                 "title": "Registry Version",
                 "description": "The version of the registry.",
                 "examples": [
                   "1.0.0"
                 ],
+                "default": "1.0.0",
                 "type": "string"
               }
             },
-            "required": [
-              "version"
-            ],
             "additionalProperties": false
           },
           "hash": {
@@ -285,14 +284,11 @@
           "hash"
         ],
         "additionalProperties": false
-      },
-      "title": "Manifest Items",
-      "description": "The items in the manifest."
+      }
     }
   },
   "required": [
-    "$schema",
-    "items"
+    "$schema"
   ],
   "additionalProperties": false,
   "$id": "https://weme-ui.github.io/schema/v3/manifest.schema.json",

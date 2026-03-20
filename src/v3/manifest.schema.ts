@@ -52,6 +52,7 @@ export const ManifestSchema = z
           hash: RegistrySchema.pick({ hash: true }),
         }),
       )
+      .optional()
       .meta({
         title: 'Manifest Items',
         description: 'The items in the manifest.',
