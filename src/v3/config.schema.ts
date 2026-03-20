@@ -9,7 +9,7 @@ const Path = z.string().trim()
  *
  * This schema defines the structure of the project JSON file used in Weme UI
  *
- * @see {@link https://weme-ui.github.io/schema/v3/config.schema.json}
+ * @see {@link CONFIG_SCHEMA_URL}
  */
 export const ConfigSchema = z
   .object({

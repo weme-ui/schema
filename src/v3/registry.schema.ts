@@ -20,7 +20,7 @@ export const RegistryName = z
  *
  * This schema defines the structure of the registry JSON file used in Weme UI
  *
- * @see {@link https://weme-ui.github.io/schema/v3/registry.schema.json}
+ * @see {@link REGISTRY_SCHEMA_URL}
  */
 export const RegistrySchema = z
   .object({
