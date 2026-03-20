@@ -300,6 +300,118 @@ body {
   background: var(--accent-legacy);
 }
 
+/* Usage Section */
+.usage {
+  margin-bottom: 64px;
+  animation: fadeInUp 0.6s ease-out calc(var(--delay) * 0.1s + 0.4s) both;
+}
+
+.usage-card {
+  position: relative;
+  padding: 40px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.usage-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), #6366f1, var(--accent));
+  opacity: 0.6;
+}
+
+.usage-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.usage-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(76, 187, 165, 0.1);
+  border: 1px solid rgba(76, 187, 165, 0.2);
+  border-radius: 12px;
+  color: var(--accent);
+}
+
+.usage-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+.usage-desc {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.usage-command {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+.usage-command::before {
+  content: '$';
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.usage-command code {
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.usage-hint {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.usage-hint a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.usage-hint a:hover {
+  color: var(--accent);
+}
+
+.usage-hint svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
 /* Footer */
 .footer {
   margin-top: auto;

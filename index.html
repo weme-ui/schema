@@ -130,18 +130,47 @@
       </section>
 
       <section class="usage" style="--delay: 8">
-        <h2 class="usage-title">本地查看</h2>
-        <p class="usage-desc">
-          克隆本仓库后，可使用 <code>pnpm dlx @mouji/json-viewer ./schemas/v3</code> 查看 JSON
-          文件，获得更好的浏览体验。
-        </p>
-        <p class="usage-hint">
-          基于
-          <a href="https://github.com/vercel-labs/visual-json" target="_blank" rel="noopener"
-            >vercel-labs/visual-json</a
-          >
-          提供支持
-        </p>
+        <div class="usage-card">
+          <div class="usage-header">
+            <div class="usage-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <h2 class="usage-title">本地查看</h2>
+          </div>
+          <p class="usage-desc">
+            克隆本仓库后，可使用以下命令启动浏览器查看 JSON Schema 文件，获得更好的浏览体验。
+          </p>
+          <div class="usage-command">
+            <code>pnpm dlx @mouji/json-viewer ./schemas/v3</code>
+          </div>
+          <p class="usage-hint">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+            基于
+            <a href="https://github.com/vercel-labs/visual-json" target="_blank" rel="noopener"
+              >vercel-labs/visual-json</a
+            >
+            提供支持
+          </p>
+        </div>
       </section>
 
       <footer class="footer" style="--delay: 9">
