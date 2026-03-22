@@ -21,7 +21,7 @@ This schema defines the structure of the registry JSON file used in Weme UI.
 | [$schema](#schema)          | `string` | Required | cannot be null | [Weme UI Registry JSON Schema Definitions (v3)](registry-properties-registry-schema-url.md "https://weme-ui.github.io/schema/v3/registry.schema.json#/properties/$schema")  |
 | [name](#name)               | `string` | Required | cannot be null | [Weme UI Registry JSON Schema Definitions (v3)](registry-properties-registry-name.md "https://weme-ui.github.io/schema/v3/registry.schema.json#/properties/name")           |
 | [author](#author)           | `string` | Optional | cannot be null | [Weme UI Registry JSON Schema Definitions (v3)](registry-properties-registry-author.md "https://weme-ui.github.io/schema/v3/registry.schema.json#/properties/author")       |
-| [version](#version)         | `string` | Optional | cannot be null | [Weme UI Registry JSON Schema Definitions (v3)](registry-properties-registry-version.md "https://weme-ui.github.io/schema/v3/registry.schema.json#/properties/version")     |
+| [version](#version)         | `string` | Required | cannot be null | [Weme UI Registry JSON Schema Definitions (v3)](registry-properties-registry-version.md "https://weme-ui.github.io/schema/v3/registry.schema.json#/properties/version")     |
 | [libraries](#libraries)     | `array`  | Required | cannot be null | [Weme UI Registry JSON Schema Definitions (v3)](registry-properties-registry-libraries.md "https://weme-ui.github.io/schema/v3/registry.schema.json#/properties/libraries") |
 | [hash](#hash)               | `string` | Optional | cannot be null | [Weme UI Registry JSON Schema Definitions (v3)](registry-properties-registry-hash.md "https://weme-ui.github.io/schema/v3/registry.schema.json#/properties/hash")           |
 | [lastUpdated](#lastupdated) | `string` | Optional | cannot be null | [Weme UI Registry JSON Schema Definitions (v3)](registry-properties-last-updated.md "https://weme-ui.github.io/schema/v3/registry.schema.json#/properties/lastUpdated")     |
@@ -90,6 +90,12 @@ The name of the registry, in the format of `owner/repo`.
 
 [try pattern](https://regexr.com/?expression=%5E%5B%5Cs%5CS%5D%7B0%2C%7D\(%5C%2F\)%5B%5Cs%5CS%5D%7B0%2C%7D%24 "try regular expression with regexr.com")
 
+### name Examples
+
+```json
+"weme-ui/weme-ui"
+```
+
 ## author
 
 The author of the registry.
@@ -120,7 +126,7 @@ The version of the registry.
 
 `version`
 
-* is optional
+* is required
 
 * Type: `string` ([Registry Version](registry-properties-registry-version.md))
 

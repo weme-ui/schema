@@ -1,4 +1,5 @@
 import { z } from 'zod'
+import { OptionalString, SafeString } from '../shared'
 
 /**
  * The registry library item file type
@@ -10,67 +11,52 @@ import { z } from 'zod'
  * - `style`: A style file
  * - `locale`: A locale file
  * - `composable`: A composable file
- * - `utility`: A utility file
+ * - `util`: A utility file
  * - `file`: A general file
  *
  * @example 'component'
  */
-const RegistryLibraryItemFileType = z
-  .enum(['component', 'type', 'style', 'locale', 'composable', 'utility', 'file'])
-  .meta({
-    title: 'Item File Type',
-    description: 'The type of the registry library item file.',
-    examples: ['component'],
-  })
+const FileType = z.enum(['component', 'type', 'style', 'locale', 'composable', 'util', 'file'])
 
-export const RegistryLibraryItemFile = z
+export const ItemFile = z
   .discriminatedUnion('type', [
     z.object({
-      type: RegistryLibraryItemFileType.extract(['file']).meta({
+      type: FileType.extract(['file']).meta({
         title: 'Registry Item File Type',
         description: 'The type of the registry item file.',
         examples: ['file'],
       }),
-      path: z
-        .string()
-        .trim()
-        .meta({
-          title: 'Registry Item File Path',
-          description: 'The path of the registry item file.',
-          examples: ['path/to/file'],
-        }),
-      target: z
-        .string()
-        .trim()
-        .meta({
-          title: 'Registry Item File Target',
-          description: 'The target of the registry item file.',
-          examples: ['~/path/to/target'],
-        }),
-      hash: z.string().trim().meta({
+      path: SafeString.meta({
+        title: 'Registry Item File Path',
+        description: 'The path of the registry item file.',
+        examples: ['path/to/file'],
+      }),
+      target: SafeString.meta({
+        title: 'Registry Item File Target',
+        description: 'The target of the registry item file.',
+        examples: ['~/path/to/target'],
+      }),
+      hash: SafeString.meta({
         title: 'Registry Item File Hash',
         description: 'The hash of the registry item file.',
       }),
     }),
     z.object({
-      type: RegistryLibraryItemFileType.exclude(['file']).meta({
+      type: FileType.exclude(['file']).meta({
         title: 'Registry Item File Type',
         description: 'The type of the registry item file.',
         examples: ['component'],
       }),
-      path: z
-        .string()
-        .trim()
-        .meta({
-          title: 'Registry Item File Path',
-          description: 'The path of the registry item file.',
-          examples: ['components/button/button.vue'],
-        }),
-      target: z.string().trim().optional().meta({
+      path: SafeString.meta({
+        title: 'Registry Item File Path',
+        description: 'The path of the registry item file.',
+        examples: ['components/button/button.vue'],
+      }),
+      target: OptionalString.meta({
         title: 'Registry Item File Target',
         description: 'The target of the registry item file.',
       }),
-      hash: z.string().trim().meta({
+      hash: SafeString.meta({
         title: 'Registry Item File Hash',
         description: 'The hash of the registry item file.',
       }),

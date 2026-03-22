@@ -13,3 +13,9 @@ The name of the prompt.
 ## name Type
 
 `string` ([Prompt Name](template-properties-prompts-prompt-properties-prompt-name.md))
+
+## name Examples
+
+```json
+"name"
+```

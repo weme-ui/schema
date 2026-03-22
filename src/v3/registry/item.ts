@@ -1,5 +1,6 @@
 import { z } from 'zod'
-import { RegistryLibraryItemFile } from './file'
+import { ItemFile } from './file'
+import { OptionalString, SafeString } from '../shared'
 
 /**
  * The registry library item scope
@@ -12,7 +13,7 @@ import { RegistryLibraryItemFile } from './file'
  *
  * @example 'component'
  */
-const RegistryLibraryItemScope = z.enum(['component', 'layout', 'theme', 'plugin', 'page']).meta({
+const ItemScope = z.enum(['component', 'layout', 'theme', 'plugin', 'page']).meta({
   title: 'Item Scope',
   description: 'The scope of the registry library item.',
   examples: ['component'],
@@ -29,33 +30,30 @@ const RegistryLibraryItemScope = z.enum(['component', 'layout', 'theme', 'plugin
  * - `plugin`: A plugin item
  * - `page`: A page item
  */
-export const RegistryLibraryItem = z
+export const LibraryItem = z
   .object({
     /**
      * The scope of the item
      *
      * @example 'component'
      */
-    scope: RegistryLibraryItemScope,
+    scope: ItemScope,
 
     /**
      * The name of the item
      *
      * @example 'button'
      */
-    name: z
-      .string()
-      .trim()
-      .meta({
-        title: 'Item Name',
-        description: 'The name of the registry library item.',
-        examples: ['button'],
-      }),
+    name: SafeString.meta({
+      title: 'Item Name',
+      description: 'The name of the registry library item.',
+      examples: ['button'],
+    }),
 
     /**
      * The description of the item
      */
-    description: z.string().trim().optional().meta({
+    description: OptionalString.meta({
       title: 'Item Description',
       description: 'The description of the registry library item.',
     }),
@@ -66,7 +64,7 @@ export const RegistryLibraryItem = z
      * @example ['react', 'react-dom@^18.0.0']
      */
     dependencies: z
-      .array(z.string().trim())
+      .array(SafeString)
       .optional()
       .meta({
         title: 'Item Dependencies',
@@ -80,7 +78,7 @@ export const RegistryLibraryItem = z
      * @example ['unocss', 'tsdown@^0.21.0']
      */
     devDependencies: z
-      .array(z.string().trim())
+      .array(SafeString)
       .optional()
       .meta({
         title: 'Item Dev Dependencies',
@@ -97,7 +95,7 @@ export const RegistryLibraryItem = z
      * @example ['icon', 'slim/button']
      */
     localDependencies: z
-      .array(z.string().trim())
+      .array(SafeString)
       .optional()
       .meta({
         title: 'Item Dependencies In The Same Registry',
@@ -108,7 +106,7 @@ export const RegistryLibraryItem = z
     /**
      * The files of the item
      */
-    files: z.array(RegistryLibraryItemFile).default([]).meta({
+    files: z.array(ItemFile).default([]).meta({
       title: 'Item Files',
       description: 'The files of the registry library item.',
     }),
@@ -117,10 +115,7 @@ export const RegistryLibraryItem = z
      * The CSS variables of the item
      */
     cssVariables: z
-      .record(
-        z.string().trim(),
-        z.record(z.string().trim(), z.string().trim()).or(z.string().trim()),
-      )
+      .record(SafeString, z.record(SafeString, SafeString).or(SafeString))
       .optional()
       .meta({
         title: 'Item CSS Variables',

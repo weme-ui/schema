@@ -13,3 +13,9 @@ The message of the prompt.
 ## message Type
 
 `string` ([Prompt Message](template-properties-prompts-prompt-properties-prompt-message.md))
+
+## message Examples
+
+```json
+"Please enter your project name"
+```

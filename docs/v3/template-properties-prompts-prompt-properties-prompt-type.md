@@ -26,3 +26,9 @@ The type of the prompt.
 | `"list"`        |             |
 | `"select"`      |             |
 | `"multiselect"` |             |
+
+## type Examples
+
+```json
+"text"
+```

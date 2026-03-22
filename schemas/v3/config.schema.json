@@ -100,7 +100,9 @@
             "pattern": "^[\\s\\S]{0,}(\\/)[\\s\\S]{0,}$",
             "title": "Registry Name",
             "description": "The name of the registry, in the format of `owner/repo`.",
-            "example": "weme-ui/weme-ui"
+            "examples": [
+              "weme-ui/weme-ui"
+            ]
           },
           "url": {
             "type": "string",
@@ -143,7 +145,7 @@
           "prefix"
         ],
         "additionalProperties": false,
-        "title": "Registry Information",
+        "title": "Project Registry",
         "description": "A registry used in the project."
       }
     },

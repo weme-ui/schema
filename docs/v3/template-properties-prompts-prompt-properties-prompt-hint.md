@@ -17,5 +17,5 @@ The hint of the prompt.
 ## hint Examples
 
 ```json
-"Enter your project name"
+"Select a framework"
 ```

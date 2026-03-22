@@ -1,34 +1,28 @@
 import { z } from 'zod'
-import { RegistryLibraryItem } from './item'
+import { LibraryItem } from './item'
+import { OptionalString, SafeString } from '../shared'
 
 /**
  * Library name
  *
  * @example 'slim'
  */
-const RegistryLibraryName = z
-  .string()
-  .trim()
-  .meta({
-    title: 'Library Name',
-    description: 'The name of the library.',
-    examples: ['slim'],
-  })
+const LibraryName = SafeString.meta({
+  title: 'Library Name',
+  description: 'The name of the library.',
+  examples: ['slim'],
+})
 
 /**
  * Default library prefix
  *
  * @default 'ui'
  */
-const RegistryLibraryDefaultPrefix = z
-  .string()
-  .trim()
-  .default('ui')
-  .meta({
-    title: 'Default Library Prefix',
-    description: 'The default prefix of the library.',
-    examples: ['ui'],
-  })
+const LibraryDefaultPrefix = SafeString.default('ui').meta({
+  title: 'Default Library Prefix',
+  description: 'The default prefix of the library.',
+  examples: ['ui'],
+})
 
 /**
  * Library of the registry
@@ -40,12 +34,12 @@ export const RegistryLibrary = z
      *
      * @example 'slim'
      */
-    name: RegistryLibraryName,
+    name: LibraryName,
 
     /**
      * The description of the library
      */
-    description: z.string().trim().optional().meta({
+    description: OptionalString.meta({
       title: 'Library Description',
       description: 'The description of the library.',
     }),
@@ -55,12 +49,12 @@ export const RegistryLibrary = z
      *
      * @default 'ui'
      */
-    defaultPrefix: RegistryLibraryDefaultPrefix,
+    defaultPrefix: LibraryDefaultPrefix,
 
     /**
      * The items in the library
      */
-    items: z.array(RegistryLibraryItem).meta({
+    items: z.array(LibraryItem).meta({
       title: 'Library Items',
       description: 'The items in the library.',
     }),

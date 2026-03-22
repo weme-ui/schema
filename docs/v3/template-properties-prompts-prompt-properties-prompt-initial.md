@@ -13,3 +13,9 @@ The initial value of the prompt.
 ## initial Type
 
 `string` ([Prompt Initial](template-properties-prompts-prompt-properties-prompt-initial.md))
+
+## initial Examples
+
+```json
+"my-project"
+```

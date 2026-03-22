@@ -18,7 +18,7 @@ A variant of the prompt.
 
 | Property            | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                        |
 | :------------------ | :------- | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [use](#use)         | `array`  | Optional | cannot be null | [Weme UI Skeleton Template JSON Schema Definitions (v3)](template-properties-prompts-prompt-properties-prompt-template.md "https://weme-ui.github.io/schema/v3/template.schema.json#/properties/prompts/items/properties/use")    |
+| [use](#use)         | `array`  | Required | cannot be null | [Weme UI Skeleton Template JSON Schema Definitions (v3)](template-properties-prompts-prompt-properties-prompt-template.md "https://weme-ui.github.io/schema/v3/template.schema.json#/properties/prompts/items/properties/use")    |
 | [type](#type)       | `string` | Required | cannot be null | [Weme UI Skeleton Template JSON Schema Definitions (v3)](template-properties-prompts-prompt-properties-prompt-type.md "https://weme-ui.github.io/schema/v3/template.schema.json#/properties/prompts/items/properties/type")       |
 | [name](#name)       | `string` | Required | cannot be null | [Weme UI Skeleton Template JSON Schema Definitions (v3)](template-properties-prompts-prompt-properties-prompt-name.md "https://weme-ui.github.io/schema/v3/template.schema.json#/properties/prompts/items/properties/name")       |
 | [message](#message) | `string` | Optional | cannot be null | [Weme UI Skeleton Template JSON Schema Definitions (v3)](template-properties-prompts-prompt-properties-prompt-message.md "https://weme-ui.github.io/schema/v3/template.schema.json#/properties/prompts/items/properties/message") |
@@ -32,7 +32,7 @@ Which template this prompt belongs to.
 
 `use`
 
-* is optional
+* is required
 
 * Type: `string[]`
 
@@ -75,6 +75,12 @@ The type of the prompt.
 | `"select"`      |             |
 | `"multiselect"` |             |
 
+### type Examples
+
+```json
+"text"
+```
+
 ## name
 
 The name of the prompt.
@@ -92,6 +98,12 @@ The name of the prompt.
 ### name Type
 
 `string` ([Prompt Name](template-properties-prompts-prompt-properties-prompt-name.md))
+
+### name Examples
+
+```json
+"name"
+```
 
 ## message
 
@@ -111,6 +123,12 @@ The message of the prompt.
 
 `string` ([Prompt Message](template-properties-prompts-prompt-properties-prompt-message.md))
 
+### message Examples
+
+```json
+"Please enter your project name"
+```
+
 ## initial
 
 The initial value of the prompt.
@@ -128,6 +146,12 @@ The initial value of the prompt.
 ### initial Type
 
 `string` ([Prompt Initial](template-properties-prompts-prompt-properties-prompt-initial.md))
+
+### initial Examples
+
+```json
+"my-project"
+```
 
 ## choices
 
@@ -178,5 +202,5 @@ The hint of the prompt.
 ### hint Examples
 
 ```json
-"Enter your project name"
+"Select a framework"
 ```

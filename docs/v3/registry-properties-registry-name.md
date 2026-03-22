@@ -23,3 +23,9 @@ The name of the registry, in the format of `owner/repo`.
 ```
 
 [try pattern](https://regexr.com/?expression=%5E%5B%5Cs%5CS%5D%7B0%2C%7D\(%5C%2F\)%5B%5Cs%5CS%5D%7B0%2C%7D%24 "try regular expression with regexr.com")
+
+## name Examples
+
+```json
+"weme-ui/weme-ui"
+```

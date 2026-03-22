@@ -12,4 +12,4 @@ The files of the template.
 
 ## files Type
 
-`object[]` ([Details](template-properties-templates-template-properties-template-files-items.md))
+`object[]` ([Template File](template-properties-templates-template-properties-template-files-template-file.md))

@@ -12,4 +12,4 @@ The registries used in the project.
 
 ## registries Type
 
-`object[]` ([Registry Information](config-properties-project-registries-registry-information.md))
+`object[]` ([Project Registry](config-properties-project-registries-project-registry.md))

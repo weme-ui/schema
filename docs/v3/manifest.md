@@ -19,7 +19,7 @@ This schema defines the structure of the manifest JSON file used in Weme UI.
 | Property           | Type     | Required | Nullable       | Defined by                                                                                                                                                                 |
 | :----------------- | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [$schema](#schema) | `string` | Required | cannot be null | [Weme UI Manifest JSON Schema Definitions (v3)](manifest-properties-manifest-schema-url.md "https://weme-ui.github.io/schema/v3/manifest.schema.json#/properties/$schema") |
-| [items](#items)    | `array`  | Optional | cannot be null | [Weme UI Manifest JSON Schema Definitions (v3)](manifest-properties-manifest-items.md "https://weme-ui.github.io/schema/v3/manifest.schema.json#/properties/items")        |
+| [items](#items)    | `array`  | Optional | cannot be null | [Weme UI Manifest JSON Schema Definitions (v3)](manifest-properties-added-items.md "https://weme-ui.github.io/schema/v3/manifest.schema.json#/properties/items")           |
 
 ## $schema
 
@@ -59,18 +59,18 @@ The default value is:
 
 ## items
 
-The items in the manifest.
+The added items in the project.
 
 `items`
 
 * is optional
 
-* Type: `object[]` ([Details](manifest-properties-manifest-items-items.md))
+* Type: `object[]` ([Added Registry Item](manifest-properties-added-items-added-registry-item.md))
 
 * cannot be null
 
-* defined in: [Weme UI Manifest JSON Schema Definitions (v3)](manifest-properties-manifest-items.md "https://weme-ui.github.io/schema/v3/manifest.schema.json#/properties/items")
+* defined in: [Weme UI Manifest JSON Schema Definitions (v3)](manifest-properties-added-items.md "https://weme-ui.github.io/schema/v3/manifest.schema.json#/properties/items")
 
 ### items Type
 
-`object[]` ([Details](manifest-properties-manifest-items-items.md))
+`object[]` ([Added Registry Item](manifest-properties-added-items-added-registry-item.md))

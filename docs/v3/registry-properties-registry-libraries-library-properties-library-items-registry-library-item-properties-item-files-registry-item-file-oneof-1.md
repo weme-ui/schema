@@ -52,7 +52,7 @@ The type of the registry item file.
 | `"style"`      |             |
 | `"locale"`     |             |
 | `"composable"` |             |
-| `"utility"`    |             |
+| `"util"`       |             |
 
 ### type Examples
 
