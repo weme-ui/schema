@@ -107,7 +107,7 @@
           "url": {
             "type": "string",
             "title": "Registry URL",
-            "description": "The URL of the registry's `registry.json` file.",
+            "description": "The URL of the registry.",
             "examples": [
               "@weme-ui/weme-ui"
             ]

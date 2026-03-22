@@ -60,7 +60,7 @@ The name of the registry, in the format of `owner/repo`.
 
 ## url
 
-The URL of the registry's `registry.json` file.
+The URL of the registry.
 
 `url`
 

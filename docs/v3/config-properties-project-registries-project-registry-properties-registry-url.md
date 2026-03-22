@@ -4,7 +4,7 @@
 https://weme-ui.github.io/schema/v3/config.schema.json#/properties/registries/items/properties/url
 ```
 
-The URL of the registry's `registry.json` file.
+The URL of the registry.
 
 | Abstract            | Extensible | Status         | Identifiable            | Custom Properties | Additional Properties | Access Restrictions | Defined In                                                                 |
 | :------------------ | :--------- | :------------- | :---------------------- | :---------------- | :-------------------- | :------------------ | :------------------------------------------------------------------------- |

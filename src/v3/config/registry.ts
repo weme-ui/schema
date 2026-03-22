@@ -1,6 +1,5 @@
 import { z } from 'zod'
 import { RegistryName } from '../registry/schema'
-import { REGISTRY_SCHEMA_NAME } from '../constants'
 import { SafeString } from '../shared'
 
 export const ConfigRegistry = z
@@ -26,7 +25,7 @@ export const ConfigRegistry = z
      */
     url: SafeString.meta({
       title: 'Registry URL',
-      description: `The URL of the registry's \`${REGISTRY_SCHEMA_NAME}\` file.`,
+      description: `The URL of the registry.`,
       examples: ['@weme-ui/weme-ui'],
     }),
 
