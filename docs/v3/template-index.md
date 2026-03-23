@@ -20,6 +20,7 @@ This schema defines the structure of the skeleton template index JSON file.
 | :-------------------------- | :------- | :------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [$schema](#schema)          | `string` | Required | cannot be null | [Weme UI Skeleton Template Index JSON Schema Definitions (v3)](template-index-properties-template-index-schema-url.md "https://weme-ui.github.io/schema/v3/template-index.schema.json#/properties/$schema")      |
 | [description](#description) | `string` | Required | cannot be null | [Weme UI Skeleton Template Index JSON Schema Definitions (v3)](template-index-properties-template-index-description.md "https://weme-ui.github.io/schema/v3/template-index.schema.json#/properties/description") |
+| [default](#default)         | `string` | Required | cannot be null | [Weme UI Skeleton Template Index JSON Schema Definitions (v3)](template-index-properties-default-template-name.md "https://weme-ui.github.io/schema/v3/template-index.schema.json#/properties/default")          |
 | [templates](#templates)     | `object` | Required | cannot be null | [Weme UI Skeleton Template Index JSON Schema Definitions (v3)](template-index-properties-template-index-templates.md "https://weme-ui.github.io/schema/v3/template-index.schema.json#/properties/templates")     |
 
 ## $schema
@@ -81,6 +82,24 @@ The description of the template index.
 ```json
 "Weme UI Default Templates"
 ```
+
+## default
+
+The default template name of the template index.
+
+`default`
+
+* is required
+
+* Type: `string` ([Default Template Name](template-index-properties-default-template-name.md))
+
+* cannot be null
+
+* defined in: [Weme UI Skeleton Template Index JSON Schema Definitions (v3)](template-index-properties-default-template-name.md "https://weme-ui.github.io/schema/v3/template-index.schema.json#/properties/default")
+
+### default Type
+
+`string` ([Default Template Name](template-index-properties-default-template-name.md))
 
 ## templates
 

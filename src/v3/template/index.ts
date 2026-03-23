@@ -31,6 +31,14 @@ export const TemplateIndexSchema = z
     }),
 
     /**
+     * Default template name
+     */
+    default: SafeString.meta({
+      title: 'Default Template Name',
+      description: 'The default template name of the template index.',
+    }),
+
+    /**
      * Templates list
      */
     templates: z.record(SafeString, TemplateItem).meta({

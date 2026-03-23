@@ -20,6 +20,11 @@
         "Weme UI Default Templates"
       ]
     },
+    "default": {
+      "type": "string",
+      "title": "Default Template Name",
+      "description": "The default template name of the template index."
+    },
     "templates": {
       "type": "object",
       "propertyNames": {
@@ -60,6 +65,7 @@
   "required": [
     "$schema",
     "description",
+    "default",
     "templates"
   ],
   "additionalProperties": false,
